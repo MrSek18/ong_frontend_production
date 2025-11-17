@@ -17,44 +17,43 @@ export default function HeroAlienta() {
       className="w-full h-[500px] bg-cover bg-center"
       style={{ backgroundImage: `url(${mainPresentation})` }}
     >
-      <div className="w-full flex h-10 bg-gradient-to-r from-black/100 via-black/80 to-transparent">
-          {/* first half */}
-        <div id="alienta-banner" className="w-[50%] flex justify-start items-center gap-6 py-4  pl-3">
-          <img
-            src={facebookLogo}
-            alt="Facebook"
-            className="w-6 h-6 cursor-pointer hover:scale-110 transition"
-          />
-          <img
-            src={instagramLogo}
-            alt="Instagram"
-            className="w-6 h-6 cursor-pointer hover:scale-110 transition"
-          />
-          <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
-        </div>
-        {/* second half */}
-        <div id="alienta-banner" className="w-[50%] flex justify-end items-center gap-6 py-4  pr-3">
-          <img
-            src={peruLogo}
-            alt="Facebook"
-            className="w-10 h-10   transition"
-          />
-          <a href="#">Español</a>
-          <img
-            src={usaLogo}
-            alt="Instagram"
-            className="w-10 h-10   transition"
-          />
-          <a href="#">English</a>
-        </div>
+      <div className="w-full flex flex-wrap h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
+      {/* first half */}
+      <div className="flex-1 flex justify-start items-center gap-3 py-2 pl-3 min-w-[150px]">
+        <img
+          src={facebookLogo}
+          alt="Facebook"
+          className="w-6 h-6 cursor-pointer hover:scale-110 transition"
+        />
+        <img
+          src={instagramLogo}
+          alt="Instagram"
+          className="w-6 h-6 cursor-pointer hover:scale-110 transition"
+        />
+        <img
+          src={youtubeLogo}
+          alt="YouTube"
+          className="w-8 h-8 cursor-pointer hover:scale-110 transition"
+        />
       </div>
+
+      {/* second half */}
+      <div className="flex-1 flex justify-end items-center gap-3 py-2 pr-3 min-w-[150px]">
+        <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
+        <a href="#" className="text-white">Español</a>
+        <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
+        <a href="#" className="text-white">English</a>
+      </div>
+    </div>
+
         <div className="w-full flex justify-between items-center h-40 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4">
       {/* Logo a la izquierda */}
       <img
         src={AlientaPeruLogo}
         alt="alientaPeruLogo"
-        className="w-80 h-60 ml-3 transition mt-2"
+        className="w-48 h-36 ml-3 transition mt-2 sm:w-80 sm:h-60"
       />
+
 
       {/* Links en desktop */}
       <div className="hidden md:flex items-center gap-6">
