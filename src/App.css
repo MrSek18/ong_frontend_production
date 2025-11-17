@@ -1,0 +1,8 @@
+/* Elimina bordes blancos aplicando fondo global */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff; /* azul marino oscuro */
+  color: white;
+  font-family: 'Anton', sans-serif;
+}
