@@ -6,3 +6,7 @@ html, body {
   color: white;
   font-family: 'Anton', sans-serif;
 }
+.clip-inverted-flag {
+  clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 50%, 100% 100%, 100% 100%, 0 100%);
+}
+
