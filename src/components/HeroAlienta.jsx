@@ -138,11 +138,11 @@ export default function HeroAlienta() {
         className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
             {/* contendio sec 1 */}
             <div className="w-full lg:w-[65%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag ">
-              <h1 className="text-white text-center lg:text-left text-2xl mt-3">Les brindamos:</h1>
-              <div className="flex flex-col w-full h-full items-center justify-center gap-4   p-10 ">
+              <h1 className="text-white text-center lg:text-left text-2xl mt-3 border-2">Les brindamos:</h1>
+              <div className="flex flex-col w-full h-full items-center justify-center gap-4 p-10 ">
                 {/* Fila superior */}
                 <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4  ">
-                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 gap-4 md-gap-0">
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left gap-4 md-gap-0">
                     <img src={icono1} alt="" className="w-20 h-auto" />
                     <p className="text-white ml-4 text-left text-xl">
                       Entrenamiento de futbol personalizado
