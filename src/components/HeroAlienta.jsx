@@ -12,6 +12,12 @@ import icono1 from "../assets/ic1.png";
 import icono2 from "../assets/ic2.png";
 import icono3 from "../assets/ic3.png";
 import icono4 from "../assets/ic4.png";
+import icono5 from "../assets/ic5.png";
+import icono6 from "../assets/ic6.png";
+import icono7 from "../assets/ic7.png";
+import icono8 from "../assets/ic8.png";
+
+
 
 import { useState, useEffect } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -100,7 +106,7 @@ export default function HeroAlienta() {
         </h1>
 
         <div
-          className={`w-[420px] h-auto absolute bottom-10 left-10 rounded-3xl bg-blue-950/80 backdrop-blur-sm p-10 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
+          className={`w-auto h-auto absolute bottom-10 left-10 rounded-3xl bg-blue-950/80 backdrop-blur-sm p-10 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
             hiding ? "opacity-0 scale-95" : "opacity-100 scale-100"
           }`}
         >
@@ -119,73 +125,102 @@ export default function HeroAlienta() {
 
       {/* Section-1 corregido */}
       <div id="Section-1"
-        className="w-full h-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
+        className="w-full h-auto text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
         <h1 className="text-5xl">¿Por qué ALIENTA PERUANO?</h1>
         
-        <ul className="text-left mr-40 list-disc list-inside text-2xl">
+        <ul className="text-left lg:mr-20 list-disc list-inside text-2xl text-[#231f20]">
           <li>Porque el fútbol puede salvar una vida.</li>
           <li>Muchos niños llegan sin dinero, sin comida y sin nadie que los apoye.</li>
           <li>Los recibimos con lo poco que tenemos, porque creemos en ellos más que nadie.</li>
         </ul>
 
         <div id="Justificacion-sec-1"
-        className="relative w-full h-auto flex justify-between items-center border-t-2 border-b-2 border-blue-950 mt-10">
-            <div className="w-[60%] h-full bg-blue-950 clip-inverted-flag absolute pl-10 pr-21  pb-10 pt-10 border-2 border-white ">
-              <h1 className="text-white text-left text-2xl">Les brindamos:</h1>
-              <div className="flex flex-col w-full h-full">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
+            {/* contendio sec 1 */}
+            <div className="w-full lg:w-[60%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag p-10 ">
+              <h1 className="text-white text-center lg:text-left text-2xl">Les brindamos:</h1>
+              <div className="flex flex-col w-full h-full items-center justify-center gap-4">
                 {/* Fila superior */}
-                <div className="flex w-full h-1/2">
-                  <div className="w-1/2 h-full border-2 border-white">
-                    <img src={icono1} alt="" className="w-5 h-5"/>
+                <div className="flex flex-col md:flex-row w-2/3 md:w-full h-auto gap-4 ">
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 ">
+                    <img src={icono1} alt="" className="w-20 h-auto" />
+                    <p className="text-white ml-4 text-left text-xl">
+                      Entrenamiento de futbol personalizado
+                    </p>
                   </div>
-                  <div className="w-1/2 h-full border-2 border-white">
-                    <img src={icono2} alt="" className="w-30 h-30"/>
-                  </div>
-                </div>
 
-                {/* Fila inferior */}
-                <div className="flex w-full h-1/2">
-                  <div className="w-1/2 h-full border-2 border-white">
-                    <img src={icono3} alt="" className="w-5 h-5"/>
-                  </div>
-                  <div className="w-1/2 h-full border-2 border-white">
-                    <img src={icono4} alt="" className="w-5 h-5"/>
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left ">
+                    <img src={icono3} alt="" className="w-30 h-auto" />
+                    <p className="text-white ml-2 text-left text-xl">
+                      Suplementacion alimenticia
+                    </p>
                   </div>
                 </div>
+                {/* Fila inferior */}
+                <div className="flex flex-col md:flex-row w-2/3 md:w-full h-auto gap-4">
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 ">
+                    <img src={icono2} alt="" className="w-30 h-auto"/>
+                    <p className="text-white ml-4 text-left text-xl">Asitencia medica y psicológica</p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 ">
+                    <img src={icono4} alt="" className="w-30 h-auto"/>
+                    <p className="text-white ml-4 text-left text-xl">Apoyo educativo y emocional</p>
+                  </div>
+                </div>
+                
               </div>
               
             </div>
-            <div className="w-1/2 h-full "></div>
-            <div className="flex-1 flex justify-end h-full">
+            {/* Delimitador */}
+            <div className="hidden lg:block w-1/2 h-auto "></div>
+            {/* img*/} 
+            <div className="w-full lg:flex-1 flex justify-center lg:justify-end h-auto lg:h-full  lg:mt-0">
               <img
                 src={section1Img}
                 alt="section1"
-                className="w-full h-full object-contain "
+                className="w-full lg:h-96"
               />
             </div>
         </div>
 
       </div>
       <div id="Section-2"
-        className="w-full h-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
-        <div className="w-2/4 border">
+        className="w-full min-h-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+        <div className="w-2/4">
           <h1 className="text-5xl">Nuestra Realidad</h1>
           <h2 className="text-left text-3xl ml-3 mt-3 mb-2" >¿Qué enfrentamos?</h2>
-          <p className="text-left text-2xl">Trabajamos con niños de zonas altamente vulnerables</p>
+          <p className="text-left text-2xl text-[#231f20]">Trabajamos con niños de zonas altamente vulnerables:</p>
         </div>
         
-        <div id="Justificacion-sec-1"
-        className="w-full h-96 flex justify-between items-center border-t-2  border-blue-950 mt-10">
-            <div>
+        <div id="Justificacion-sec-2"
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
+            {/* contendio sec 2 */}
+            <div className="w-full h-auto bg-white p-10 ">
 
+              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 w-full h-full gap-4 ">
+                {/* Fila*/}
+                
+                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                  <img src={icono5} alt="" className="w-30 h-auto h-auto mb-2"/>
+                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Violencia, drogas y pandillaje</p>
+                </div>
+                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                  <img src={icono6} alt="" className="w-30 h-auto h-auto mb-2"/>
+                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Falta de acceso a educacion y salud</p>
+                </div>
+                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                  <img src={icono7} alt="" className="w-30 h-auto h-auto mb-2"/>
+                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Pobreza extremay desnutricion</p>
+                </div>
+
+                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                  <img src={icono8} alt="" className="w-30 h-auto h-auto mb-2"/>
+                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Ausencia de apoyo familiar y oportunidades</p>
+                </div>
+              </div>
             </div>
-            <div className="flex-1 flex justify-end">
-              <img
-                src={section1Img}
-                alt="section1"
-                className="w-150 h-auto object-contain "
-              />
-            </div>
+          
+            
         </div>
 
       </div>
