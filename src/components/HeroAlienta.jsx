@@ -197,25 +197,25 @@ export default function HeroAlienta() {
             {/* contendio sec 2 */}
             <div className="w-full h-auto bg-white p-10 ">
 
-              <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 w-full h-full gap-4 ">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-full gap-4 ">
                 {/* Fila*/}
                 
                 <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
                   <img src={icono5} alt="" className="w-30 h-auto h-auto mb-2"/>
-                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Violencia, drogas y pandillaje</p>
+                  <p className="text-white ml-4 text-center text-xl ">Violencia, drogas y pandillaje</p>
                 </div>
                 <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
                   <img src={icono6} alt="" className="w-30 h-auto h-auto mb-2"/>
-                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Falta de acceso a educacion y salud</p>
+                  <p className="text-white ml-4 text-center text-xl ">Falta de acceso a educacion y salud</p>
                 </div>
                 <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
                   <img src={icono7} alt="" className="w-30 h-auto h-auto mb-2"/>
-                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Pobreza extremay desnutricion</p>
+                  <p className="text-white ml-4 text-center text-xl ">Pobreza extremay desnutricion</p>
                 </div>
 
                 <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
                   <img src={icono8} alt="" className="w-30 h-auto h-auto mb-2"/>
-                  <p className="text-white ml-4 text-center text-xl border-2 border-white">Ausencia de apoyo familiar y oportunidades</p>
+                  <p className="text-white ml-4 text-center text-xl ">Ausencia de apoyo familiar y oportunidades</p>
                 </div>
               </div>
             </div>
