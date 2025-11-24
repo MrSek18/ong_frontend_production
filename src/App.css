@@ -16,3 +16,15 @@ html, body {
     clip-path: polygon(0 0, 100% 0, 100% 0%, 90% 50%, 100% 100%, 100% 100%, 0 100%);
   }
 }
+
+@media (min-width: 1024px) {
+  .sec3-shape-img-form {
+    clip-path: polygon(0 0, 100% 0, 90% 0, 100% 50%, 90% 100%, 100% 100%, 0 100%);
+  }
+}
+
+@media (min-width: 1024px) {
+  .sec4-shape-img-form {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%, 0% 50%, 10% 0, 0 10%);
+  }
+}

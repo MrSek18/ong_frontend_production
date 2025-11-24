@@ -16,7 +16,16 @@ import icono5 from "../assets/ic5.png";
 import icono6 from "../assets/ic6.png";
 import icono7 from "../assets/ic7.png";
 import icono8 from "../assets/ic8.png";
-
+import n01 from "../assets/azul01.png";
+import n02 from "../assets/azul02.png";
+import n03 from "../assets/azul03.png";
+import n04 from "../assets/azul04.png";
+import imgSection3 from "../assets/img_3.png";
+import imgSection4 from "../assets/img_4.png";
+import checkSection5 from "../assets/check.png"
+import img1Section6 from "../assets/img_6.png";
+import img2Section6 from "../assets/img_7.png";
+import img3Section6 from "../assets/img_8.png";
 
 
 import { useState, useEffect } from "react";
@@ -125,7 +134,7 @@ export default function HeroAlienta() {
 
       {/* Section-1 corregido */}
       <div id="Section-1"
-        className="w-full h-auto text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
         <h1 className="text-5xl">¿Por qué ALIENTA PERUANO?</h1>
         
         <ul className="text-left lg:mr-20 list-disc list-inside text-2xl text-[#231f20]">
@@ -138,7 +147,7 @@ export default function HeroAlienta() {
         className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
             {/* contendio sec 1 */}
             <div className="w-full lg:w-[65%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag ">
-              <h1 className="text-white text-center lg:text-left text-2xl mt-3 border-2">Les brindamos:</h1>
+              <h1 className="text-white text-center lg:text-left text-2xl mt-3 ">Les brindamos:</h1>
               <div className="flex flex-col w-full h-full items-center justify-center gap-4 p-10 ">
                 {/* Fila superior */}
                 <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4  ">
@@ -191,35 +200,35 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-2"
-        className="w-full min-h-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
-        <div className="w-2/4">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+        <div className="w-2/4 ">
           <h1 className="text-5xl">Nuestra Realidad</h1>
           <h2 className="text-left text-3xl ml-3 mt-3 mb-2" >¿Qué enfrentamos?</h2>
           <p className="text-left text-2xl text-[#231f20]">Trabajamos con niños de zonas altamente vulnerables:</p>
         </div>
         
         <div id="Justificacion-sec-2"
-        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10">
             {/* contendio sec 2 */}
             <div className="w-full h-auto bg-white p-10 ">
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-full gap-4 ">
                 {/* Fila*/}
                 
-                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">
                   <img src={icono5} alt="" className="w-30 h-auto h-auto mb-2"/>
                   <p className="text-white ml-4 text-center text-xl ">Violencia, drogas y pandillaje</p>
                 </div>
-                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">
                   <img src={icono6} alt="" className="w-30 h-auto h-auto mb-2"/>
                   <p className="text-white ml-4 text-center text-xl ">Falta de acceso a educacion y salud</p>
                 </div>
-                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">
                   <img src={icono7} alt="" className="w-30 h-auto h-auto mb-2"/>
                   <p className="text-white ml-4 text-center text-xl ">Pobreza extremay desnutricion</p>
                 </div>
 
-                <div className="flex flex-col h-full border-2 border-white items-center justify-center p-10 bg-blue-950">
+                <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">
                   <img src={icono8} alt="" className="w-30 h-auto h-auto mb-2"/>
                   <p className="text-white ml-4 text-center text-xl ">Ausencia de apoyo familiar y oportunidades</p>
                 </div>
@@ -228,6 +237,170 @@ export default function HeroAlienta() {
           
             
         </div>
+
+      </div>
+      <div id="Section-3 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
+        <div className="w-2/4">
+          <h1 className="text-5xl">Lo que nos limita</h1>
+        </div>
+        
+        <div
+          id="Justificacion-sec-3"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+        >
+          {/* img */}
+          <div
+            className="w-full lg:w-1/2 h-110 bg-blue-950 sec3-shape-img-form order-2 lg:order-1"
+            style={{
+              backgroundImage: `url(${imgSection3})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+
+          {/* right contenedor */}
+          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 gap-y-4 text-3xl order-1 lg:order-2 text-[#231f20]">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 ">
+              <img src={n01} alt="" className="w-15 h-15" />
+              <h1 className="text-left">No contamos con financiamiento constante.</h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n02} alt="" className="w-15 h-15" />
+              <h1 className="text-left">Muchos niños no pueden pagar ni el transporte.</h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n03} alt="" className="w-15 h-15" />
+              <h1 className="text-left">
+                No tenemos infraestructura adecuada (canchas, gimnasio, nutrición estable).
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n04} alt="" className="w-15 h-15" />
+              <h1 className="text-left">
+                Necesitamos recursos para ofrecer una formación de calidad
+              </h1>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      <div id="Section-4 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
+        <div className="w-2/4 flex flex-col gap-4">
+          <h1 className="text-5xl">Lo que necesitamos</h1>
+          <p className="text-[#231f20] text-2xl">Aliados con corazón y visión</p>
+        </div>
+        
+        <div
+          id="Justificacion-sec-4"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+        >
+          {/* right contenedor */}
+          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 gap-y-4 text-3xl text-[#231f20]">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n01} alt="" className="w-15 h-15" />
+              <h1 className="text-left">
+                Empresas y personas que apoyen con financiamiento o productos.
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n02} alt="" className="w-15 h-15" />
+              <h1 className="text-left">
+                Voluntarios, entrenadores, médicos, psicólogos, docentes.
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n03} alt="" className="w-15 h-15" />
+              <h1 className="text-left">
+                Apadrinamiento de niños o donaciones mensuales
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n04} alt="" className="w-15 h-15" />
+              <h1 className="text-left">Difusión de nuestra causa</h1>
+            </div>
+          </div>
+
+          {/* img */}
+          <div
+            className="w-full lg:w-1/2 h-110 bg-blue-950 sec4-shape-img-form"
+            style={{
+              backgroundImage: `url(${imgSection4})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+        </div>
+
+
+      </div>
+      <div id="Section-5 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+        
+        {/* img */}
+        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center">
+          <h1 className="text-7xl text-white">Imagen faltante</h1>
+        </div>
+
+        {/* right content */}
+        <div className="w-full h-auto flex flex-col lg:flex-row ">
+          <div className="flex h-50 w-full lg:w-1/2 border-2 border-red-600 items-center justify-center">
+            <h1 className="text-7xl">Impacto real</h1>
+          </div>
+          <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-lg text-[#231f20] bg-blue-950 text-white ">
+            <div className="flex w-full h-auto gap-4 border-2 border-green-500">
+              <img src={checkSection5} alt="" className="w-10 h-10" />
+              <h1 className="text-left border-2 border-green-500">
+                Empresas y personas que apoyen con financiamiento o productos.
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={checkSection5} alt="" className="w-10 h-10" />
+              <h1 className="text-left">
+                Voluntarios, entrenadores, médicos, psicólogos, docentes.
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={checkSection5} alt="" className="w-10 h-10" />
+              <h1 className="text-left">
+                Apadrinamiento de niños o donaciones mensuales
+              </h1>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={checkSection5} alt="" className="w-10 h-10" />
+              <h1 className="text-left">Difusión de nuestra causa</h1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div id="Section-6 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+
+          <div className="w-full h-auto">
+            <h1 className="text-5xl">Público objetivo</h1>
+          </div> 
+            
+          <div className="w-full flex h-auto gap-4 p-10">
+            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
+               <div className="flex h-70 w-full justify-center">
+                  <img src={img1Section6} alt="" className="h-70"/>
+                  <div className="w-2/3 h-10 bg-blue-950 text-white">
+                    <h1 className="text-2xl">Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad</h1>
+                  </div>
+               </div>
+            </div>
+            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
+               
+            </div>
+            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
+               
+            </div>
+          </div>
+        {/* right content */}
+
 
       </div>
     </div>
