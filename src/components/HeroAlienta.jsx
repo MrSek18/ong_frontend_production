@@ -45,6 +45,7 @@ export default function HeroAlienta() {
   };
   return (
     <div className="w-full h-auto overflow-x-hidden">
+      <h1 className="bg-red-500 text-white text-4xl text-center p-4">Pagina en desarrollo</h1>
       <div
         id="alienta-banner"
         className="w-full h-screen bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply"
@@ -384,12 +385,13 @@ export default function HeroAlienta() {
           </div> 
             
           <div className="w-full flex h-auto gap-4 p-10">
-            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
-               <div className="flex h-70 w-full justify-center">
+            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
+               <div className="flex h-auto w-full justify-center flex-col items-center">
                   <img src={img1Section6} alt="" className="h-70"/>
                   <div className="w-2/3 h-10 bg-blue-950 text-white">
-                    <h1 className="text-2xl">Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad</h1>
+                    <h1 className="text-2xl">Primario</h1>
                   </div>
+                  <p className="text-[#231f20]">Niños de entre 8 y 17 años con talento futbolístico, contextos de vulnerabilidad</p>
                </div>
             </div>
             <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
