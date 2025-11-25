@@ -1,6 +1,7 @@
 
 import './App.css'
 import HeroAlienta from './components/HeroAlienta';
+
 function App() {
 
   return (

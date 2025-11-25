@@ -26,6 +26,9 @@ import checkSection5 from "../assets/check.png"
 import img1Section6 from "../assets/img_6.png";
 import img2Section6 from "../assets/img_7.png";
 import img3Section6 from "../assets/img_8.png";
+import imgSection7 from "../assets/ic11.png";
+import n01White from "../assets/num_01.png";
+import n02White from "../assets/num_02.png";
 
 
 import { useState, useEffect } from "react";
@@ -387,21 +390,90 @@ export default function HeroAlienta() {
           <div className="w-full flex h-auto gap-4 p-10">
             <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
                <div className="flex h-auto w-full justify-center flex-col items-center">
-                  <img src={img1Section6} alt="" className="h-70"/>
-                  <div className="w-2/3 h-10 bg-blue-950 text-white">
-                    <h1 className="text-2xl">Primario</h1>
+                  <img src={img1Section6} alt="" className="h-70 w-2/3"/>
+                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
+                    <h1 className="text-2xl text-center">Primario</h1>
                   </div>
-                  <p className="text-[#231f20]">Niños de entre 8 y 17 años con talento futbolístico, contextos de vulnerabilidad</p>
+                  <p className="text-[#231f20] text-xl">Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad</p>
                </div>
             </div>
-            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
-               
+            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
+               <div className="flex h-auto w-full justify-center flex-col items-center">
+                  <img src={img2Section6} alt="" className="h-70 w-2/3"/>
+                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
+                    <h1 className="text-2xl text-center">Secundario</h1>
+                  </div>
+                  <p className="text-[#231f20] text-xl">Padres o tutores de los niños</p>
+               </div>
             </div>
-            <div className="h-70 w-full lg:w-1/3 border-2 border-red-600">
-               
+            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
+               <div className="flex h-auto w-full justify-center flex-col items-center">
+                  <img src={img3Section6} alt="" className="h-70 w-2/3"/>
+                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
+                    <h1 className="text-2xl text-center">Terciario (aliados)</h1>
+                  </div>
+                  <p className="text-[#231f20] text-xl">
+                      Empresas privadas, instituciones educativas, medios de comunicación,
+                      entrenadores profesionales, figuras publicas del futbol.
+                  </p>
+               </div>
             </div>
           </div>
-        {/* right content */}
+
+
+      </div>
+      <div id="Section-7 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+
+          <div className="w-full h-auto">
+            <h1 className="text-5xl">Análisis de competencia</h1>
+          </div> 
+            
+          <div
+          id="Justificacion-sec-4"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+        >
+          {/* right contenedor */}
+          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white p-10">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n01White} alt="" className="w-13 h-13 " />
+              <div className="flex flex-col gap-y-4">
+                <h1 className="text-left w-full">
+                Escuelas de fútbol tradicionales:
+                </h1>
+                <p className="text-left montserrat font-light">Se enfocan solo en la técnica. No abordan nutrición, psicología ni educación formal</p>
+              </div>
+              
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n02White} alt="" className="w-13 h-13" />
+              <h1 className="text-left">
+                Academias profesionales privadas:
+              </h1>
+              <p>Costosas, inaccesibles para niños de bajos recursos</p>
+            </div>
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+              <img src={n03} alt="" className="w-13 h-13" />
+              <h1 className="text-left">
+                ONGs deportivas:
+              </h1>
+              <p>Existen, pero pocas con enfoque profesionalizante</p>
+            </div>
+            
+          </div>
+
+          {/* img */}
+          <div
+            className="w-full lg:w-1/2 h-110"
+            style={{
+              backgroundImage: `url(${imgSection7})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+
+          </div>
+        </div>
 
 
       </div>
