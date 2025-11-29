@@ -56,14 +56,14 @@ export default function HeroAlienta() {
       >
         <div className="w-full flex flex-wrap h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
           {/* first half */}
-          <div className="flex-1 flex justify-start items-center gap-3 py-2 pl-3 min-w-[150px]">
+          <div className="flex-1 flex justify-start items-center gap-3 py-2 pl-3 min-w-[150px] border-2 border-white">
             <img src={facebookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
             <img src={instagramLogo} alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
             <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
           </div>
 
           {/* second half */}
-          <div className="flex-1 flex justify-end items-center gap-3 py-2 pr-3 min-w-[150px]">
+          <div className="flex-1 flex justify-end items-center gap-3 py-2 pr-3 min-w-[150px] border-2 border-white">
             <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
             <a href="#" className="text-white">Español</a>
             <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
@@ -73,10 +73,10 @@ export default function HeroAlienta() {
 
         <div className="w-full flex justify-around items-center h-40 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4">
           {/* Logo a la izquierda */}
-          <img src={AlientaPeruLogo} alt="alientaPeruLogo" className="w-80 h-60 ml-3 transition mt-2" />
+          <img src={AlientaPeruLogo} alt="alientaPeruLogo" className="w-60 h-40 sm:w-80 sm:h-60  transition " />
 
           {/* Links en desktop */}
-          <div className="hidden [@media(min-width:1090px)]:flex items-center gap-6">
+          <div className="hidden [@media(min-width:1090px)]:flex items-center gap-6 ">
             <a href="#quienes" className="text-white cursor-pointer hover:scale-110 transition">Quienes Somos</a>
             <a href="#contenido" className="text-white cursor-pointer hover:scale-110 transition">Contenido</a>
             <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
@@ -89,7 +89,7 @@ export default function HeroAlienta() {
           </div>
 
           {/* Botón hamburguesa en móvil */}
-          <div className="flex items-center [@media(min-width:1090px)]:hidden">
+          <div className="flex items-center [@media(min-width:1090px)]:hidden ">
             <button onClick={() => setOpen(!open)} className="text-white focus:outline-none">
               {open ? <XMarkIcon className="w-8 h-8" /> : <Bars3Icon className="w-8 h-8" />}
             </button>
@@ -139,51 +139,45 @@ export default function HeroAlienta() {
       {/* Section-1 corregido */}
       <div id="Section-1"
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
-        <h1 className="text-5xl">¿Por qué ALIENTA PERUANO?</h1>
+        <h1 className="text-5xl p-5">¿Por qué ALIENTA PERUANO?</h1>
         
-        <ul className="text-left lg:mr-20 list-disc list-inside text-2xl text-[#231f20]">
-          <li>Porque el fútbol puede salvar una vida.</li>
-          <li>Muchos niños llegan sin dinero, sin comida y sin nadie que los apoye.</li>
-          <li>Los recibimos con lo poco que tenemos, porque creemos en ellos más que nadie.</li>
+        <ul className="text-left lg:mr-20 list-disc list-inside text-2xl text-[#231f20] p-5">
+          <li className="mb-3">Porque el fútbol puede salvar una vida.</li>
+          <li className="mb-3">Muchos niños llegan sin dinero, sin comida y sin nadie que los apoye.</li>
+          <li >Los recibimos con lo poco que tenemos, porque creemos en ellos más que nadie.</li>
         </ul>
 
         <div id="Justificacion-sec-1"
         className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 ">
             {/* contendio sec 1 */}
             <div className="w-full lg:w-[65%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag ">
-              <h1 className="text-white text-center lg:text-left text-2xl mt-3 ">Les brindamos:</h1>
-              <div className="flex flex-col w-full h-full items-center justify-center gap-4 p-10 ">
+              <h1 className="text-white text-center lg:text-left text-2xl mt-3 pl-10">Les brindamos:</h1>
+              <div className="flex flex-col w-full h-full items-center justify-center gap-4 p-10  ">
                 {/* Fila superior */}
-                <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4  ">
+                <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4 md:gap-0 ">
                   <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left gap-4 md-gap-0">
-                    <img src={icono1} alt="" className="w-20 h-auto" />
-                    <p className="text-white ml-4 text-left text-xl">
+                    <img src={icono1} alt="" className="w-20 h-auto " />
+                    <p className="text-white text-left text-xl ">
                       Entrenamiento de futbol personalizado
                     </p>
                   </div>
 
                   <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left gap-4 md-gap-0">
                     <img src={icono3} alt="" className="w-30 h-auto" />
-                    <div className="flex flex-col 2xl:flex-row">
-                       <p className="text-white text-left text-xl">
-                        Suplementacion   
+                       <p className="text-white text-left text-xl md:mr-12">
+                        Suplementacion  Alimenticia
                       </p>
-                      <p className="text-white text-left text-xl">
-                        alimenticia
-                      </p>
-                    </div>
-                   
                   </div>
                 </div>
                 {/* Fila inferior */}
-                <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4 ">
-                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 gap-4 md-gap-0">
+                <div className="flex flex-col sm:flex-row w-full md:w-full h-auto gap-4 md:gap-0">
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left  gap-4 md-gap-0 ">
                     <img src={icono2} alt="" className="w-30 h-auto"/>
-                    <p className="text-white ml-4 text-left text-xl">Asitencia medica y psicológica</p>
+                    <p className="text-white text-left text-xl ">Asitencia medica y psicológica</p>
                   </div>
-                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left p-4 gap-4 md-gap-0">
+                  <div className="flex flex-col sm:flex-row w-full lg:w-1/2 items-center justify-left gap-4 md-gap-0">
                     <img src={icono4} alt="" className="w-30 h-auto"/>
-                    <p className="text-white ml-4 text-left text-xl">Apoyo educativo y emocional</p>
+                    <p className="text-white text-left text-xl md:mr-12">Apoyo educativo y emocional</p>
                   </div>
                 </div>
                 
@@ -251,7 +245,7 @@ export default function HeroAlienta() {
         
         <div
           id="Justificacion-sec-3"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 "
         >
           {/* img */}
           <div
@@ -264,22 +258,22 @@ export default function HeroAlienta() {
           ></div>
 
           {/* right contenedor */}
-          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 gap-y-4 text-3xl order-1 lg:order-2 text-[#231f20]">
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 ">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-3xl order-1 lg:order-2 text-[#231f20] p-10">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 ">
               <img src={n01} alt="" className="w-15 h-15" />
-              <h1 className="text-left">No contamos con financiamiento constante.</h1>
+              <h1 className="text-left mb-4">No contamos con financiamiento constante.</h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
               <img src={n02} alt="" className="w-15 h-15" />
-              <h1 className="text-left">Muchos niños no pueden pagar ni el transporte.</h1>
+              <h1 className="text-left mb-4">Muchos niños no pueden pagar ni el transporte.</h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
               <img src={n03} alt="" className="w-15 h-15" />
-              <h1 className="text-left">
+              <h1 className="text-left mb-4">
                 No tenemos infraestructura adecuada (canchas, gimnasio, nutrición estable).
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto gap-4">
               <img src={n04} alt="" className="w-15 h-15" />
               <h1 className="text-left">
                 Necesitamos recursos para ofrecer una formación de calidad
@@ -292,36 +286,38 @@ export default function HeroAlienta() {
       </div>
       <div id="Section-4 "
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
-        <div className="w-2/4 flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4">
           <h1 className="text-5xl">Lo que necesitamos</h1>
           <p className="text-[#231f20] text-2xl">Aliados con corazón y visión</p>
         </div>
         
         <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 "
         >
           {/* right contenedor */}
-          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 gap-y-4 text-3xl text-[#231f20]">
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+          
+          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-3xl text-[#231f20] p-10">
+            <h1 className=" text-left text-4xl text-blue-950 mb-4">Buscamos:</h1>
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
               <img src={n01} alt="" className="w-15 h-15" />
-              <h1 className="text-left">
+              <h1 className="text-left mb-4">
                 Empresas y personas que apoyen con financiamiento o productos.
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
               <img src={n02} alt="" className="w-15 h-15" />
-              <h1 className="text-left">
+              <h1 className="text-left mb-4">
                 Voluntarios, entrenadores, médicos, psicólogos, docentes.
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
               <img src={n03} alt="" className="w-15 h-15" />
-              <h1 className="text-left">
+              <h1 className="text-left mb-4">
                 Apadrinamiento de niños o donaciones mensuales
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto  gap-4">
               <img src={n04} alt="" className="w-15 h-15" />
               <h1 className="text-left">Difusión de nuestra causa</h1>
             </div>
@@ -341,7 +337,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-5 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
         
         {/* img */}
         <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center">
@@ -349,30 +345,30 @@ export default function HeroAlienta() {
         </div>
 
         {/* right content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row ">
-          <div className="flex h-50 w-full lg:w-1/2 border-2 border-red-600 items-center justify-center">
+        <div className="w-full h-auto flex flex-col lg:flex-row mt-10">
+          <div className="flex h-50 w-full lg:w-1/2  items-center justify-center">
             <h1 className="text-7xl">Impacto real</h1>
           </div>
-          <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-lg text-[#231f20] bg-blue-950 text-white ">
-            <div className="flex w-full h-auto gap-4 border-2 border-green-500">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-lg text-[#231f20] bg-blue-950 text-white p-5">
+            <div className="flex w-full h-auto gap-4 ">
               <img src={checkSection5} alt="" className="w-10 h-10" />
-              <h1 className="text-left border-2 border-green-500">
+              <h1 className="text-left ">
                 Empresas y personas que apoyen con financiamiento o productos.
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto gap-4">
               <img src={checkSection5} alt="" className="w-10 h-10" />
               <h1 className="text-left">
                 Voluntarios, entrenadores, médicos, psicólogos, docentes.
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto gap-4">
               <img src={checkSection5} alt="" className="w-10 h-10" />
               <h1 className="text-left">
                 Apadrinamiento de niños o donaciones mensuales
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto gap-4">
               <img src={checkSection5} alt="" className="w-10 h-10" />
               <h1 className="text-left">Difusión de nuestra causa</h1>
             </div>
@@ -381,43 +377,69 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-6 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
 
           <div className="w-full h-auto">
             <h1 className="text-5xl">Público objetivo</h1>
           </div> 
             
-          <div className="w-full flex h-auto gap-4 p-10">
-            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
-               <div className="flex h-auto w-full justify-center flex-col items-center">
-                  <img src={img1Section6} alt="" className="h-70 w-2/3"/>
-                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
-                    <h1 className="text-2xl text-center">Primario</h1>
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 h-auto gap-4 p-10  ">
+
+            <div className="flex h-auto w-full ">
+              
+               <div className="relative flex h-auto w-full flex-col items-center">
+                  <div className="relative w-auto">
+                    <img src={img1Section6} alt="" className="w-full h-auto max-h-96" />
+
+                    {/* Badge en el borde inferior del wrapper */}
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
+                      <h1 className="text-2xl text-center">Primario</h1>
+                    </div>
                   </div>
-                  <p className="text-[#231f20] text-xl">Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad</p>
+                  <p className="text-[#231f20] text-xl mt-10">Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad</p>
                </div>
+
             </div>
-            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
-               <div className="flex h-auto w-full justify-center flex-col items-center">
-                  <img src={img2Section6} alt="" className="h-70 w-2/3"/>
-                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
+            
+            <div className="flex h-auto w-full">
+              <div className="relative flex h-auto w-full flex-col items-center ">
+                {/* Wrapper de imagen + badge */}
+                <div className="relative w-auto">
+                  <img src={img2Section6} alt="" className="w-full h-auto max-h-96" />
+
+                  {/* Badge en el borde inferior del wrapper */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
                     <h1 className="text-2xl text-center">Secundario</h1>
                   </div>
-                  <p className="text-[#231f20] text-xl">Padres o tutores de los niños</p>
-               </div>
+                </div>
+
+                {/* Texto debajo */}
+                <p className="mt-10 text-xl text-[#231f20]">
+                  Padres o tutores de los niños
+                </p>
+              </div>
             </div>
-            <div className="h-auto w-full lg:w-1/3 border-2 border-red-600">
-               <div className="flex h-auto w-full justify-center flex-col items-center">
-                  <img src={img3Section6} alt="" className="h-70 w-2/3"/>
-                  <div className="flex w-2/4 h-10 bg-blue-950 text-white items-center justify-center ">
+
+            <div className="flex h-auto w-full">
+              <div className="relative flex h-auto w-full justify-center flex-col items-center ">
+                {/* Wrapper de imagen + badge */}
+                <div className="relative w-auto">
+                  <img src={img3Section6} alt="" className="w-full h-auto max-h-96" />
+
+                  {/* Badge en el borde inferior del wrapper */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-3/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
                     <h1 className="text-2xl text-center">Terciario (aliados)</h1>
                   </div>
-                  <p className="text-[#231f20] text-xl">
-                      Empresas privadas, instituciones educativas, medios de comunicación,
-                      entrenadores profesionales, figuras publicas del futbol.
-                  </p>
-               </div>
+                </div>
+
+                {/* Texto debajo */}
+                <p className="mt-10 text-xl text-[#231f20]">
+                  Empresas privadas, instituciones educativas, medios de comunicación,
+                  entrenadores profesionales, figuras públicas del fútbol.
+                </p>
+              </div>
             </div>
+
           </div>
 
 
@@ -469,14 +491,14 @@ export default function HeroAlienta() {
 
           {/* img */}
           <div
-            className="flex w-full lg:w-1/2 h-110 border-2 border-red-500 justify-center items-center"
+            className="flex w-full lg:w-1/2 h-110  justify-center items-center"
             style={{
               backgroundImage: `url(${imgSection7})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
           > 
-            <div className="flex flex-col w-[70%] sm:w-[60%] border-2 border-red-500 text-white">
+            <div className="flex flex-col w-[70%] sm:w-[60%] text-white">
               <h1 className="text-center text-3xl mb-3">Diferenciador clave</h1>
               <p className="text-left text-2xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
             </div>
