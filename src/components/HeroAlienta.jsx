@@ -51,7 +51,7 @@ export default function HeroAlienta() {
       <h1 className="bg-red-500 text-white text-4xl text-center p-4">Pagina en desarrollo</h1>
       <div
         id="alienta-banner"
-        className="w-full h-screen bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply"
+        className="w-full h-screen bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply flex flex-col"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
         <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
@@ -116,9 +116,11 @@ export default function HeroAlienta() {
           )}
         </div>
 
-        <h1 className="absolute bottom-8 right-8 text-white text-3xl text-right">
-          "Transformando vidas con talento <br /> a través del fútbol"
-        </h1>
+        <div className="flex justify-end items-end flex-grow">
+          <h1 className="text-white text-3xl text-right p-8">
+            "Transformando vidas con talento <br /> a través del fútbol"
+          </h1>
+        </div>
 
         <div
           className={`w-auto h-auto absolute bottom-10 left-10 rounded-3xl bg-blue-950/80 backdrop-blur-sm p-10 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
