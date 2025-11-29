@@ -4,7 +4,9 @@ import instagramLogo from "../assets/instagram_logo_button.png";
 import youtubeLogo from "../assets/youtube_logo_button.png";
 import usaLogo from "../assets/usa_logo.png";
 import peruLogo from "../assets/peru_logo.png";
-import mainPresentation from "../assets/main_presentacion.jpg";
+// import mainPresentation from "../assets/main_presentacion.jpg";
+import mainPresentation from "../assets/imgMainBanner.png";
+
 import AlientaPeruLogo from "../assets/alientaPeruanoLogo.png";
 import hideButton from "../assets/hideButton.png";
 import section1Img from "../assets/img_2.png";
@@ -51,7 +53,7 @@ export default function HeroAlienta() {
       <h1 className="bg-red-500 text-white text-4xl text-center p-4">Pagina en desarrollo</h1>
       <div
         id="alienta-banner"
-        className="w-full h-screen bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply flex flex-col"
+        className="w-full h-screen bg-cover bg-center bg-no-repeat  bg-blend-multiply flex flex-col"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
         <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
