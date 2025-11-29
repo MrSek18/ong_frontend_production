@@ -434,7 +434,7 @@ export default function HeroAlienta() {
           className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500 items-stretch"
         >
           {/* right contenedor */}
-          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white pr-20 pl-20 justify-center items-center">
+          <div className="flex flex-col w-full h-1/2 lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white pr-20 pl-20 justify-center items-center">
             <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 mb-4 pb-3">
               <img src={n01White} alt="" className="w-13 h-13 " />
               <div className="flex flex-col gap-y-4">
@@ -476,7 +476,7 @@ export default function HeroAlienta() {
               backgroundPosition: "center",
             }}
           > 
-            <div className="flex flex-col w-[60%] border-2 border-red-500 text-white">
+            <div className="flex flex-col w-[80%] lg:w-[60%] border-2 border-red-500 text-white">
               <h1 className="text-center text-4xl mb-3">Diferenciador clave</h1>
               <p className="text-left text-3xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
             </div>
