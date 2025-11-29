@@ -116,28 +116,50 @@ export default function HeroAlienta() {
           )}
         </div>
 
-        <div className="flex justify-end items-end flex-grow">
-          <h1 className="text-white text-3xl text-right p-8">
-            "Transformando vidas con talento <br /> a través del fútbol"
-          </h1>
-        </div>
+        <div className="flex flex-col md:flex-row flex-grow ">
 
-        <div
-          className={`w-auto h-auto absolute bottom-10 left-10 rounded-3xl bg-blue-950/80 backdrop-blur-sm p-10 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
-            hiding ? "opacity-0 scale-95" : "opacity-100 scale-100"
-          }`}
-        >
-          <h1 className="ml-12 text-3xl mb-2 leading-tight">ALIENTA PERUANO</h1>
-          <p className="ml-12 text-2xl leading-relaxed mb-4">
-            no solo entrena,<br />
-            forma integralmente para el alto rendimiento<br />
-            y la vida.
-          </p>
-          <button className="absolute bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition cursor-pointer mb-4">
-            Dona ahora
-          </button>
-          <img src={hideButton} alt="hideButton" onClick={handleHide} className="absolute top-20 left-6 w-10 h-10 cursor-pointer hover:scale-110 transition" />
+          <div className="flex justify-start items-end flex-grow md:ml-5 md:mb-10">
+            <div
+              id="tarjetaDonacionDinamica"
+              className={`relative w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
+                hiding ? "opacity-0 scale-95" : "opacity-100 scale-100"
+              }`}
+            >
+              <h1 className="ml-10  text-2xl sm:text-3xl mb-2 leading-tight">ALIENTA PERUANO</h1>
+              <p className="ml-10  text-xl sm:text-2xl leading-relaxed mb-4">
+                no solo entrena,<br />
+                forma integralmente para el alto rendimiento<br />
+                y la vida.
+              </p>
+              {/* Ícono absoluto */}
+              <img
+                src={hideButton}
+                alt="hideButton"
+                onClick={handleHide}
+                className="absolute top-20 left-4 w-10 h-10 cursor-pointer hover:scale-110 transition"
+              />
+              {/* Footer de la tarjeta */}
+                {/* Botón absoluto */}
+              <button className="absolute bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition cursor-pointer">
+                Dona ahora
+              </button>
+
+              
+            </div>
+          </div>
+
+          <div className="flex justify-end items-end flex-grow">
+            <h1 className="text-white text-3xl text-right ">
+              "Transformando vidas con talento <br /> a través del fútbol"
+            </h1>
+          </div>
+          
         </div>
+        
+        
+
+        
+        
       </div>
 
       {/* Section-1 corregido */}
