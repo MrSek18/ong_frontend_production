@@ -423,7 +423,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-7 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 border-2 border-green-500">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
 
           <div className="w-full h-auto">
             <h1 className="text-5xl">Análisis de competencia</h1>
@@ -431,11 +431,11 @@ export default function HeroAlienta() {
             
         <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500 items-stretch"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 items-stretch"
         >
           {/* right contenedor */}
-          <div className="flex flex-col w-full h-1/2 lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white pr-20 pl-20 justify-center items-center">
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 mb-4 pb-3">
+          <div className="flex flex-col w-full h-1/2 lg:w-1/2 h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center">
+            <div className="flex w-[60%] md:w-[60%] h-auto border-b-2 border-white gap-4 mb-4 pb-3 mt-10">
               <img src={n01White} alt="" className="w-13 h-13 " />
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-left w-full">
@@ -445,7 +445,7 @@ export default function HeroAlienta() {
               </div>
               
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 mb-4 pb-3">
+            <div className="flex w-[60%] md:w-[60%] h-auto border-b-2 border-white gap-4 mb-4 pb-3">
               <img src={n02White} alt="" className="w-13 h-13" />
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-left w-full">
@@ -455,7 +455,7 @@ export default function HeroAlienta() {
               </div>
              
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 pb-3">
+            <div className="flex w-[60%] md:w-[60%] h-auto gap-4 pb-3  mb-10">
               <img src={n03} alt="" className="w-13 h-13" />
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-left w-full">
@@ -476,9 +476,9 @@ export default function HeroAlienta() {
               backgroundPosition: "center",
             }}
           > 
-            <div className="flex flex-col w-[80%] lg:w-[60%] border-2 border-red-500 text-white">
-              <h1 className="text-center text-4xl mb-3">Diferenciador clave</h1>
-              <p className="text-left text-3xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
+            <div className="flex flex-col w-[70%] sm:w-[60%] border-2 border-red-500 text-white">
+              <h1 className="text-center text-3xl mb-3">Diferenciador clave</h1>
+              <p className="text-left text-2xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
             </div>
           </div>
         </div>
