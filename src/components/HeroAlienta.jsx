@@ -54,22 +54,24 @@ export default function HeroAlienta() {
         className="w-full h-screen bg-cover bg-center bg-no-repeat bg-black/70 bg-blend-multiply"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
-        <div className="w-full flex flex-wrap h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
+        <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
           {/* first half */}
-          <div className="flex-1 flex justify-start items-center gap-3 py-2 pl-3 min-w-[150px] border-2 border-white">
+          <div className="flex flex-shrink-0 basis-1/3 justify-start items-center gap-2 py-2 pl-2">
             <img src={facebookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
             <img src={instagramLogo} alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
             <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
           </div>
 
           {/* second half */}
-          <div className="flex-1 flex justify-end items-center gap-3 py-2 pr-3 min-w-[150px] border-2 border-white">
+          <div className="flex flex-grow basis-2/3 justify-end items-center gap-2 py-2 pr-2 ">
             <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
-            <a href="#" className="text-white">Español</a>
+            <a href="#" className="text-white text-sm sm:text-base">Español</a>
             <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
-            <a href="#" className="text-white">English</a>
+            <a href="#" className="text-white text-sm sm:text-base">English</a>
           </div>
         </div>
+
+
 
         <div className="w-full flex justify-around items-center h-40 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4">
           {/* Logo a la izquierda */}
