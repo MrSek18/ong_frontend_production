@@ -429,49 +429,57 @@ export default function HeroAlienta() {
             <h1 className="text-5xl">Análisis de competencia</h1>
           </div> 
             
-          <div
+        <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 border-2 border-red-500 items-stretch"
         >
           {/* right contenedor */}
-          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white p-10">
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto border-2 border-green-500 bg-blue-950 gap-y-4 text-xl text-white pr-20 pl-20 justify-center items-center">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 mb-4 pb-3">
               <img src={n01White} alt="" className="w-13 h-13 " />
               <div className="flex flex-col gap-y-4">
                 <h1 className="text-left w-full">
                 Escuelas de fútbol tradicionales:
                 </h1>
-                <p className="text-left montserrat font-light">Se enfocan solo en la técnica. No abordan nutrición, psicología ni educación formal</p>
+                <p className="text-left">Se enfocan solo en la técnica. No abordan nutrición, psicología ni educación formal</p>
               </div>
               
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 mb-4 pb-3">
               <img src={n02White} alt="" className="w-13 h-13" />
-              <h1 className="text-left">
+              <div className="flex flex-col gap-y-4">
+                <h1 className="text-left w-full">
                 Academias profesionales privadas:
-              </h1>
-              <p>Costosas, inaccesibles para niños de bajos recursos</p>
+                </h1>
+                <p className="text-left">Costosas, inaccesibles para niños de bajos recursos</p>
+              </div>
+             
             </div>
-            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-red-500 gap-4 pb-3">
               <img src={n03} alt="" className="w-13 h-13" />
-              <h1 className="text-left">
-                ONGs deportivas:
-              </h1>
-              <p>Existen, pero pocas con enfoque profesionalizante</p>
+              <div className="flex flex-col gap-y-4">
+                <h1 className="text-left w-full">
+                  ONGs deportivas:
+                </h1>
+                <p className="text-left">Existen, pero pocas con enfoque profesionalizante</p>
+              </div>
             </div>
             
           </div>
 
           {/* img */}
           <div
-            className="w-full lg:w-1/2 h-110"
+            className="flex w-full lg:w-1/2 h-110 border-2 border-red-500 justify-center items-center"
             style={{
               backgroundImage: `url(${imgSection7})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          >
-
+          > 
+            <div className="flex flex-col w-[60%] border-2 border-red-500 text-white">
+              <h1 className="text-center text-4xl mb-3">Diferenciador clave</h1>
+              <p className="text-left text-3xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
+            </div>
           </div>
         </div>
 
