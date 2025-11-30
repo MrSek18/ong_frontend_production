@@ -1,13 +1,7 @@
 
-import facebookLogo from "../assets/facebook_logo_button.png";
-import instagramLogo from "../assets/instagram_logo_button.png";
-import youtubeLogo from "../assets/youtube_logo_button.png";
-import usaLogo from "../assets/usa_logo.png";
-import peruLogo from "../assets/peru_logo.png";
 // import mainPresentation from "../assets/main_presentacion.jpg";
 import mainPresentation from "../assets/imgMainBanner.png";
 
-import AlientaPeruLogo from "../assets/alientaPeruanoLogo.png";
 import hideButton from "../assets/hideButton.png";
 import section1Img from "../assets/img_2.png";
 import icono1 from "../assets/ic1.png";
@@ -24,6 +18,7 @@ import n03 from "../assets/azul03.png";
 import n04 from "../assets/azul04.png";
 import imgSection3 from "../assets/img_3.png";
 import imgSection4 from "../assets/img_4.png";
+import imgSection5 from "../assets/img_5.png";
 import checkSection5 from "../assets/check.png"
 import img1Section6 from "../assets/img_6.png";
 import img2Section6 from "../assets/img_7.png";
@@ -31,13 +26,11 @@ import img3Section6 from "../assets/img_8.png";
 import imgSection7 from "../assets/ic11.png";
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
-
+import Header from "../components/Header.jsx";
 
 import { useState, useEffect } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function HeroAlienta() {
-  const [open, setOpen] = useState(false);
   const [hiding, setHiding] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => setHiding(false), 100); // delay para activar animación
@@ -50,73 +43,12 @@ export default function HeroAlienta() {
   };
   return (
     <div className="w-full h-auto overflow-x-hidden">
-      <h1 className="bg-red-500 text-white text-4xl text-center p-4">Pagina en desarrollo</h1>
       <div
         id="alienta-banner"
         className="w-full h-screen bg-cover bg-center bg-no-repeat  bg-blend-multiply flex flex-col"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
-        <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
-          {/* first half */}
-          <div className="flex flex-shrink-0 basis-1/3 justify-start items-center gap-2 py-2 pl-2">
-            <img src={facebookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
-            <img src={instagramLogo} alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
-            <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
-          </div>
-
-          {/* second half */}
-          <div className="flex flex-grow basis-2/3 justify-end items-center gap-2 py-2 pr-2 ">
-            <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
-            <a href="#" className="text-white text-sm sm:text-base">Español</a>
-            <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
-            <a href="#" className="text-white text-sm sm:text-base">English</a>
-          </div>
-        </div>
-
-
-
-        <div className="w-full flex justify-around items-center h-40 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4">
-          {/* Logo a la izquierda */}
-          <img src={AlientaPeruLogo} alt="alientaPeruLogo" className="w-60 h-40 sm:w-80 sm:h-60  transition " />
-
-          {/* Links en desktop */}
-          <div className="hidden [@media(min-width:1090px)]:flex items-center gap-6 ">
-            <a href="#quienes" className="text-white cursor-pointer hover:scale-110 transition">Quienes Somos</a>
-            <a href="#contenido" className="text-white cursor-pointer hover:scale-110 transition">Contenido</a>
-            <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
-            <a href="#noticias" className="text-white cursor-pointer hover:scale-110 transition">Noticias</a>
-            <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">Contáctanos</a>
-            <a href="#tienda" className="text-white cursor-pointer hover:scale-110 transition">Tienda</a>
-            <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition">
-              Dona ahora
-            </button>
-          </div>
-
-          {/* Botón hamburguesa en móvil */}
-          <div className="flex items-center [@media(min-width:1090px)]:hidden ">
-            <button onClick={() => setOpen(!open)} className="text-white focus:outline-none">
-              {open ? <XMarkIcon className="w-8 h-8" /> : <Bars3Icon className="w-8 h-8" />}
-            </button>
-          </div>
-
-          {/* Menú desplegable en móvil */}
-          {open && (
-            <div className="absolute top-20 right-0 w-2/3 bg-blue-950 text-white flex flex-col items-start gap-4 p-6 md:hidden shadow-lg">
-              <button onClick={() => setOpen(false)} className="self-end text-white mb-4 focus:outline-none">
-                <XMarkIcon className="w-8 h-8" />
-              </button>
-              <a href="#quienes" className="cursor-pointer hover:scale-105 transition">Quienes Somos</a>
-              <a href="#contenido" className="cursor-pointer hover:scale-105 transition">Contenido</a>
-              <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
-              <a href="#noticias" className="cursor-pointer hover:scale-105 transition">Noticias</a>
-              <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
-              <a href="#tienda" className="cursor-pointer hover:scale-105 transition">Tienda</a>
-              <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-105 transform-gpu transition">
-                Dona ahora
-              </button>
-            </div>
-          )}
-        </div>
+        <Header />
 
         <div className="flex flex-col md:flex-row flex-grow ">
 
@@ -368,8 +300,12 @@ export default function HeroAlienta() {
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
         
         {/* img */}
-        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center">
-          <h1 className="text-7xl text-white">Imagen faltante</h1>
+        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center" 
+        style={{
+              backgroundImage: `url(${imgSection5})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}>
         </div>
 
         {/* right content */}
