@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import facebookLogo from "../assets/facebook_logo_button.png";
 import instagramLogo from "../assets/instagram_logo_button.png";
@@ -13,6 +13,7 @@ import AlientaPeruano from "../assets/alientaPeruanoLogo.png";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <header className="w-full flex flex-col">
@@ -37,7 +38,11 @@ export default function Header() {
       {/* Navbar principal */}
       <div className="w-full flex justify-around items-center h-25 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4 relative">
         {/* Logo a la izquierda */}
-        <img src={AlientaPeruano} alt="alientaPeruLogo" className="w-40 h-20 sm:w-40 sm:h-20 transition " />
+        <img
+          src={AlientaPeruano}
+          alt="alientaPeruLogo"
+          className="w-40 h-20 sm:w-40 sm:h-20 transition"
+        />
 
         {/* Links en desktop */}
         <nav className="hidden [@media(min-width:950px)]:flex items-center gap-6">
@@ -47,11 +52,21 @@ export default function Header() {
           <Link to="/quienesSomos" className="text-white cursor-pointer hover:scale-110 transition">
             Quienes Somos
           </Link>
-          
-          <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
-          <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">Contáctanos</a>
-          <Link 
-            to="/donaciones" 
+
+          {/* Mostrar solo en "/" */}
+          {location.pathname === "/" && (
+            <>
+              <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">
+                Nuestra Historia
+              </a>
+              <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">
+                Contáctanos
+              </a>
+            </>
+          )}
+
+          <Link
+            to="/donaciones"
             className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition"
           >
             Dona ahora
@@ -67,39 +82,49 @@ export default function Header() {
 
         {/* Menú desplegable en móvil */}
         {open && (
-        <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:950px)]:hidden shadow-lg z-50">
+          <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:950px)]:hidden shadow-lg z-50">
             <button onClick={() => setOpen(false)} className="self-end text-white mb-2 focus:outline-none">
-            <XMarkIcon className="w-8 h-8" />
+              <XMarkIcon className="w-8 h-8" />
             </button>
 
-            <Link 
-              to="/" 
-              onClick={() => setOpen(false)} 
+            <Link
+              to="/"
+              onClick={() => setOpen(false)}
               className="text-white cursor-pointer hover:scale-110 transition"
-              >
+            >
               Contenido
             </Link>
 
-            <Link 
-              to="/quienesSomos" 
-              onClick={() => setOpen(false)} 
+            <Link
+              to="/quienesSomos"
+              onClick={() => setOpen(false)}
               className="text-white cursor-pointer hover:scale-110 transition"
-              >
+            >
               Quienes Somos
             </Link>
 
-            <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
-            <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
+            {/* Mostrar solo en "/" */}
+            {location.pathname === "/" && (
+              <>
+                <a href="#historia" className="cursor-pointer hover:scale-105 transition">
+                  Nuestra Historia
+                </a>
+                <a href="#contacto" className="cursor-pointer hover:scale-105 transition">
+                  Contáctanos
+                </a>
+              </>
+            )}
 
-            <Link 
-              to="/donaciones" 
+            <Link
+              to="/donaciones"
               className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition"
             >
               Dona ahora
             </Link>
-        </div>
+          </div>
         )}
       </div>
+  
     </header>
   );
 }
