@@ -24,9 +24,18 @@ import img1Section6 from "../assets/img_6.png";
 import img2Section6 from "../assets/img_7.png";
 import img3Section6 from "../assets/img_8.png";
 import imgSection7 from "../assets/ic11.png";
+import imgSection8 from "../assets/img_historia.png";
+import imgSection9 from "../assets/img_contacto.png";
+import logoAlientaBlanco from "../assets/logoAlientaBlanco.png";
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
 import Header from "../components/Header.jsx";
+
+import fcLogoContacto from "../assets/facebookLogoContacto.png";
+import igLogoContacto from "../assets/instagramLogoContacto.png";
+import ytLogoContacto from "../assets/youtubeLogoContacto.png";
+import ttLogoContacto from "../assets/tiktokLogoContacto.png";
+
 
 import { useState, useEffect } from "react";
 
@@ -56,7 +65,7 @@ export default function HeroAlienta() {
             <div
               id="tarjetaDonacionDinamica"
               className={`relative z-10 w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
-                hiding ? "opacity-0 scale-95" : "opacity-100 scale-100"
+                hiding ? "opacity-0 scale-95 pointer-events-none" : "opacity-100 scale-100"
               }`}
             >
               <h1 className="ml-10  text-2xl sm:text-3xl mb-2 leading-tight">ALIENTA PERUANO</h1>
@@ -467,6 +476,100 @@ export default function HeroAlienta() {
               <p className="text-left text-2xl">ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida</p>
             </div>
           </div>
+        </div>
+
+
+      </div>
+      <div id="Section-8 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
+       
+        
+        <div
+          id="Justificacion-sec-8"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center"
+        >
+          {/* img */}
+          <div
+            className="w-full lg:w-[75%] h-180 bg-blue-950  order-2 lg:order-1"
+            style={{
+              backgroundImage: `url(${imgSection8})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          ></div>
+         <div className="hidden lg:flex lg:w-[25%] h-auto bg-red-500 flex items-center justify-center order-1 lg:order-2">
+
+         </div>
+
+          {/* right contenedor */}
+          <div className="lg:absolute top-0 right-0 w-full lg:w-1/2 h-full bg-white/80 z-50 flex-col text-[#231f20] p-10">
+            <h1 className="text-blue-950 text-5xl">Nuestra Historia</h1>
+            <h2 className="text-blue-950 text-2xl">¿Cómo empezó todo?</h2>
+            <p className="text-left mt-5 text-lg">ALIENTA PERUANO nació en diciembre de 2015, en San Juan de 
+            Lurigancho, gracias al esfuerzo de un grupo de amigos unidos por 
+            el amor al fútbol y el deseo de ayudar.
+            </p>
+            <p className="text-left mt-5 text-lg">Comenzamos con pocos niños en una cancha humilde, pero con 
+            un sueño grande: usar el fútbol como herramienta para alejar a 
+            los niños de la delincuencia, las drogas, el abandono y la pobreza.
+            </p>
+            <p className="text-left mt-5 text-lg">Muchos de nuestros niños no cuentan con el apoyo de sus 
+            familias, ni los medios para pagar una formación deportiva. Aun 
+            así, entrenan con pasión, aunque no tengan recursos 
+            económicos, o sin que nadie crea en ellos. Porque para ellos, el 
+            fútbol no es solo un deporte, es una oportunidad de vida.
+            </p>
+            <p className="text-left mt-5 text-lg">Hoy somos una asociación comprometida a transformar futuros, 
+            brindando entrenamiento, salud, nutrición, educación y apoyo 
+            emocional. Sin embargo, nuestros recursos son limitados y la 
+            necesidad es enorme.
+            </p>  
+
+          </div>
+        </div>
+
+
+      </div>
+      <div id="Section-9 "
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+       
+        
+        <div className="flex flex-col w-full h-160 md:flex-row"
+        style={{
+              backgroundImage: `url(${imgSection9})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+          }}>
+            <div className="flex flex-col w-full h-[75%] p-5 gap-y-4 md:gap-y-30 text-center md:text-left justify-end md:w-1/2 md:h-full ">
+              <div className="flex flex-col w-full h-auto  "> 
+                <h1 className="text-white text-5xl  mb-4 " >¡Contactanos!</h1>
+                <p className="text-white text-xl ">Únete a nuestro equipo Alienta un sueño</p>
+              </div>
+              <div className="flex flex-col w-full h-auto gap-y-4 ">
+                <h3 className="text-white text-2xl ">Transforma una vida</h3>
+                <p className="text-white text-xl  ">Contacto: 999 999 999</p>
+                <div className="flex flex-row w-auto gap-4  justify-center md:justify-start">
+                  <img src={fcLogoContacto} className="w-7.5 h-9 " />
+                  <h1 className="text-xl text-white ">xxxxxxx@alientaperuano</h1>
+                </div>
+                <div className="flex flex-row w-full gap-4 justify-center md:justify-start">
+                  <img src={igLogoContacto} className="w-7.5 h-9 " />
+                  <h1 className="text-xl text-white">xxxxxxx@alientaperuano</h1>
+                </div>
+                <div className="flex flex-row w-full gap-4 justify-center md:justify-start">
+                  <img src={ytLogoContacto} className="w-7.5 h-9 " />
+                  <h1 className="text-xl text-white">xxxxxxx@alientaperuano</h1>
+                </div>
+                <div className="flex flex-row w-full gap-4 justify-center md:justify-start">
+                  <img src={ttLogoContacto} className="w-7.5 h-9 " />
+                  <h1 className="text-xl text-white">xxxxxxx@alientaperuano</h1>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex w-full h-[25%]  justify-center items-end md:w-1/2 md:h-full p-5">
+              <img src={logoAlientaBlanco} className="w-80 h-40 " />
+            </div>
         </div>
 
 

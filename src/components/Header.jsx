@@ -65,8 +65,8 @@ export default function Header() {
 
         {/* Menú desplegable en móvil */}
         {open && (
-        <div className="absolute top-40 right-0 w-2/3 bg-blue-950 text-white flex flex-col items-start gap-4 p-6 md:hidden shadow-lg z-50">
-            <button onClick={() => setOpen(false)} className="self-end text-white mb-4 focus:outline-none">
+        <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:1090px)]:hidden shadow-lg z-50">
+            <button onClick={() => setOpen(false)} className="self-end text-white mb-2 focus:outline-none">
             <XMarkIcon className="w-8 h-8" />
             </button>
 
