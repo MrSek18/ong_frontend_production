@@ -39,7 +39,7 @@ export default function Header() {
         <img src={AlientaPeruLogo} alt="alientaPeruLogo" className="w-60 h-40 sm:w-80 sm:h-60 transition" />
 
         {/* Links en desktop */}
-        <nav className="hidden [@media(min-width:1090px)]:flex items-center gap-6">
+        <nav className="hidden [@media(min-width:950px)]:flex items-center gap-6">
           <Link to="/" className="text-white cursor-pointer hover:scale-110 transition">
             Contenido
           </Link>
@@ -49,14 +49,13 @@ export default function Header() {
           
           <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
           <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">Contáctanos</a>
-          <a href="#tienda" className="text-white cursor-pointer hover:scale-110 transition">Tienda</a>
           <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition">
             Dona ahora
           </button>
         </nav>
 
         {/* Botón hamburguesa en móvil */}
-        <div className="flex items-center [@media(min-width:1090px)]:hidden">
+        <div className="flex items-center [@media(min-width:950px)]:hidden">
           <button onClick={() => setOpen(!open)} className="text-white focus:outline-none">
             {open ? <XMarkIcon className="w-8 h-8" /> : <Bars3Icon className="w-8 h-8" />}
           </button>
@@ -64,7 +63,7 @@ export default function Header() {
 
         {/* Menú desplegable en móvil */}
         {open && (
-        <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:1090px)]:hidden shadow-lg z-50">
+        <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:950px)]:hidden shadow-lg z-50">
             <button onClick={() => setOpen(false)} className="self-end text-white mb-2 focus:outline-none">
             <XMarkIcon className="w-8 h-8" />
             </button>
@@ -86,9 +85,7 @@ export default function Header() {
             </Link>
 
             <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
-            <a href="#noticias" className="cursor-pointer hover:scale-105 transition">Noticias</a>
             <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
-            <a href="#tienda" className="cursor-pointer hover:scale-105 transition">Tienda</a>
 
             <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-105 transform-gpu transition">
             Dona ahora
