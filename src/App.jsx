@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import HeroAlienta from './components/HeroAlienta';
 import QuienesSomos from './components/QuienesSomos.jsx';
+import Donacion from './components/Donacion.jsx';
 function App() {
 
   return (
@@ -14,6 +15,10 @@ function App() {
 
         {/* Ruta para Quienes Somos */}
         <Route path="/quienesSomos" element={<QuienesSomos />} />
+
+        {/* Ruta para Donaciones*/}
+        <Route path="/donaciones" element={<Donacion />} />
+
       </Routes>
     </Router>
   )

@@ -8,7 +8,8 @@ import instagramLogo from "../assets/instagram_logo_button.png";
 import youtubeLogo from "../assets/youtube_logo_button.png";
 import usaLogo from "../assets/usa_logo.png";
 import peruLogo from "../assets/peru_logo.png";
-import AlientaPeruLogo from "../assets/alientaPeruanoLogo.png";
+import AlientaPeruano from "../assets/AlientaPeruanoLogo.png";
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -34,9 +35,9 @@ export default function Header() {
       </div>
 
       {/* Navbar principal */}
-      <div className="w-full flex justify-around items-center h-40 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4 relative">
+      <div className="w-full flex justify-around items-center h-25 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent px-6 py-4 relative">
         {/* Logo a la izquierda */}
-        <img src={AlientaPeruLogo} alt="alientaPeruLogo" className="w-60 h-40 sm:w-80 sm:h-60 transition" />
+        <img src={AlientaPeruano} alt="alientaPeruLogo" className="w-40 h-20 sm:w-40 sm:h-20 transition " />
 
         {/* Links en desktop */}
         <nav className="hidden [@media(min-width:950px)]:flex items-center gap-6">
@@ -49,9 +50,12 @@ export default function Header() {
           
           <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
           <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">Contáctanos</a>
-          <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition">
+          <Link 
+            to="/donaciones" 
+            className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition"
+          >
             Dona ahora
-          </button>
+          </Link>
         </nav>
 
         {/* Botón hamburguesa en móvil */}
@@ -87,9 +91,12 @@ export default function Header() {
             <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
             <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
 
-            <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-105 transform-gpu transition">
-            Dona ahora
-            </button>
+            <Link 
+              to="/donaciones" 
+              className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition"
+            >
+              Dona ahora
+            </Link>
         </div>
         )}
       </div>
