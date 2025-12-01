@@ -69,8 +69,12 @@ export default function Header() {
             <button onClick={() => setOpen(false)} className="self-end text-white mb-4 focus:outline-none">
               <XMarkIcon className="w-8 h-8" />
             </button>
-            <a href="#quienes" className="cursor-pointer hover:scale-105 transition">Quienes Somos</a>
-            <a href="#contenido" className="cursor-pointer hover:scale-105 transition">Contenido</a>
+            <Link to="/" className="text-white cursor-pointer hover:scale-110 transition">
+                Contenido
+            </Link>
+            <Link to="/quienesSomos" className="text-white cursor-pointer hover:scale-110 transition">
+                Quienes Somos
+            </Link>
             <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
             <a href="#noticias" className="cursor-pointer hover:scale-105 transition">Noticias</a>
             <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
