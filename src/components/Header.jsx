@@ -8,7 +8,7 @@ import instagramLogo from "../assets/instagram_logo_button.png";
 import youtubeLogo from "../assets/youtube_logo_button.png";
 import usaLogo from "../assets/usa_logo.png";
 import peruLogo from "../assets/peru_logo.png";
-import AlientaPeruano from "../assets/AlientaPeruanoLogo.png";
+import AlientaPeruano from "../assets/alientaPeruanoLogo.png";
 
 
 export default function Header() {

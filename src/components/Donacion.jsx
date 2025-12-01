@@ -53,7 +53,7 @@ export default function QuienesSomos() {
                 }}
                 ></div>
     
-                <div className="flex flex-col w-full lg:w-[40%] h-auto sm:h-screen text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center  gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 sm:pt-0 sm:pb-0">
+                <div className="flex flex-col w-full lg:w-[40%] h-auto sm:h-screen text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center  gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 sm:pt-30 sm:pb-0">
     
                 {/* first contenedor */}
                 {!showReactive && (
