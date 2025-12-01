@@ -4,12 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css'
 import HeroAlienta from './components/HeroAlienta';
 import QuienesSomos from './components/QuienesSomos.jsx';
-
-
 function App() {
 
   return (
-        <Router>
+    <Router>
       <Routes>
         {/* Ruta principal */}
         <Route path="/" element={<HeroAlienta />} />

@@ -65,24 +65,36 @@ export default function Header() {
 
         {/* Menú desplegable en móvil */}
         {open && (
-          <div className="absolute top-40 right-0 w-2/3 bg-blue-950 text-white flex flex-col items-start gap-4 p-6 md:hidden shadow-lg">
+        <div className="absolute top-40 right-0 w-2/3 bg-blue-950 text-white flex flex-col items-start gap-4 p-6 md:hidden shadow-lg z-50">
             <button onClick={() => setOpen(false)} className="self-end text-white mb-4 focus:outline-none">
-              <XMarkIcon className="w-8 h-8" />
+            <XMarkIcon className="w-8 h-8" />
             </button>
-            <Link to="/" className="text-white cursor-pointer hover:scale-110 transition">
-                Contenido
+
+            <Link 
+              to="/" 
+              onClick={() => setOpen(false)} 
+              className="text-white cursor-pointer hover:scale-110 transition"
+              >
+              Contenido
             </Link>
-            <Link to="/quienesSomos" className="text-white cursor-pointer hover:scale-110 transition">
-                Quienes Somos
+
+            <Link 
+              to="/quienesSomos" 
+              onClick={() => setOpen(false)} 
+              className="text-white cursor-pointer hover:scale-110 transition"
+              >
+              Quienes Somos
             </Link>
+
             <a href="#historia" className="cursor-pointer hover:scale-105 transition">Nuestra Historia</a>
             <a href="#noticias" className="cursor-pointer hover:scale-105 transition">Noticias</a>
             <a href="#contacto" className="cursor-pointer hover:scale-105 transition">Contáctanos</a>
             <a href="#tienda" className="cursor-pointer hover:scale-105 transition">Tienda</a>
+
             <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-105 transform-gpu transition">
-              Dona ahora
+            Dona ahora
             </button>
-          </div>
+        </div>
         )}
       </div>
     </header>

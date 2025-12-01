@@ -55,7 +55,7 @@ export default function HeroAlienta() {
           <div className="flex justify-start items-end flex-grow md:ml-5 md:mb-10">
             <div
               id="tarjetaDonacionDinamica"
-              className={`relative w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
+              className={`relative z-10 w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
                 hiding ? "opacity-0 scale-95" : "opacity-100 scale-100"
               }`}
             >
