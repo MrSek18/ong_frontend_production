@@ -480,7 +480,7 @@ export default function HeroAlienta() {
 
 
       </div>
-      <div id="Section-8 "
+      <div id="historia"
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
        
         
@@ -530,7 +530,7 @@ export default function HeroAlienta() {
 
 
       </div>
-      <div id="Section-9 "
+      <div id="contacto"
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
        
         
@@ -540,7 +540,7 @@ export default function HeroAlienta() {
               backgroundSize: "cover",
               backgroundPosition: "center",
           }}>
-            <div className="flex flex-col w-full h-[75%] p-5 gap-y-4 md:gap-y-30 text-center md:text-left justify-end md:w-1/2 md:h-full ">
+            <div className="flex flex-col w-full h-[75%] p-5 gap-y-4 md:gap-y-30 text-center md:text-left justify-end md:w-1/2 md:h-full md: md:pl-20 lg:pl-30">
               <div className="flex flex-col w-full h-auto  "> 
                 <h1 className="text-white text-5xl  mb-4 " >¡Contactanos!</h1>
                 <p className="text-white text-xl ">Únete a nuestro equipo Alienta un sueño</p>

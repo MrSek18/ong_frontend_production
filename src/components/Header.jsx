@@ -48,7 +48,6 @@ export default function Header() {
           </Link>
           
           <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">Nuestra Historia</a>
-          <a href="#noticias" className="text-white cursor-pointer hover:scale-110 transition">Noticias</a>
           <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">Contáctanos</a>
           <a href="#tienda" className="text-white cursor-pointer hover:scale-110 transition">Tienda</a>
           <button className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition">
