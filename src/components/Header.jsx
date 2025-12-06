@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import facebookLogo from "../assets/facebook_logo_button.png";
 import instagramLogo from "../assets/instagram_logo_button.png";
 import youtubeLogo from "../assets/youtube_logo_button.png";
+import tiktokLogo from "../assets/tiktok_logo_button.png";
 import usaLogo from "../assets/usa_logo.png";
 import peruLogo from "../assets/peru_logo.png";
 import AlientaPeruano from "../assets/alientaPeruanoLogo.png";
@@ -18,12 +19,13 @@ export default function Header() {
   return (
     <header className="w-full flex flex-col">
       {/* Barra superior: redes + idiomas */}
-      <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 via-black/80 to-transparent">
+      <div className="w-full flex flex-row h-auto bg-gradient-to-r  to-transparent">
         {/* first half */}
         <div className="flex flex-shrink-0 basis-1/3 justify-start items-center gap-2 py-2 pl-2">
           <img src={facebookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
           <img src={instagramLogo} alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
           <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
+          <img src={tiktokLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
         </div>
 
         {/* second half */}
