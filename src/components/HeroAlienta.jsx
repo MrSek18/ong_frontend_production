@@ -198,7 +198,7 @@ export default function HeroAlienta() {
                 </div>
                 <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">
                   <img src={icono7} alt="" className="w-30 h-auto h-auto mb-2"/>
-                  <p className="text-white ml-4 text-center text-xl ">Pobreza extremay desnutricion</p>
+                  <p className="text-white ml-4 text-center text-xl ">Pobreza extrema y desnutricion</p>
                 </div>
 
                 <div className="flex flex-col h-full items-center justify-center p-10 bg-blue-950">

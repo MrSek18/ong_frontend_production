@@ -17,47 +17,63 @@ export default function Donacion() {
   const [otroMonto, setOtroMonto] = useState("");
   const [errors, setErrors] = useState({ plan: "", monto: "" });
   const [showForm, setShowForm] = useState(false);
+  const [mensajePago, setMensajePago] = useState(null);
 
-  // Renderizar Brick cuando se abre el formulario
+
+
   useEffect(() => {
-  if (showForm) {
-    const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale: "es-PE" });
-    const bricksBuilder = mp.bricks();
+    if (showForm) {
+      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale: "es-PE" });
+      const bricksBuilder = mp.bricks();
 
-    bricksBuilder.create("cardPayment", "paymentBrick_container", {
-      initialization: {
-        amount: monto === "otro" ? otroMonto : monto,
-      },
-      callbacks: {
-        onReady: () => {
-          console.log("Brick listo ✅");
+      bricksBuilder.create("cardPayment", "paymentBrick_container", {
+        initialization: {
+          amount: monto === "otro" ? otroMonto : monto,
         },
-        onError: (error) => {
-          console.error("Error en Brick ❌:", error);
+        callbacks: {
+          onReady: () => {
+            console.log("Brick ready");
+          },
+          onError: (error) => {
+            console.error("Error en Brick :", error);
+            setMensajePago("Error al inicializar el formulario de pago.");
+          },
+          onSubmit: async (cardData) => {
+            try {
+              console.log("cardData recibido:", JSON.stringify(cardData, null, 2));
+
+              const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/pago`, {
+                token: cardData.token,
+                payment_method_id: cardData.payment_method_id,
+                installments: cardData.installments,
+                email: cardData.payer.email,
+                identification_type: cardData.payer.identification.type,
+                identification_number: cardData.payer.identification.number,
+                monto: monto === "otro" ? otroMonto : monto,
+                plan,
+              });
+
+              console.log("Pago OK:", response.data);
+
+              // 👇 Manejo dinámico de mensajes
+              if (response.data.status === "approved") {
+                setMensajePago("¡Gracias! Tu donación fue procesada con éxito.");
+              } else if (response.data.status === "rejected") {
+                setMensajePago("Lo sentimos, tu pago fue rechazado. Intenta con otra tarjeta o método.");
+              } else if (response.data.status === "pending") {
+                setMensajePago("Tu pago está pendiente de confirmación. Te avisaremos cuando se apruebe.");
+              } else {
+                setMensajePago("Hubo un problema al procesar tu pago. Intenta nuevamente.");
+              }
+            } catch (error) {
+              console.error("Error backend:", error.response?.data || error.message);
+              setMensajePago("Error de conexión con el servidor. Intenta más tarde.");
+            }
+          },
         },
-        onSubmit: async (cardData) => {
-          try {
-            console.log("cardData recibido:", JSON.stringify(cardData, null, 2));
-            const response = await axios.post("https://f1f889e5773f.ngrok-free.app/api/pago", {
-              token: cardData.token,
-              payment_method_id: cardData.payment_method_id,
-              installments: cardData.installments,
-              email: cardData.payer.email,
-              identification_type: cardData.payer.identification.type,
-              identification_number: cardData.payer.identification.number,
-              monto: monto === "otro" ? otroMonto : monto,
-              plan,
-              movil: "991979925",
-            });
-            console.log("Pago OK:", response.data);
-          } catch (error) {
-            console.error("Error backend:", error.response?.data || error.message);
-          }
-        },
-      },
-    });
-  }
-}, [showForm, monto, otroMonto, plan]);
+      });
+    }
+  }, [showForm, monto, otroMonto, plan]);
 
 
 
@@ -223,6 +239,11 @@ export default function Donacion() {
 
                   {/* Aquí se monta el Brick de Mercado Pago */}
                   <div id="paymentBrick_container" className="w-full"></div>
+                  {mensajePago && (
+                    <div className="p-3 rounded text-center text-sm bg-gray-100 text-gray-800 ">
+                      {mensajePago}
+                    </div>
+                  )}
 
                   <p className="text-sm mt-4 text-center text-gray-500">
                     Infórmate sobre el tratamiento de tus datos personales aquí

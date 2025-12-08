@@ -1,8 +1,7 @@
-// src/components/Header.jsx
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
-
+import { useTranslation} from "react-i18next";
 import facebookLogo from "../assets/facebook_logo_button.png";
 import instagramLogo from "../assets/instagram_logo_button.png";
 import youtubeLogo from "../assets/youtube_logo_button.png";
@@ -10,31 +9,49 @@ import tiktokLogo from "../assets/tiktok_logo_button.png";
 import usaLogo from "../assets/usa_logo.png";
 import peruLogo from "../assets/peru_logo.png";
 import AlientaPeruano from "../assets/alientaPeruanoLogo.png";
+import i18n from "i18next";
+
+
 
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const location = useLocation();
-
+  const { t } = useTranslation();
   return (
     <header className="w-full flex flex-col">
       {/* Barra superior: redes + idiomas */}
-      <div className="w-full flex flex-row h-auto bg-gradient-to-r  to-transparent">
+      <div className="w-full flex flex-row h-auto bg-gradient-to-r  from-black/100 to-transparent">
         {/* first half */}
         <div className="flex flex-shrink-0 basis-1/3 justify-start items-center gap-2 py-2 pl-2">
           <img src={facebookLogo} alt="Facebook" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
           <img src={instagramLogo} alt="Instagram" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
           <img src={youtubeLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
-          <img src={tiktokLogo} alt="YouTube" className="w-8 h-8 cursor-pointer hover:scale-110 transition" />
+          <img src={tiktokLogo} alt="YouTube" className="w-6 h-6 cursor-pointer hover:scale-110 transition" />
         </div>
 
         {/* second half */}
-        <div className="flex flex-grow basis-2/3 justify-end items-center gap-2 py-2 pr-2">
-          <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
-          <a href="#" className="text-white text-sm sm:text-base">Español</a>
-          <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
-          <a href="#" className="text-white text-sm sm:text-base">English</a>
+
+        <div className="flex flex-grow basis-2/3 justify-end items-center gap-4 py-2 pr-2">
+          {/* Español */}
+          <div 
+            onClick={() => i18n.changeLanguage("es")} 
+            className="cursor-pointer flex items-center gap-2"
+          >
+            <img src={peruLogo} alt="Peru" className="w-8 h-8 transition" />
+            <span className="text-white text-sm sm:text-base">Español</span>
+          </div>
+
+          {/* Inglés */}
+          <div 
+            onClick={() => i18n.changeLanguage("en")} 
+            className="cursor-pointer flex items-center gap-2"
+          >
+            <img src={usaLogo} alt="USA" className="w-8 h-8 transition" />
+            <span className="text-white text-sm sm:text-base">English</span>
+          </div>
         </div>
+
       </div>
 
       {/* Navbar principal */}
@@ -49,20 +66,20 @@ export default function Header() {
         {/* Links en desktop */}
         <nav className="hidden [@media(min-width:950px)]:flex items-center gap-6">
           <Link to="/" className="text-white cursor-pointer hover:scale-110 transition">
-            Contenido
+            {t("nav.home")}
           </Link>
           <Link to="/quienesSomos" className="text-white cursor-pointer hover:scale-110 transition">
-            Quienes Somos
+            {t("nav.about")}
           </Link>
 
           {/* Mostrar solo en "/" */}
           {location.pathname === "/" && (
             <>
               <a href="#historia" className="text-white cursor-pointer hover:scale-110 transition">
-                Nuestra Historia
+                {t("nav.history")}
               </a>
               <a href="#contacto" className="text-white cursor-pointer hover:scale-110 transition">
-                Contáctanos
+                {t("nav.contact")}
               </a>
             </>
           )}
@@ -71,7 +88,7 @@ export default function Header() {
             to="/donaciones"
             className="bg-red-600 text-white px-4 py-2 rounded-full cursor-pointer hover:scale-110 transform-gpu transition"
           >
-            Dona ahora
+            {t("nav.donate")}
           </Link>
         </nav>
 
