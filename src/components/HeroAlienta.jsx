@@ -98,7 +98,7 @@ export default function HeroAlienta() {
             </div>
           </div>
 
-          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 ">
+          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 border-2 ">
             <h1 className="text-white text-xl md:text-3xl text-right">
               <span dangerouslySetInnerHTML={{ __html: t("Hero.text") }} />
             </h1>
