@@ -58,22 +58,22 @@ export default function HeroAlienta() {
     <div className="w-full h-auto overflow-x-hidden">
       <div
         id="alienta-banner"
-        className="w-full h-screen bg-cover bg-center bg-no-repeat  bg-blend-multiply flex flex-col"
+        className="w-full h-200 lg:h-screen bg-cover bg-center bg-no-repeat  bg-blend-multiply flex flex-col"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
         <Header className="fixed top-0 left-0 w-full z-50"/>
 
         <div className="flex flex-col md:flex-row flex-grow ">
 
-          <div className="flex justify-start items-end flex-grow md:ml-5 md:mb-10">
+          <div className="flex h-[85%] md:h-full justify-start items-end flex-grow pl-10 pb-10 border-2">
             <div
               id="tarjetaDonacionDinamica"
               className={`relative z-10 w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
                 hiding ? "opacity-0 scale-95 pointer-events-none" : "opacity-100 scale-100"
               }`}
             >
-              <h1 className="ml-10  text-2xl sm:text-3xl mb-2 leading-tight">ALIENTA PERUANO</h1>
-              <p className="ml-10 text-xl sm:text-2xl leading-relaxed mb-4">
+              <h1 className="ml-10 text-lg md:text-3xl mb-2 leading-tight">ALIENTA PERUANO</h1>
+              <p className="ml-10 text-md md:text-2xl leading-relaxed mb-4">
                 <span dangerouslySetInnerHTML={{ __html: t("DynamicDonationCard.main") }} />
               </p>
               {/* Ícono absoluto */}
@@ -89,7 +89,7 @@ export default function HeroAlienta() {
               
               <Link 
                 to="/donaciones" 
-                className="absolute bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition cursor-pointer"
+                className="text-md absolute bottom-4 right-4 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full transition cursor-pointer"
               >
                 Dona ahora
               </Link>
@@ -98,8 +98,8 @@ export default function HeroAlienta() {
             </div>
           </div>
 
-          <div className="flex justify-end items-end flex-grow">
-            <h1 className="text-white text-3xl text-right">
+          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 border-2">
+            <h1 className="text-white text-xl md:text-3xl text-right">
               <span dangerouslySetInnerHTML={{ __html: t("Hero.text") }} />
             </h1>
           </div>
