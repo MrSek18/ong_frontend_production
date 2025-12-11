@@ -65,7 +65,7 @@ export default function HeroAlienta() {
 
         <div className="flex flex-col md:flex-row flex-grow ">
 
-          <div className="flex h-[85%] md:h-full justify-start items-end flex-grow pl-10 pb-10 border-2">
+          <div className="flex h-[85%] md:h-full justify-start items-end flex-grow pl-5 pb-5 lg:pl-10 lg:pb-10 border-2">
             <div
               id="tarjetaDonacionDinamica"
               className={`relative z-10 w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
