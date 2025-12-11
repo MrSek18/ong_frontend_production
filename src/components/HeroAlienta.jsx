@@ -1,6 +1,6 @@
 
 // import mainPresentation from "../assets/main_presentacion.jpg";
-import mainPresentation from "../assets/imgMainBanner.png";
+import mainPresentation from "../assets/imgMainBanner.jpg";
 import { Link } from "react-router-dom";
 
 import hideButton from "../assets/hideButton.png";
@@ -65,7 +65,7 @@ export default function HeroAlienta() {
 
         <div className="flex flex-col md:flex-row flex-grow ">
 
-          <div className="flex h-[85%] md:h-full justify-start items-end flex-grow pl-5 pb-5 lg:pl-10 lg:pb-10 border-2">
+          <div className="flex h-[85%] md:h-full justify-start items-end flex-grow pl-5 pb-5 lg:pl-10 lg:pb-10 ">
             <div
               id="tarjetaDonacionDinamica"
               className={`relative z-10 w-full max-w-md rounded-3xl bg-blue-950/80 backdrop-blur-sm pr-10 pl-10 pt-5 pb-5 text-white shadow-xl text-left transition-all duration-[2000ms] ease-in-out transform ${
@@ -98,7 +98,7 @@ export default function HeroAlienta() {
             </div>
           </div>
 
-          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 border-2">
+          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 ">
             <h1 className="text-white text-xl md:text-3xl text-right">
               <span dangerouslySetInnerHTML={{ __html: t("Hero.text") }} />
             </h1>
