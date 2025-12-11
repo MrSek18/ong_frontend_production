@@ -14,12 +14,12 @@ import i18n from "i18next";
 
 
 
-export default function Header() {
+export default function Header( { className = "" } ) {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
   return (
-    <header className="w-full flex flex-col">
+    <header className={`w-full flex flex-col ${className}`}>
       {/* Barra superior: redes + idiomas */}
       <div className="w-full flex flex-row h-auto bg-gradient-to-r  from-black/100 to-transparent">
         {/* first half */}
