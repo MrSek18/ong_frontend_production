@@ -4,7 +4,7 @@ import mainPresentation from "../assets/imgMainBanner.jpg";
 import { Link } from "react-router-dom";
 
 import hideButton from "../assets/hideButton.png";
-import section1Img from "../assets/img_2.png";
+import section1Img from "../assets/img_2.jpg";
 import icono1 from "../assets/ic1.png";
 import icono2 from "../assets/ic2.png";
 import icono3 from "../assets/ic3.png";
@@ -17,13 +17,13 @@ import n01 from "../assets/azul01.png";
 import n02 from "../assets/azul02.png";
 import n03 from "../assets/azul03.png";
 import n04 from "../assets/azul04.png";
-import imgSection3 from "../assets/img_3.png";
-import imgSection4 from "../assets/img_4.png";
-import imgSection5 from "../assets/img_5.png";
+import imgSection3 from "../assets/img_3.jpg";
+import imgSection4 from "../assets/img_4.jpg";
+import imgSection5 from "../assets/img_5.jpg";
 import checkSection5 from "../assets/check.png"
-import img1Section6 from "../assets/img_6.png";
-import img2Section6 from "../assets/img_7.png";
-import img3Section6 from "../assets/img_8.png";
+import img1Section6 from "../assets/img_6.jpg";
+import img2Section6 from "../assets/img_7.jpg";
+import img3Section6 from "../assets/img_8.jpg";
 import imgSection7 from "../assets/ic11.png";
 import imgSection8 from "../assets/img_historia.png";
 import imgSection9 from "../assets/img_contacto.png";
@@ -378,29 +378,39 @@ export default function HeroAlienta() {
             <h1 className="text-5xl">{t("section6.title")}</h1>
           </div> 
             
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 h-auto gap-4 p-10  ">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 h-auto gap-4 p-10 place-items-center md:place-items-stretch">
 
-            <div className="flex h-auto w-full ">
+            <div className="flex h-auto w-2/3 md:w-full ">
               
-               <div className="relative flex h-auto w-full flex-col items-center border-2 border-red-500">
-                  <div className="relative w-auto border-2 border-red-500">
-                    <img src={img1Section6} alt="" className="w-full h-auto max-h-96" />
+               <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
+                  <div className="relative w-[100%] h-[80%]  border-green-500">
+                    {/* img */}
+                    <div className="relative w-full h-full  flex justify-center items-center  ">
+                      <img src={img1Section6} alt="" className="w-full h-full object-fill " />
+                    </div>
 
                     {/* Badge en el borde inferior del wrapper */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto ">
                       <h1 className="text-2xl text-center ">{t("section6.part2Box1Title")}</h1>
                     </div>
                   </div>
-                  <p className="text-[#231f20] text-xl mt-10 oswald">{t("section6.part2Box1Paragraph")}</p>
+                  <div className="w-[100%] h-[15%]">
+                    <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box1Paragraph")}</p>
+                  </div>
+                  
                </div>
 
             </div>
             
-            <div className="flex h-auto w-full">
-              <div className="relative flex h-auto w-full flex-col items-center border-2 border-red-500 ">
-                {/* Wrapper de imagen + badge */}
-                <div className="relative w-auto">
-                  <img src={img2Section6} alt="" className="w-full h-auto max-h-96 " />
+            <div className="flex h-auto w-2/3 md:w-full">
+              <div className="relative flex h-auto w-full flex-col items-center  border-red-500 gap-y-4 justify-between">
+                <div className="relative w-[100%] h-[80%]  ">
+
+                  {/* img */}
+                  <div className="relative w-full h-full  flex justify-center items-center ">
+
+                    <img src={img2Section6} alt="" className="w-full h-full object-fill " />
+                  </div>
 
                   {/* Badge en el borde inferior del wrapper */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
@@ -409,17 +419,24 @@ export default function HeroAlienta() {
                 </div>
 
                 {/* Texto debajo */}
-                <p className="mt-10 text-xl text-[#231f20] oswald">
-                  {t("section6.part2Box2Paragraph")}
-                </p>
+
+                <div className="w-[100%] h-[15%]">
+                    <p className="text-[#231f20] text-xl  oswald">{t("section6.part2Box2Paragraph")}</p>
+                </div>
+              
               </div>
             </div>
 
-            <div className="flex h-auto w-full">
-              <div className="relative flex h-auto w-full justify-center flex-col items-center border-2 border-red-500">
+            <div className="flex h-auto w-2/3 md:w-full">
+              <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
                 {/* Wrapper de imagen + badge */}
-                <div className="relative w-auto border-2 border-red-500">
-                  <img src={img3Section6} alt="" className="w-85  max-h-96" />
+                <div className="relative w-[100%] h-[80%] ">
+                  {/* img */}
+                  <div className="relative w-full h-full  flex justify-center items-center ">
+
+                    <img src={img3Section6} alt="" className="w-full h-full object-fill " />
+
+                  </div>
 
                   {/* Badge en el borde inferior del wrapper */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-3/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
@@ -428,9 +445,9 @@ export default function HeroAlienta() {
                 </div>
 
                 {/* Texto debajo */}
-                <p className="mt-10 text-xl text-[#231f20] oswald">
-                  {t("section6.part2Box3Paragraph")}
-                </p>
+                <div className="w-[100%] h-[15%]  ">
+                    <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box3Paragraph")}</p>
+                </div>
               </div>
             </div>
 
