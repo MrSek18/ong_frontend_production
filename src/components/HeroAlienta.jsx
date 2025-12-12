@@ -380,7 +380,7 @@ export default function HeroAlienta() {
             
           <div className="w-full grid grid-cols-1 md:grid-cols-3 h-auto gap-4 p-10 place-items-center md:place-items-stretch">
 
-            <div className="flex h-auto w-2/3 md:w-full ">
+            <div className="flex h-auto w-full md:w-full ">
               
                <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
                   <div className="relative w-[100%] h-[80%]  border-green-500">
@@ -402,7 +402,7 @@ export default function HeroAlienta() {
 
             </div>
             
-            <div className="flex h-auto w-2/3 md:w-full">
+            <div className="flex h-auto w-full md:w-full">
               <div className="relative flex h-auto w-full flex-col items-center  border-red-500 gap-y-4 justify-between">
                 <div className="relative w-[100%] h-[80%]  ">
 
@@ -427,7 +427,7 @@ export default function HeroAlienta() {
               </div>
             </div>
 
-            <div className="flex h-auto w-2/3 md:w-full">
+            <div className="flex h-auto w-full md:w-full">
               <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
                 {/* Wrapper de imagen + badge */}
                 <div className="relative w-[100%] h-[80%] ">
