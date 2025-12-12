@@ -372,15 +372,15 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-6 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+        className="w-full h-auto sm:min-h-screen text-center flex flex-col items-center text-blue-950 mt-10 mb-20 lg:mb-10 border-2 border-red-500">
 
-          <div className="w-full h-auto">
+          <div className="w-full h-auto ">
             <h1 className="text-5xl">{t("section6.title")}</h1>
           </div> 
             
-          <div className="w-full grid grid-cols-1 md:grid-cols-3 h-auto gap-4 p-10 place-items-center md:place-items-stretch">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-auto gap-4 p-10 place-items-center sm:place-items-stretch ">
 
-            <div className="flex h-auto w-full md:w-full ">
+            <div className="flex h-auto w-full md:w-full border-2">
               
                <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
                   <div className="relative w-[100%] h-[80%]  border-green-500">
@@ -391,10 +391,10 @@ export default function HeroAlienta() {
 
                     {/* Badge en el borde inferior del wrapper */}
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto ">
-                      <h1 className="text-2xl text-center ">{t("section6.part2Box1Title")}</h1>
+                      <h1 className="text-2xl md:text-xl lg:text-2xl text-center">{t("section6.part2Box1Title")}</h1>
                     </div>
                   </div>
-                  <div className="w-[100%] h-[15%]">
+                  <div className="w-[100%] h-[20%]">
                     <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box1Paragraph")}</p>
                   </div>
                   
@@ -402,7 +402,7 @@ export default function HeroAlienta() {
 
             </div>
             
-            <div className="flex h-auto w-full md:w-full">
+            <div className="flex h-auto w-full md:w-full border-2 ">
               <div className="relative flex h-auto w-full flex-col items-center  border-red-500 gap-y-4 justify-between">
                 <div className="relative w-[100%] h-[80%]  ">
 
@@ -414,20 +414,20 @@ export default function HeroAlienta() {
 
                   {/* Badge en el borde inferior del wrapper */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
-                    <h1 className="text-2xl text-center">{t("section6.part2Box2Title")}</h1>
+                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">{t("section6.part2Box2Title")}</h1>
                   </div>
                 </div>
 
                 {/* Texto debajo */}
 
-                <div className="w-[100%] h-[15%]">
+                <div className="w-[100%] h-[20%]">
                     <p className="text-[#231f20] text-xl  oswald">{t("section6.part2Box2Paragraph")}</p>
                 </div>
               
               </div>
             </div>
 
-            <div className="flex h-auto w-full md:w-full">
+            <div className="flex h-auto w-full md:w-full border-2 sm:col-span-2   md:col-span-1 justify-center">
               <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
                 {/* Wrapper de imagen + badge */}
                 <div className="relative w-[100%] h-[80%] ">
@@ -440,12 +440,12 @@ export default function HeroAlienta() {
 
                   {/* Badge en el borde inferior del wrapper */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-3/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
-                    <h1 className="text-2xl text-center">{t("section6.part2Box3Title")}</h1>
+                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">{t("section6.part2Box3Title")}</h1>
                   </div>
                 </div>
 
                 {/* Texto debajo */}
-                <div className="w-[100%] h-[15%]  ">
+                <div className="w-[100%] h-[40%]  ">
                     <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box3Paragraph")}</p>
                 </div>
               </div>
@@ -535,12 +535,10 @@ export default function HeroAlienta() {
               backgroundPosition: "center",
             }}
           ></div>
-         <div className="hidden lg:flex lg:w-[25%] h-auto bg-red-500 flex items-center justify-center order-1 lg:order-2 ">
-
-         </div>
+         
 
           {/* right contenedor */}
-          <div className="relative lg:absolute top-0 right-0 w-full lg:w-1/2 h-full bg-white/80 z-50 flex flex-col text-[#231f20] p-10 border-2 border-red-500">
+          <div className="relative  top-0 right-0 w-full lg:w-1/2 h-full bg-white/80 flex flex-col text-[#231f20] p-10 border-2 border-red-500 order-1 lg:order-2">
             <h1 className="text-blue-950 text-5xl border-2 border-red-500">
               {t("history.title")}
             </h1>
