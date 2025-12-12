@@ -11,7 +11,7 @@ i18n.use(initReactI18next).init({
         nav: {
           home: "Contenido",
           about: "Quienes Somos",
-          history: "Nuestra Hitoria",
+          history: "Nuestra Historia",
           contact: "Contáctanos",
           donate: "Dona ahora",
         },
