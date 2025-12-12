@@ -25,7 +25,7 @@ import img1Section6 from "../assets/img_6.jpg";
 import img2Section6 from "../assets/img_7.jpg";
 import img3Section6 from "../assets/img_8.jpg";
 import imgSection7 from "../assets/ic11.png";
-import imgSection8 from "../assets/img_historia.png";
+import imgSection8 from "../assets/img_historia.jpg";
 import imgSection9 from "../assets/img_contacto.png";
 import logoAlientaBlanco from "../assets/logoAlientaBlanco.png";
 import n01White from "../assets/num_01.png";
@@ -524,31 +524,37 @@ export default function HeroAlienta() {
         
         <div
           id="Justificacion-sec-8"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center "
+          className="relative w-full flex h- flex-col lg:flex-row justify-between items-center "
         >
           {/* img */}
           <div
-            className="w-full lg:w-[75%] h-180 bg-blue-950  order-2 lg:order-1  "
+            className="flex relative w-full lg:w-[50%] h-100 sm:min-h-screen bg-blue-950 order-2 lg:order-1"
             style={{
               backgroundImage: `url(${imgSection8})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          ></div>
+          >
+            {/* Overlay difuminado solo en el 15% derecho */}
+            <div className="hidden lg:block absolute right-0 top-0 h-full w-[20%] bg-gradient-to-r from-transparent to-white"></div>
+
+          </div>
+
+
          
 
           {/* right contenedor */}
-          <div className="relative  top-0 right-0 w-full lg:w-1/2 h-full bg-white/80 flex flex-col text-[#231f20] p-10 border-2 border-red-500 order-1 lg:order-2">
+          <div className="relative  top-0 right-0 w-full lg:w-1/2 min-h-screen bg-white/80 flex flex-col text-[#231f20] p-10 border-2 border-red-500 order-1 lg:order-2 gap-y-5 justify-center">
             <h1 className="text-blue-950 text-5xl border-2 border-red-500">
               {t("history.title")}
             </h1>
-            <h2 className="text-blue-950 text-2xl border-2 border-red-500 mt-4">
+            <h2 className="text-blue-950 text-2xl border-2 border-red-500">
               {t("history.subtitle")}
             </h2>
 
             {/* Este div ocupa todo lo que sobra */}
-            <div className="flex-1 flex flex-col border-2 border-green-500 overflow-y-auto justify-center items-center">
-              <p className="text-left mt-5 text-lg oswald border-2 border-red-500">{t("history.paragraphs.n1")}</p>
+            <div className=" flex flex-col border-2 border-green-500 overflow-y-auto justify-start">
+              <p className="text-left  text-lg oswald border-2 border-red-500">{t("history.paragraphs.n1")}</p>
               <p className="text-left mt-5 text-lg oswald border-2 border-red-500">{t("history.paragraphs.n2")}</p>
               <p className="text-left mt-5 text-lg oswald border-2 border-red-500">{t("history.paragraphs.n3")}</p>
               <p className="text-left mt-5 text-lg oswald border-2 border-red-500">{t("history.paragraphs.n4")}</p>  
