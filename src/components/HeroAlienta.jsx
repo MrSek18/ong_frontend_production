@@ -1,10 +1,10 @@
 
 // import mainPresentation from "../assets/main_presentacion.jpg";
-import mainPresentation from "../assets/imgMainBanner.jpg";
+import mainPresentation from "../assets/imgMainBanner.webp";
 import { Link } from "react-router-dom";
 
 import hideButton from "../assets/hideButton.png";
-import section1Img from "../assets/img_2.jpg";
+import section1Img from "../assets/img_2.webp";
 import icono1 from "../assets/ic1.png";
 import icono2 from "../assets/ic2.png";
 import icono3 from "../assets/ic3.png";
@@ -17,16 +17,16 @@ import n01 from "../assets/azul01.png";
 import n02 from "../assets/azul02.png";
 import n03 from "../assets/azul03.png";
 import n04 from "../assets/azul04.png";
-import imgSection3 from "../assets/img_3.jpg";
-import imgSection4 from "../assets/img_4.jpg";
-import imgSection5 from "../assets/img_5.jpg";
+import imgSection3 from "../assets/img_3.webp";
+import imgSection4 from "../assets/img_4.webp";
+import imgSection5 from "../assets/img_5.webp";
 import checkSection5 from "../assets/check.png"
-import img1Section6 from "../assets/img_6.jpg";
-import img2Section6 from "../assets/img_7.jpg";
-import img3Section6 from "../assets/img_8.jpg";
+import img1Section6 from "../assets/img_6.webp";
+import img2Section6 from "../assets/img_7.webp";
+import img3Section6 from "../assets/img_8.webp";
 import imgSection7 from "../assets/ic11.png";
-import imgSection8 from "../assets/img_historia.jpg";
-import imgSection9 from "../assets/img_contacto.jpg";
+import imgSection8 from "../assets/img_historia.webp";
+import imgSection9 from "../assets/img_contacto.webp";
 import logoAlientaBlanco from "../assets/logoAlientaBlanco.png";
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
@@ -61,6 +61,7 @@ export default function HeroAlienta() {
         className="w-full h-200 lg:h-screen bg-cover bg-center bg-no-repeat  bg-blend-multiply flex flex-col"
         style={{ backgroundImage: `url(${mainPresentation})` }}
       >
+        
         <Header className="fixed top-0 left-0 w-full z-50"/>
 
         <div className="flex flex-col md:flex-row flex-grow ">
@@ -183,6 +184,7 @@ export default function HeroAlienta() {
                 src={section1Img}
                 alt="section1"
                 className="w-full lg:h-96"
+                loading="lazy"
               />
             </div>
         </div>
@@ -245,6 +247,7 @@ export default function HeroAlienta() {
               backgroundImage: `url(${imgSection3})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
+              
             }}
           ></div>
 
@@ -388,7 +391,8 @@ export default function HeroAlienta() {
                   <img 
                     src={img1Section6} 
                     alt="" 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover"
+                    loading="lazy" 
                   />
 
                   {/* Badge */}
@@ -421,7 +425,8 @@ export default function HeroAlienta() {
                   <img 
                     src={img2Section6} 
                     alt="" 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover"
+                    loading="lazy" 
                   />
                   {/* Badge */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 
@@ -454,6 +459,7 @@ export default function HeroAlienta() {
                     src={img3Section6} 
                     alt="" 
                     className="w-full h-full object-cover" 
+                    loading="lazy" 
                   />
                   {/* Badge */}
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 

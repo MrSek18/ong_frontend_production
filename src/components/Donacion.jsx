@@ -1,5 +1,5 @@
 import Header from "../components/Header.jsx";
-import DonacionImg from "../assets/imgsec2QuienesSomos.png";
+import DonacionImg from "../assets/imgsec2QuienesSomos.webp";
 import formAmericanExpress from "../assets/formAmericanExpress.png";
 import formDinersClub from "../assets/formDinersClubLogo.png";
 import formMastercard from "../assets/formMastercardLogo.png";
