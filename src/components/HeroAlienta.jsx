@@ -26,7 +26,7 @@ import img2Section6 from "../assets/img_7.jpg";
 import img3Section6 from "../assets/img_8.jpg";
 import imgSection7 from "../assets/ic11.png";
 import imgSection8 from "../assets/img_historia.jpg";
-import imgSection9 from "../assets/img_contacto.png";
+import imgSection9 from "../assets/img_contacto.jpg";
 import logoAlientaBlanco from "../assets/logoAlientaBlanco.png";
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
@@ -372,84 +372,110 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-6 "
-        className="w-full h-auto sm:min-h-screen text-center flex flex-col items-center text-blue-950 mt-10 mb-20 lg:mb-10 border-2 border-red-500">
+        className="w-full min-h-screen text-center flex flex-col items-center justify-center  text-blue-950 mt-10 mb-20 lg:mb-10 border-2 border-red-500">
 
           <div className="w-full h-auto ">
             <h1 className="text-5xl">{t("section6.title")}</h1>
           </div> 
             
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 h-auto gap-4 p-10 place-items-center sm:place-items-stretch ">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 p-10 place-items-center sm:place-items-stretch">
 
-            <div className="flex h-auto w-full md:w-full border-2">
-              
-               <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
-                  <div className="relative w-[100%] h-[80%]  border-green-500">
-                    {/* img */}
-                    <div className="relative w-full h-full  flex justify-center items-center  ">
-                      <img src={img1Section6} alt="" className="w-full h-full object-fill " />
-                    </div>
+            <div id="Card1" className="flex h-auto w-full md:w-full border-2">    
+              <div className="relative flex h-auto w-full flex-col items-start">
+                
+                {/* Imagen + badge */}
+                <div className="relative w-full h-90 md:h-100 border-green-500">
+                  <img 
+                    src={img1Section6} 
+                    alt="" 
+                    className="w-full h-full object-cover" 
+                  />
 
-                    {/* Badge en el borde inferior del wrapper */}
-                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto ">
-                      <h1 className="text-2xl md:text-xl lg:text-2xl text-center">{t("section6.part2Box1Title")}</h1>
-                    </div>
+                  {/* Badge */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 
+                                  flex h-10 w-2/4 items-center justify-center 
+                                  bg-blue-950 text-white shadow-lg">
+                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">
+                      {t("section6.part2Box1Title")}
+                    </h1>
                   </div>
-                  <div className="w-[100%] h-[20%]">
-                    <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box1Paragraph")}</p>
-                  </div>
-                  
-               </div>
+                </div>
 
+                {/* Texto debajo */}
+                <div className="w-full h-auto border-2 mt-6">
+                  <p className="text-[#231f20] text-xl oswald">
+                    {t("section6.part2Box1Paragraph")}
+                  </p>
+                </div>
+                
+              </div>
             </div>
+
+
             
-            <div className="flex h-auto w-full md:w-full border-2 ">
-              <div className="relative flex h-auto w-full flex-col items-center  border-red-500 gap-y-4 justify-between">
-                <div className="relative w-[100%] h-[80%]  ">
-
-                  {/* img */}
-                  <div className="relative w-full h-full  flex justify-center items-center ">
-
-                    <img src={img2Section6} alt="" className="w-full h-full object-fill " />
-                  </div>
-
-                  {/* Badge en el borde inferior del wrapper */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-2/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
-                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">{t("section6.part2Box2Title")}</h1>
-                  </div>
-                </div>
-
-                {/* Texto debajo */}
-
-                <div className="w-[100%] h-[20%]">
-                    <p className="text-[#231f20] text-xl  oswald">{t("section6.part2Box2Paragraph")}</p>
-                </div>
-              
-              </div>
-            </div>
-
-            <div className="flex h-auto w-full md:w-full border-2 sm:col-span-2   md:col-span-1 justify-center">
-              <div className="relative flex h-auto w-full flex-col items-center  gap-y-4 justify-between">
-                {/* Wrapper de imagen + badge */}
-                <div className="relative w-[100%] h-[80%] ">
-                  {/* img */}
-                  <div className="relative w-full h-full  flex justify-center items-center ">
-
-                    <img src={img3Section6} alt="" className="w-full h-full object-fill " />
-
-                  </div>
-
-                  {/* Badge en el borde inferior del wrapper */}
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex h-10 w-3/4 items-center justify-center bg-blue-950 text-white shadow-lg h-auto">
-                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">{t("section6.part2Box3Title")}</h1>
+            <div id="Card2" className="flex h-auto w-full md:w-full border-2">
+              <div className="relative flex h-auto w-full flex-col items-start">
+                
+                {/* Imagen + badge */}
+                <div className="relative w-full h-90 md:h-100">
+                  <img 
+                    src={img2Section6} 
+                    alt="" 
+                    className="w-full h-full object-cover" 
+                  />
+                  {/* Badge */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 
+                                  flex h-10 w-2/4 items-center justify-center 
+                                  bg-blue-950 text-white shadow-lg">
+                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">
+                      {t("section6.part2Box2Title")}
+                    </h1>
                   </div>
                 </div>
 
                 {/* Texto debajo */}
-                <div className="w-[100%] h-[40%]  ">
-                    <p className="text-[#231f20] text-xl  oswald ">{t("section6.part2Box3Paragraph")}</p>
+                <div className="w-full h-auto border-2 mt-6">
+                  <p className="text-[#231f20] text-xl oswald">
+                    {t("section6.part2Box2Paragraph")}
+                  </p>
                 </div>
+
               </div>
             </div>
+
+
+
+            <div id="Card3" className="flex h-auto w-full md:w-full border-2 sm:col-span-2 md:col-span-1">
+              <div className="relative flex h-auto w-full flex-col items-start">
+                
+                {/* Imagen + badge */}
+                <div className="relative w-full h-90 md:h-100">
+                  <img 
+                    src={img3Section6} 
+                    alt="" 
+                    className="w-full h-full object-cover" 
+                  />
+                  {/* Badge */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 
+                                  flex h-10 w-3/4 items-center justify-center 
+                                  bg-blue-950 text-white shadow-lg">
+                    <h1 className="text-lg md:text-xl lg:text-2xl text-center">
+                      {t("section6.part2Box3Title")}
+                    </h1>
+                  </div>
+                </div>
+
+                {/* Texto debajo */}
+                <div className="w-full h-auto border-2 mt-6">
+                  <p className="text-[#231f20] text-xl oswald">
+                    {t("section6.part2Box3Paragraph")}
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+
 
           </div>
 
