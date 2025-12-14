@@ -1,10 +1,10 @@
 
 // import mainPresentation from "../assets/main_presentacion.jpg";
-import mainPresentation from "../assets/imgMainBanner.webp";
+import mainPresentation from "../assets/imgMainBanner.png";
 import { Link } from "react-router-dom";
 
 import hideButton from "../assets/hideButton.png";
-import section1Img from "../assets/img_2.webp";
+import section1Img from "../assets/img_2.png";
 import icono1 from "../assets/ic1.png";
 import icono2 from "../assets/ic2.png";
 import icono3 from "../assets/ic3.png";
@@ -17,16 +17,16 @@ import n01 from "../assets/azul01.png";
 import n02 from "../assets/azul02.png";
 import n03 from "../assets/azul03.png";
 import n04 from "../assets/azul04.png";
-import imgSection3 from "../assets/img_3.webp";
-import imgSection4 from "../assets/img_4.webp";
-import imgSection5 from "../assets/img_5.webp";
+import imgSection3 from "../assets/img_3.png";
+import imgSection4 from "../assets/img_4.png";
+import imgSection5 from "../assets/img_5.png";
 import checkSection5 from "../assets/check.png"
-import img1Section6 from "../assets/img_6.webp";
-import img2Section6 from "../assets/img_7.webp";
-import img3Section6 from "../assets/img_8.webp";
+import img1Section6 from "../assets/img_6.png";
+import img2Section6 from "../assets/img_7.png";
+import img3Section6 from "../assets/img_8.png";
 import imgSection7 from "../assets/ic11.png";
-import imgSection8 from "../assets/img_historia.webp";
-import imgSection9 from "../assets/img_contacto.webp";
+import imgSection8 from "../assets/img_historia.png";
+import imgSection9 from "../assets/img_contacto.png";
 import logoAlientaBlanco from "../assets/logoAlientaBlanco.png";
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
