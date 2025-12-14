@@ -1,10 +1,10 @@
 // src/pages/QuienesSomos.jsx
 import Header from "../components/Header.jsx";
-import imgsec1QuienesSomos from "../assets/imgsec1QuienesSomos.webp";
-import imgsec2QuienesSomos from "../assets/imgsec2QuienesSomos.webp";
-import imgsec3QuienesSomos from "../assets/imgsec3QuienesSomos.webp";
-import imgsec4QuienesSomos from "../assets/imgsec4QuienesSomos.webp";
-import imgsec5QuienesSomos from "../assets/imgsec5QuienesSomos.webp";
+import imgsec1QuienesSomos from "../assets/imgsec1QuienesSomos.png";
+import imgsec2QuienesSomos from "../assets/imgsec2QuienesSomos.png";
+import imgsec3QuienesSomos from "../assets/imgsec3QuienesSomos.png";
+import imgsec4QuienesSomos from "../assets/imgsec4QuienesSomos.png";
+import imgsec5QuienesSomos from "../assets/imgsec5QuienesSomos.png";
 import checkSection3 from "../assets/check.png"
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
