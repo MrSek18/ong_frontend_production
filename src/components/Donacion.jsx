@@ -1,13 +1,10 @@
 import Header from "../components/Header.jsx";
-import DonacionImg from "../assets/imgsec2QuienesSomos.png";
-import formAmericanExpress from "../assets/formAmericanExpress.png";
-import formDinersClub from "../assets/formDinersClubLogo.png";
-import formMastercard from "../assets/formMastercardLogo.png";
+import DonacionImg from "../assets/imgsec2QuienesSomos.webp";
+
 import formPsi from "../assets/formPsiLogo.png";
-import formUnionPay from "../assets/formUnionPay.png";
-import formVisa from "../assets/formVisaLogo.png";
+
 import logoAlientaOriginal from "../assets/alientaPeruanoLogoOriginal.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef  } from "react";
 import axios from "axios";
 
 export default function Donacion() {
@@ -15,11 +12,10 @@ export default function Donacion() {
   const [plan, setPlan] = useState(null);
   const [monto, setMonto] = useState(null);
   const [otroMonto, setOtroMonto] = useState("");
-  const [errors, setErrors] = useState({ plan: "", monto: "" });
+  const [errors, setErrors] = useState({ plan: null , monto: null });
   const [showForm, setShowForm] = useState(false);
   const [mensajePago, setMensajePago] = useState(null);
-
-
+  const brickControllerRef = useRef(null);
 
   useEffect(() => {
     if (showForm) {
@@ -28,7 +24,7 @@ export default function Donacion() {
 
       bricksBuilder.create("cardPayment", "paymentBrick_container", {
         initialization: {
-          amount: monto === "otro" ? otroMonto : monto,
+          amount: monto === "otro" ? Number(otroMonto) : Number(monto),
         },
         callbacks: {
           onReady: () => {
@@ -55,7 +51,6 @@ export default function Donacion() {
 
               console.log("Pago OK:", response.data);
 
-              // 👇 Manejo dinámico de mensajes
               if (response.data.status === "approved") {
                 setMensajePago("¡Gracias! Tu donación fue procesada con éxito.");
               } else if (response.data.status === "rejected") {
@@ -71,35 +66,54 @@ export default function Donacion() {
             }
           },
         },
+      }).then(controller => {
+        brickControllerRef.current = controller;
       });
     }
+
+    return () => {
+      if (brickControllerRef.current) {
+        brickControllerRef.current.unmount();
+        brickControllerRef.current = null;
+      }
+    };
   }, [showForm, monto, otroMonto, plan]);
 
 
 
+
   const handleNext = () => {
-    let newErrors = { plan: "", monto: "" };
+    let newErrors = { plan: null, monto: null };
 
     if (!plan) {
       newErrors.plan = "Debes seleccionar un plan (Mensual o Única).";
     }
-    if (!monto) {
-      newErrors.monto = "Debes seleccionar un monto.";
-    } else if (monto === "otro" && !otroMonto) {
-      newErrors.monto = "Debes ingresar un monto en 'OTRO'.";
-    } else if (monto === "otro" && isNaN(otroMonto)) {
-      newErrors.monto = "El monto ingresado debe ser un número válido.";
-    } else if (monto === "otro" && Number(otroMonto) <= 0) {
-      newErrors.monto = "El monto ingresado debe ser mayor a cero.";
-    } else if (monto === "otro" && Number(otroMonto) > 0 && Number(otroMonto) < 5) {
-      newErrors.monto = "El monto mínimo para donar es S/ 5.00.";
+
+    switch (monto) {
+      case "":
+        newErrors.monto = "Debes seleccionar un monto.";
+        break;
+      case "otro":
+        if (!otroMonto) {
+          newErrors.monto = "Debes ingresar un monto en 'OTRO'.";
+        } else if (isNaN(otroMonto)) {
+          newErrors.monto = "El monto ingresado debe ser un número válido.";
+        } else if (Number(otroMonto) <= 0) {
+          newErrors.monto = "El monto ingresado debe ser mayor a cero.";
+        } else if (Number(otroMonto) < 5) {
+          newErrors.monto = "El monto mínimo para donar es S/ 5.00.";
+        }
+        break;
     }
+
 
     setErrors(newErrors);
 
-    if (!newErrors.plan && !newErrors.monto) {
+    const hasErrors = Object.values(newErrors).some(error => error);
+    if (!hasErrors) {
       setShowForm(true);
     }
+
   };
 
   return (
@@ -109,20 +123,21 @@ export default function Donacion() {
           <Header />
         </div>
 
-        <div id="donacion" className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 gap-6 ">
-          <div id="Justificacion-sec-2" className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center ">
+        <div id="donacion" className="w-full h-screen text-center flex flex-col items-center text-blue-950 gap-6 ">
+          <div id="Justificacion-sec-2" className="relative w-full h-full flex flex-col lg:flex-row justify-between items-center ">
             
             {/* img */}
             <div
-              className="w-full lg:w-[60%] h-screen bg-blue-950 order-2 lg:order-1"
+              className="w-full lg:w-[50%] h-screen bg-blue-950 order-2 lg:order-1 flex items-center justify-center "
               style={{
                 backgroundImage: `url(${DonacionImg})`,
                 backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
               }}
             ></div>
 
-            <div className="flex flex-col w-full lg:w-[40%] h-auto lg:h-screen text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 lg:pt-30 lg:pb-0">
+            <div className="flex flex-col w-full lg:w-[50%] h-full lg:h-full text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 lg:pt-30 lg:pb-0">
 
               {/* first contenedor */}
               {!showReactive && !showForm && (
@@ -147,6 +162,7 @@ export default function Donacion() {
                   <button
                     onClick={() => setShowReactive(false)}
                     className="absolute top-2 right-4 text-black text-xl font-bold"
+                    aria-label="Cerrar formulario"
                   >
                     ✕
                   </button>
@@ -222,44 +238,62 @@ export default function Donacion() {
 
               {/* Vista del formulario de tarjeta */}
               {showForm && (
-                <div className="flex flex-col w-[95%] lg:w-[90%] gap-6 items-center justify-start bg-white text-[#231f20] p-2 lg:p-6 relative rounded overflow-y-auto max-h-100">
-                  {/* Botón de cierre */}
-                  <button
-                    type="button"
-                    onClick={() => setShowForm(false)}
-                    className="absolute top-2 right-4 text-black text-xl font-bold"
-                  >
-                    ✕
-                  </button>
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm roboto-condensed" >
+                  {/* Contenedor del formulario */}
+                  <div className="relative w-[95%] lg:w-[900px] max-h-[90vh] overflow-y-auto 
+                      bg-white text-[#231f20] rounded-xl shadow-2xl p-8 fadeInScale">
 
-                  <img src={logoAlientaOriginal} className="bg-[#a7a9ac] px-10 py-3 mt-10 lg:mt-5"/>
-                  <p className="text-sm mb-2 text-center text-gray-600 font-sans font-medium">
-                    Recuerda activar las compras por internet con tu banco
-                  </p>
+                    
+                    {/* Botón de cierre */}
+                    <button
+                      type="button"
+                      onClick={() => setShowForm(false)}
+                      className="absolute top-6 right-8 text-gray-600 hover:text-black text-3xl font-bold"
+                    >
+                      ✕
+                    </button>
 
-                  {/* Aquí se monta el Brick de Mercado Pago */}
-                  <div id="paymentBrick_container" className="w-full"></div>
-                  {mensajePago && (
-                    <div className="p-3 rounded text-center text-sm bg-gray-100 text-gray-800 ">
-                      {mensajePago}
+                    {/* Logo más grande */}
+                    <img
+                      src={logoAlientaOriginal}
+                      alt="Logo Alienta"
+                      className="mx-auto h-20 mb-8"
+                    />
+
+                    {/* Mensaje inicial */}
+                    <p className="text-sm mb-6 text-center text-gray-600 font-medium">
+                      Recuerda activar las compras por internet con tu banco
+                    </p>
+
+                    {/* Brick de Mercado Pago con más ancho */}
+                    <div id="paymentBrick_container" className="w-full min-h-[350px] mb-6 "></div>
+
+                    {/* Mensaje dinámico */}
+                    {mensajePago && (
+                      <div className="p-3 rounded text-center text-sm bg-gray-100 text-gray-800 mb-6">
+                        {mensajePago}
+                      </div>
+                    )}
+
+                    {/* Aviso legal */}
+                    <p className="text-xs text-center text-gray-500 mb-4">
+                      Infórmate sobre el tratamiento de tus datos personales aquí
+                    </p>
+                    <p className="text-xs text-center text-gray-500 mt-4 ">
+                      Tu donación será procesada de manera segura a través de Mercado Pago, 
+                      cumpliendo con los estándares PCI DSS. Nosotros no almacenamos tus datos de tarjeta.
+                    </p>
+
+                    {/* Logos de seguridad */}
+                    <div className="grid grid-cols-3 gap-4 justify-items-center sm:flex sm:justify-center mt-5">
+                      <img src={formPsi} alt="PCI Security Standards Council" className="h-8" />
                     </div>
-                  )}
-
-                  <p className="text-sm mt-4 text-center text-gray-500">
-                    Infórmate sobre el tratamiento de tus datos personales aquí
-                  </p>
-
-                  {/* Logos de seguridad */}
-                  <div className="grid grid-cols-3 mt-4 justify-items-center sm:flex sm:justify-center gap-4">
-                    <img src={formPsi} alt="PCI Security Standards Council" className="h-8 " />
-                    <img src={formVisa} alt="Visa" className="h-8 " />
-                    <img src={formMastercard} alt="Mastercard" className="h-8 " />
-                    <img src={formDinersClub} alt="Diners Club" className="h-8 " />
-                    <img src={formAmericanExpress} alt="American Express" className="h-8 " />
-                    <img src={formUnionPay} alt="UnionPay" className="h-8 " />
                   </div>
                 </div>
               )}
+
+
+
             </div>
           </div>
         </div>

@@ -81,3 +81,12 @@ li::marker {
   font-size: 2rem; /* más grande que el texto normal */
   color: #1e3a8a;    /* azul equivalente a text-blue-950 */
 }
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.fadeInScale {
+  animation: fadeInScale 0.3s ease;
+}
