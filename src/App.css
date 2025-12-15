@@ -78,7 +78,7 @@ html, body {
 }
 
 li::marker {
-  font-size: 2rem; /* más grande que el texto normal */
+  font-size: 1.5rem; /* más grande que el texto normal */
   color: #1e3a8a;    /* azul equivalente a text-blue-950 */
 }
 

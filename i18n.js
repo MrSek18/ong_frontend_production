@@ -21,6 +21,11 @@ i18n.use(initReactI18next).init({
         Hero: {
           text: "Transformando vidas con talento <br /> a través del fútbol",
         },
+        sectionVideo: {
+          title: "Un Sueño en Juego: Niños que necesitan tu apoyo",
+          subtitle: "Mira este video de conciencia y descubre cómo tu donación puede transformar vidas a través del fútbol."
+          
+        },
         section1: {
           title: "¿Por qué ALIENTA PERUANO?",
           reasons: [
@@ -130,6 +135,12 @@ i18n.use(initReactI18next).init({
         },
         Hero: {
           text: "Transforming lives with talent <br /> through football",
+        }
+        ,
+        sectionVideo: {
+          title: "A Dream in Play: Children Who Need Your Support",
+          subtitle: "Watch this awareness video and discover how your donation can transform lives through football."
+          
         },
         section1: {
           title: "Why ALIENTA PERUANO?",

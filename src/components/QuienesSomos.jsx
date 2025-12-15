@@ -14,9 +14,8 @@ export default function QuienesSomos() {
   return (
     <div className="w-full h-auto overflow-x-hidden ">
       <div className="w-full h-auto  flex flex-col ">
-        <div className="bg-blue-500">
-            <Header />
-        </div>
+        <Header className="fixed top-0 left-0 w-full z-50"/>
+        
         
         <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow">
             <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pl-10 pr-10">

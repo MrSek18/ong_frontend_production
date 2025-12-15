@@ -119,16 +119,13 @@ export default function Donacion() {
   return (
     <div className="w-full h-auto overflow-x-hidden ">
       <div className="w-full h-auto flex flex-col ">
-        <div className="absolute top-0 left-0 w-full bg-blue-500/70 z-50">
-          <Header />
-        </div>
-
+       <Header className="fixed top-0 left-0 w-full z-50"/>
         <div id="donacion" className="w-full h-screen text-center flex flex-col items-center text-blue-950 gap-6 ">
           <div id="Justificacion-sec-2" className="relative w-full h-full flex flex-col lg:flex-row justify-between items-center ">
             
             {/* img */}
             <div
-              className="w-full lg:w-[50%] h-screen bg-blue-950 order-2 lg:order-1 flex items-center justify-center "
+              className="w-full lg:w-[50%] min-h-[400px] lg:h-screen bg-blue-950 order-2 lg:order-1 flex items-center justify-center "
               style={{
                 backgroundImage: `url(${DonacionImg})`,
                 backgroundSize: "cover",
@@ -137,7 +134,7 @@ export default function Donacion() {
               }}
             ></div>
 
-            <div className="flex flex-col w-full lg:w-[50%] h-full lg:h-full text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 lg:pt-30 lg:pb-0">
+            <div className="flex flex-col w-full lg:w-[50%] h-auto lg:h-full text-xl order-1 lg:order-2 text-[#231f20] justify-center items-center gap-y-6 bg-blue-950 text-white relative pt-50 pb-10 lg:pt-30 lg:pb-0">
 
               {/* first contenedor */}
               {!showReactive && !showForm && (
@@ -158,7 +155,7 @@ export default function Donacion() {
 
               {/* reactive contenedor */}
               {showReactive && !showForm && (
-                <div className="flex flex-col w-[95%] lg:w-[70%] gap-6 items-center justify-start bg-[#a7a9ac] text-[#231f20] xl-p-10 p-6 relative overflow-y-auto lg:max-h-110 ">
+                <div className="flex flex-col w-[95%] lg:w-[70%] gap-2 items-center justify-start bg-[#a7a9ac] text-[#231f20] lg:p-4 p-6 relative  lg:max-h-110 ">
                   <button
                     onClick={() => setShowReactive(false)}
                     className="absolute top-2 right-4 text-black text-xl font-bold"
@@ -167,8 +164,8 @@ export default function Donacion() {
                     ✕
                   </button>
 
-                  <h1 className="text-2xl xl:text-3xl">DONA AHORA</h1>
-                  <h2 className="text-base xl:text-lg">
+                  <h1 className="text-2xl">DONA AHORA</h1>
+                  <h2 className="text-base">
                     Con tu apoyo ayudas al desarrollo personal y profesional a niños vulnerables con talento. <br />
                     Elije el monto.
                   </h2>
