@@ -1,0 +1,194 @@
+{
+    "es": {
+        "welcome": "Bienvenido a la página",
+        "donate": "Donar ahora",
+        "nav": {
+            "home": "Contenido",
+            "about": "Quienes Somos",
+            "history": "Nuestra Historia",
+            "contact": "Contáctanos",
+            "donate": "Dona ahora"
+        },
+        "section1": {
+            "title": "Quienes Somos",
+            "paragraphs": {
+                "p1": "Somos una asociación sin fines de lucro que nació del corazón de un grupo de amigos con una pasión en común: el fútbol y el deseo de ayudar a niños en situación de vulnerabilidad.",
+                "p2": "Trabajamos en San Juan de Lurigancho formando no solo futbolistas, sino seres humanos con valores, disciplina y esperanza.",
+                "p3": "Creemos que el fútbol puede ser una herramienta poderosa para transformar vidas y abrir caminos donde no los hay.",
+                "p4": "Por eso buscamos aliados que crean, como nosotros, que un balón puede cambiar un destino."
+            }
+        },
+        "section2": {
+          "title1": "Misión",
+          "paragraph1": "Formar integralmente a niños con talento futbolístico en contextos vulnerables, brindándoles entrenamiento de alto nivel, educación y soporte emocional para convertirlos en profesionales y ciudadanos ejemplares.",
+          "title2": "Visión",
+          "paragraph2": "Ser un referente en Latinoamérica en transformación social a través del fútbol, desarrollando talentos con impacto global."
+
+        },
+        "section3": {
+            "title": "Valores",
+            "items": {
+              "1": "Superacion",
+              "2": "Disciplina",
+              "3": "Empatía",
+              "4": "Compromiso",
+              "5": "Esperanza",
+              "6": "Excelencia"
+            }
+        },
+        "section4": {
+            "title": "Objetivos",
+            "items": {
+              "1": "Detectar y formar talento deportivo en zonas de alto riesgo.",
+              "2": "Brindar soporte completo (médico, psicológico, educativo).",
+              "3": "Establecer alianzas con clubes, empresas y entidades educativas.",
+              "4": "Promover modelos de vida saludable y alejados de la violencia."
+            }
+        },
+        "section5": {
+            "title1": "Posicionamiento",
+            "paragraph1": "“ALIENTA PERUANO es una plataforma de transformación que convierte a niños con talento y pocos recursos en futbolistas profesionales y líderes positivos, integrando deporte, salud y educación.”",
+            "title2": "Propuesta de valor",
+            "paragraph2": "Brindamos una oportunidad real de desarrollo personal y profesional a niños vulnerables con talento, a través de un modelo integral que une fútbol, salud, educación y valores."
+        },
+        "section6": {
+            "title": "Público objetivo",
+            "part2Box1Title": "Primario",
+            "part2Box1Paragraph":
+            "Niños de entre 8 y 17 años con talento futbolístico, en contextos de vulnerabilidad",
+            "part2Box2Title": "Secundario",
+            "part2Box2Paragraph": "Padres o tutores de los niños",
+            "part2Box3Title": "Terciario (aliados)",
+            "part2Box3Paragraph":
+            "Empresas privadas, instituciones educativas, medios de comunicación, entrenadores profesionales, figuras públicas del fútbol."
+        },
+        "section7": {
+            "title": "Análisis de competencia",
+            "part2Box1Title": "Escuelas de fútbol tradicionales:",
+            "part2Box1Paragraph":
+            "Se enfocan solo en la técnica. No abordan nutrición, psicología ni educación formal",
+            "part2Box2Title": "Academias profesionales privadas",
+            "part2Box2Paragraph":
+            "Costosas, inaccesibles para niños de bajos recursos",
+            "part2Box3Title": "ONGs deportivas:",
+            "part2Box3Paragraph":
+            "Existen, pero pocas con enfoque profesionalizante",
+            "part3Title": "Diferenciador clave",
+            "part3Paragraph":
+            "ALIENTA PERUANO no solo entrena, forma integralmente para el alto rendimiento y la vida"
+        },
+        "history": {
+            "title": "Nuestra Historia",
+            "subtitle": "¿Cómo empezó todo?",
+            "paragraphs": {
+            "n1": "ALIENTA PERUANO nació en diciembre de 2015, en San Juan de Lurigancho, gracias al esfuerzo de un grupo de amigos unidos por el amor al fútbol y el deseo de ayudar.",
+            "n2": "Comenzamos con pocos niños en una cancha humilde, pero con un sueño grande: usar el fútbol como herramienta para alejar a los niños de la delincuencia, las drogas, el abandono y la pobreza.",
+            "n3": "Muchos de nuestros niños no cuentan con el apoyo de sus familias, ni los medios para pagar una formación deportiva. Aun así, entrenan con pasión, aunque no tengan recursos económicos, o sin que nadie crea en ellos. Porque para ellos, el fútbol no es solo un deporte, es una oportunidad de vida.",
+            "n4": "Hoy somos una asociación comprometida a transformar futuros, brindando entrenamiento, salud, nutrición, educación y apoyo emocional. Sin embargo, nuestros recursos son limitados y la necesidad es enorme."
+            }
+        },
+        "contact": {
+            "title": "¡Contactanos!",
+            "subtitle": "Únete a nuestro equipo Alienta un sueño",
+            "slogan": "Transforma una vida",
+            "contactNumber": "Contacto: 999 999 999"
+        }
+        
+        },
+    "en": {
+        "welcome": "Welcome to the page",
+        "donate": "Donate now",
+        "nav": {
+          "home": "Home",
+          "about": "About Us",
+          "history": "our history",
+          "contact": "Contact Us",
+          "donate": "Donate now"
+        },
+        "section1": {
+            "title": "About us",
+            "paragraphs": {
+                "p1": "We are a non-profit organization born from the hearts of a group of friends with a shared passion: football and the desire to help children in vulnerable situations.",
+                "p2": "We work in San Juan de Lurigancho, shaping not only football players but also human beings with values, discipline, and hope.",
+                "p3": "We believe that football can be a powerful tool to transform lives and open paths where none exist.",
+                "p4": "That is why we seek allies who believe, as we do, that a ball can change a destiny."
+            }
+        },
+        "section2": {
+          "title1": "Mission",
+          "paragraph1": "To comprehensively train children with football talent in vulnerable contexts, providing them with high-level training, education, and emotional support to turn them into professionals and exemplary citizens.",
+          "title2": "Our Vision",
+          "paragraph2": "To be a benchmark in Latin America for social transformation through football, developing talents with global impact."
+
+        },
+        "section3": {
+            "title": "Our Values",
+            "items": {
+              "1": "Self-Improvement",
+              "2": "Discipline",
+              "3": "Empathy",
+              "4": "Commitment",
+              "5": "Hope",
+              "6": "Excellence"
+            }
+        },
+        "section4": {
+          "title": "Goals",
+          "items": {
+              "1": "Identify and develop sports talent in high-risk areas.",
+              "2": "Provide comprehensive support (medical, psychological, educational).",
+              "3": "Build partnerships with clubs, corporations, and academic institutions.",
+              "4": "Encourage healthy lifestyles away from violence."
+            }
+        },
+        "section5": {
+            "title1": "Strategic Positioning",
+            "paragraph1": "“ALIENTA PERUANO is a transformative platform that empowers young people with talent and limited resources to become professional football players and positive leaders, integrating sports, health, and education.”",
+            "title2": "Our Value Proposition",
+            "paragraph2": "We offer a genuine chance for personal and professional growth to vulnerable children with talent, through an integral model that combines football, health, education, and values."
+        },
+        "section6": {
+          "title": "Target audience",
+          "part2Box1Title": "Primary",
+          "part2Box1Paragraph":
+            "Children between 8 and 17 years old with football talent",
+          "part2Box2Title": "Secondary",
+          "part2Box2Paragraph": "Parents or guardians of the children",
+          "part2Box3Title": "Tertiary (allies)",
+          "part2Box3Paragraph":
+            "Private companies, educational institutions, media outlets, profesional coaches, public football figures."
+        },
+        "section7": {
+          "title": "Competitor analysis",
+          "part2Box1Title": "Traditional football schools",
+          "part2Box1Paragraph":
+            "They focus only on technique. They do not address nutrition, psychology, or formal education",
+          "part2Box2Title": "Private professional academies:",
+          "part2Box2Paragraph":
+            "Expensive, inaccessible for children from low-income families",
+          "part2Box3Title": "Sports NGOs",
+          "part2Box3Paragraph":
+            "They exist, but few with a professionalizing focus",
+          "part3Title": "Key differentiator",
+          "part3Paragraph":
+            "ALIENTA PERUANO not only trains, it comprehensively prepares for high performance and life"
+        },
+        "history": {
+          "title": "Our History",
+          "subtitle": "How did it all start?",
+          "paragraphs": {
+            "n1": "ALIENTA PERUANO was born in December 2015, in San Juan de Lurigancho, thanks to the effort of a group of friends united by their love of football and their desire to help.",
+            "n2": "We started with a few children on a humble field, but with a big dream: to use football as a tool to keep children away from crime, drugs, neglect, and poverty.",
+            "n3": "Many of our children do not have the support of their families, nor the means to pay for sports training. Even so, they train with passion, even if they lack financial resources or if no one believes in them. Because for them, football is not just a sport, it is a life opportunity.",
+            "n4": "Today we are an association committed to transforming futures, providing training, health, nutrition, education, and emotional support. However, our resources are limited and the need is enormous."
+          }
+        },
+        "contact": {
+          "title": "Contact Us!",
+          "subtitle": "Join our team, Encourage a dream",
+          "slogan": "Transform a life",
+          "contactNumber": "Contact: 999 999 999"
+        }
+      
+    }
+}

@@ -96,8 +96,22 @@ li::marker {
 }
 
 /* A partir de 400px: fila */
-@media (min-width: 400px) {
+@media (min-width: 470px) {
   .custom-flex-xs {
     flex-direction: row;
+
+  }
+}
+
+/* Estilo base: ancho completo */
+.custom-div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* A partir de 407px: ancho automático */
+@media (min-width: 470px) {
+  .custom-div {
+    width: auto;
   }
 }

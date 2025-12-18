@@ -8,53 +8,44 @@ import imgsec5QuienesSomos from "../assets/imgsec5QuienesSomos.webp";
 import checkSection3 from "../assets/check.png"
 import n01White from "../assets/num_01.png";
 import n02White from "../assets/num_02.png";
+import { useTranslation } from "react-i18next";
 
 
 export default function QuienesSomos() {
+
+  const {t} = useTranslation("quienesSomos");
+
+
   return (
     <div className="w-full h-auto overflow-x-hidden ">
+
         <Header className="fixed top-0 left-0 w-full z-50"/>
-        
-        
-        
-    <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow ">
-        <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pt-30 lg:pt-20 ">
-            <div className="flex flex-col mb-10 mt-10 oswald  pl-10 pr-10  ">
-                <h1 className="text-3xl lg:text-5xl text-blue-950 w-full text-center mb-5 anton ">Quienes Somos</h1>
-                <p className="text-lg lg:text-2xl text-[#231f20] mb-5 ">Somos una asociación sin fines de lucro que nació del 
-                corazón de un grupo de amigos con una pasión en común: el 
-                fútbol y el deseo de ayudar a niños en situación de 
-                vulnerabilidad.</p>
-                <p className="text-lg lg:text-2xl text-[#231f20] mb-5">
-                Trabajamos en San Juan de Lurigancho formando no solo 
-                futbolistas, sino seres humanos con valores, disciplina y 
-                esperanza.   
-                </p>
-                <p className="text-lg lg:text-2xl text-[#231f20] mb-5">
-                Creemos que el fútbol puede ser una herramienta poderosa 
-                para transformar vidas y abrir caminos donde no los hay.   
-                </p>
-                <p className="text-lg lg:text-2xl text-[#231f20]">
-                Por eso buscamos aliados que crean, como nosotros, que 
-                un balón puede cambiar un destino.   
-                </p>
+
+        <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow ">
+            <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pt-30 lg:pt-20 ">
+                <div className="flex flex-col mb-10 mt-10 oswald  pl-10 pr-10  ">
+                    <h1 className="text-3xl lg:text-5xl text-blue-950 w-full text-center mb-5 anton ">{t("section1.title")}</h1>
+                    <p className="text-lg lg:text-2xl text-[#231f20] mb-5 ">{t("section1.paragraphs.p1")}</p>
+                    <p className="text-lg lg:text-2xl text-[#231f20] mb-5 ">{t("section1.paragraphs.p2")}</p>
+                    <p className="text-lg lg:text-2xl text-[#231f20] mb-5 ">{t("section1.paragraphs.p3")}</p>
+                    <p className="text-lg lg:text-2xl text-[#231f20]">{t("section1.paragraphs.p4")}</p>
+                </div>
+                
+
             </div>
             
-
+            <div
+            className="w-full lg:w-1/2 min-h-160 bg-blue-950 "
+            style={{
+                backgroundImage: `url(${imgsec1QuienesSomos})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+            }}
+            ></div>
         </div>
-        
-        <div
-        className="w-full lg:w-1/2 min-h-160 bg-blue-950 "
-        style={{
-            backgroundImage: `url(${imgsec1QuienesSomos})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-        }}
-        ></div>
-    </div>
-        
-      {/* Sección con columnas */}
-      <div id="Section-2" className="w-full text-center flex flex-col items-center text-blue-950 mt-20  ">
+            
+        {/* Sección con columnas */}
+        <div id="Section-2" className="w-full text-center flex flex-col items-center text-blue-950 mt-20  ">
         <div
             id="Justificacion-sec-2"
             className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center "
@@ -76,29 +67,22 @@ export default function QuienesSomos() {
             {/* right contenedor */}
             <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-10 text-xl order-1 lg:order-2 text-[#231f20] p-10 items-end oswald ">
                 <div className="flex w-full h-auto border-2 border-blue-950 gap-4 p-10 rounded-4xl relative">
-                    <h1 className="text-left text-lg lg:text-2xl ">Formar integralmente a niños con talento futbolístico en 
-                    contextos vulnerables, brindándoles entrenamiento de 
-                    alto nivel, educación y soporte emocional para 
-                    convertirlos en profesionales y ciudadanos ejemplares.
-                    </h1>
+                    <h1 className="text-left text-lg lg:text-2xl ">{t("section2.paragraph1")}</h1>
                     <div className="absolute top-0 left-0 -translate-y-1/2 -translate-x-[25%] flex px-6 items-center justify-center bg-white p-5">
-                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">Misión</h1>
+                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">{t("section2.title1")}</h1>
                     </div>
                 </div>
                 <div className="flex w-[80%] h-auto border-2 border-blue-950 gap-4 p-10 rounded-4xl relative">
-                    <h1 className="text-left text-lg lg:text-2xl ">Ser un referente en Latinoamérica en transformación 
-                    social a través del fútbol, desarrollando talentos con 
-                    impacto global.
-                    </h1>
+                    <h1 className="text-left text-lg lg:text-2xl ">{t("section2.paragraph2")}</h1>
                     <div className="absolute top-0 left-0 -translate-y-1/2 -translate-x-[25%] flex px-6 items-center justify-center bg-white p-5">
-                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">Visión</h1>
+                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">{t("section2.title2")}</h1>
                     </div>
                 </div>
 
             </div>
         </div>
-      </div>
-      <div id="Section-3 "
+        </div>
+        <div id="Section-3 "
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20  ">
         
         {/* img */}
@@ -111,57 +95,59 @@ export default function QuienesSomos() {
         </div>
 
         {/* bottom content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row  lg:pr-10 lg:pl-10 lg:pt-10 justify-center items-center   gap-y-4 order-1 lg:order-2">
+        <div className="w-full h-auto flex flex-col lg:flex-row  lg:pr-10 lg:pl-10 lg:mt-5 justify-center items-center   gap-y-4 order-1 lg:order-2 mb-5 lg:mb-0">
             <div className="flex w-auto lg:w-[45%]  items-center justify-center ">
-                <h1 className="text-3xl lg:text-5xl ">Valores</h1>
+                <h1 className="text-3xl lg:text-5xl ">{t("section3.title")}</h1>
             </div>
-            <div className="flex custom-flex-xs sm:flex-row gap-x-4 lg:gap-x-0 w-full lg:w-[55%] h-auto gap-y-4 text-2xl lg:text-3xl text-[#231f20] bg-blue-950 text-white justify-evenly items-center p-5 lg:text-3xl oswald ">
-                <div className="flex flex-col w-auto gap-y-4   ">
-                    <div className="flex w-full h-auto gap-4 ">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-left ">
-                        Superacion
-                        </h1>
+            <div className="flex sm:flex-row gap-x-4 lg:gap-x-0 w-full lg:w-[55%] h-auto gap-y-4 text-2xl lg:text-3xl text-[#231f20] bg-blue-950 text-white justify-evenly items-center lg:pl-10 lg:pr-10 pt-5 pb-5 lg:text-3xl oswald">
+                <div className="flex flex-col w-auto  custom-flex-xs gap-x-10">
+                    <div className=" w-auto sm:w-auto gap-y-4 ">
+                        <div className="flex w-full h-auto gap-4 ">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-left ">
+                            {t("section3.items.1")}
+                            </h1>
+                        </div>
+                        <div className="flex w-full h-auto gap-4 ">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-left">
+                            {t("section3.items.2")}
+                            </h1>
+                        </div>
+                        <div className="flex w-full h-auto gap-4">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-left">
+                            {t("section3.items.3")}
+                            </h1>
+                        </div>
                     </div>
-                    <div className="flex w-full h-auto gap-4 ">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-left">
-                        Disciplina
-                        </h1>
-                    </div>
-                    <div className="flex w-full h-auto gap-4">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-left">
-                        Empatía
-                        </h1>
+                    <div className=" w-auto sm:w-auto gap-y-4  ">
+                        <div className="flex w-full h-auto gap-4 ">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-center ">
+                            {t("section3.items.4")}
+                            </h1>
+                        </div>
+                        <div className="flex w-full h-auto gap-4 ">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-left">
+                            {t("section3.items.5")}
+                            </h1>
+                        </div>
+                        <div className="flex w-full h-auto gap-4">
+                            <img src={checkSection3} alt="" className="w-10 h-10" />
+                            <h1 className="text-left">
+                            {t("section3.items.6")}
+                            </h1>
+                        </div>
                     </div>
                 </div>
                 
-                <div className="flex flex-col w-auto  gap-y-4   ">
-                    <div className="flex w-full h-auto gap-4 ">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-center ">
-                        Compromiso
-                        </h1>
-                    </div>
-                    <div className="flex w-full h-auto gap-4 ">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-left">
-                        Esperanza
-                        </h1>
-                    </div>
-                    <div className="flex w-full h-auto gap-4">
-                        <img src={checkSection3} alt="" className="w-10 h-10" />
-                        <h1 className="text-left">
-                        Excelencia
-                        </h1>
-                    </div>
-                </div>
             </div>
         </div>
 
-      </div>
-      <div id="Section-4 "
+        </div>
+        <div id="Section-4 "
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950   mt-20 ">
         <div
         id="Justificacion-sec-4"
@@ -170,33 +156,33 @@ export default function QuienesSomos() {
         
             {/* right contenedor */}
             <div className="flex flex-col w-full lg:w-2/3 h-auto ">
-                <h1 className="text-3xl lg:text-5xl mb-5">Objetivos</h1>
+                <h1 className="text-3xl lg:text-5xl mb-5">{t("section4.title")}</h1>
                 <div className="flex flex-col w-full h-1/2  h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center oswald ">
                     <div className="flex w-[70%] md:w-[55%] h-auto  gap-4 mb-4 mt-10 ">
                         <img src={n01White} alt="" className="w-10 h-10 " />
                         <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
-                            <p className="text-left">Detectar y formar talento deportivo en zonas de alto riesgo</p>
+                            <p className="text-left">{t("section4.items.1")}</p>
                         </div>
                     
                     </div>
                     <div className="flex w-[70%] md:w-[55%] h-auto  gap-4 mb-4">
                         <img src={n02White} alt="" className="w-10 h-10" />
                         <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
-                            <p className="text-left">Brindar soporte completo (médico, psicólógico, educativo).</p>
+                            <p className="text-left">{t("section4.items.2")}</p>
                         </div>
                     
                     </div>
                     <div className="flex w-[70%] md:w-[55%] h-auto e gap-4 mb-4  ">
                         <img src={n01White} alt="" className="w-10 h-10" />
                         <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
-                            <p className="text-left">Establecer alianzas con clubes, empresas y entidades educativas</p>
+                            <p className="text-left">{t("section4.items.3")}</p>
                         </div>
                     </div>
 
                     <div className="flex w-[70%] md:w-[55%] h-auto gap-4  mb-10">
                         <img src={n01White} alt="" className="w-10 h-10" />
                         <div className="flex flex-col gap-y-4 w-full">
-                            <p className="text-left">Promover modelos de vida saludable y alejados de la violencia</p>
+                            <p className="text-left">{t("section4.items.4")}</p>
                         </div>
                     </div>
                     
@@ -217,8 +203,8 @@ export default function QuienesSomos() {
         </div>
 
 
-      </div>
-      <div id="Section-5 "
+        </div>
+        <div id="Section-5 "
         className="w-full h-min-screen text-center flex flex-col items-center text-blue-950  mt-20">
         
         <div
@@ -230,26 +216,15 @@ export default function QuienesSomos() {
         <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4  text-[#231f20] pl-5 pr-5 sm:p-10 ">
             <div className="flex flex-col w-full h-auto gap-4">
                 <div className="w-full h-auto bg-blue-950 ">
-                    <h1 className="text-white p-3 text-3xl lg:text-5xl">Posicionamiento</h1>
+                    <h1 className="text-white p-3 text-3xl lg:text-5xl">{t("section5.title1")}</h1>
                 </div>
-                <h1 className="text-center text-xl p-5 oswald ">
-                    “ALIENTA PERUANO es una plataforma de 
-                    transformación que convierte a niños con 
-                    talento y pocos recursos en futbolistas 
-                    profesionales y líderes positivos, 
-                    integrando deporte, salud y educación.”
-                </h1>
+                <h1 className="text-center text-xl p-5 oswald ">{t("section5.paragraph1")}</h1>
             </div>
             <div className="flex flex-col w-full h-auto gap-4 mb-4">
                 <div className="w-full h-auto bg-blue-950 ">
-                    <h1 className="text-white p-3 text-3xl lg:text-5xl">Propuesta de valor</h1>
+                    <h1 className="text-white p-3 text-3xl lg:text-5xl">{t("section5.title2")}</h1>
                 </div>
-                <h1 className="text-center text-xl oswald ">
-                    Brindamos una oportunidad real de desarrollo 
-                    personal y profesional a niños vulnerables con 
-                    talento, a través de un modelo integral que une 
-                    fútbol, salud, educación y valores.
-                </h1>
+                <h1 className="text-center text-xl oswald ">{t("section5.paragraph2")}</h1>
             </div>
             
         </div>
@@ -266,7 +241,7 @@ export default function QuienesSomos() {
         </div>
 
 
-      </div>
+        </div>
     </div>
   );
 }

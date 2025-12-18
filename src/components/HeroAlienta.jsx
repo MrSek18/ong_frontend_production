@@ -42,7 +42,7 @@ import { useState, useEffect } from "react";
 
 export default function HeroAlienta() {
 
-  const {t} = useTranslation();
+  const {t} = useTranslation("heroAlienta");
   const [hiding, setHiding] = useState(true); 
   const reasons = t("section1.reasons", {returnObjects: true});
   useEffect(() => {

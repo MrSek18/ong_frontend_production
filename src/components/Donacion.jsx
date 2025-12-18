@@ -139,14 +139,14 @@ export default function Donacion() {
               {/* first contenedor */}
               {!showReactive && !showForm && (
                 <div className="flex flex-col w-[85%] gap-6 items-center justify-center ">
-                  <h1 className="text-5xl ">¡Con tu ayuda</h1>
-                  <h2 className="text-4xl ">podemos ayudarlos!</h2>
-                  <p className="text-2xl w-[80%]">
+                  <h1 className="text-7xl tracking-wider">¡Con tu ayuda</h1>
+                  <h2 className="text-4xl tracking-wide">podemos ayudarlos!</h2>
+                  <p className="text-2xl w-[80%] oswald">
                     Tu apoyo puede convertir a niños con talento y pocos recursos en futbolistas profesionales y líderes positivos
                   </p>
                   <button
                     onClick={() => setShowReactive(true)}
-                    className="bg-red-600 text-white px-6 py-4 rounded-full cursor-pointer hover:scale-110 transform-gpu transition text-2xl"
+                    className="bg-red-600 text-white px-6 py-4 rounded-full cursor-pointer hover:scale-110 transform-gpu transition text-2xl oswald font-bold"
                   >
                     Dona ahora
                   </button>

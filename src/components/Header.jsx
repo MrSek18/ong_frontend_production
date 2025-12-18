@@ -33,13 +33,13 @@ export default function Header({ className = "" }) {
           {/* Español */}
           <div onClick={() => i18n.changeLanguage("es")} className="cursor-pointer flex items-center gap-2">
             <img src={peruLogo} alt="Peru" className="w-8 h-8 lg:w-6 lg:h-6 transition" />
-            <span className="text-white text-sm sm:text-base lg:text-xs">Español</span>
+            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl">Español</span>
           </div>
 
           {/* Inglés */}
           <div onClick={() => i18n.changeLanguage("en")} className="cursor-pointer flex items-center gap-2">
             <img src={usaLogo} alt="USA" className="w-8 h-8 lg:w-6 lg:h-6 transition" />
-            <span className="text-white text-sm sm:text-base lg:text-xs">English</span>
+            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl">English</span>
           </div>
         </div>
       </div>
