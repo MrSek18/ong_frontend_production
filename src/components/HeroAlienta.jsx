@@ -678,7 +678,7 @@ export default function HeroAlienta() {
             </div>
 
             <div className="flex w-full h-[25%]  justify-center items-end md:w-1/2 md:h-full p-5">
-              <img src={logoAlientaBlanco} className="w-60 h-30  lg:w-80 lg:h-40" />
+              <img src={logoAlientaBlanco} className="w-60 h-30  lg:w-80 lg:h-40 " />
             </div>
         </div>
 
