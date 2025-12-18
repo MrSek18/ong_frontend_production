@@ -80,8 +80,8 @@ export default function HeroAlienta() {
                 hiding ? "opacity-0 scale-95 pointer-events-none" : "opacity-100 scale-100"
               }`}
             >
-              <h1 className="ml-10 text-lg md:text-3xl mb-2 leading-tight roboto-condensed">ALIENTA PERUANO</h1>
-              <p className="ml-10 text-md md:text-2xl leading-relaxed mb-4 roboto-condensed">
+              <h1 className="ml-10 text-lg md:text-3xl mb-2 leading-tight roboto-condensed font-bold">ALIENTA PERUANO</h1>
+              <p className="ml-10 text-md md:text-3xl leading-relaxed mb-4 roboto-condensed font-bold">
                 <span dangerouslySetInnerHTML={{ __html: t("DynamicDonationCard.main") }} />
               </p>
               {/* Ícono absoluto */}
@@ -106,8 +106,8 @@ export default function HeroAlienta() {
             </div>
           </div>
 
-          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-3 ">
-            <h1 className="text-white text-xl md:text-3xl text-right roboto-condensed">
+          <div className="flex h-[15%] md:h-full justify-end items-end flex-grow p-5 sm:p-10 ">
+            <h1 className="text-white text-xl md:text-3xl text-right roboto-condensed ">
               <span dangerouslySetInnerHTML={{ __html: t("Hero.text") }} />
             </h1>
           </div>
@@ -118,16 +118,16 @@ export default function HeroAlienta() {
       </div>
       
       {/* Sección de video de conciencia */}
-      <div id="Section-video"
-          className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6">
+      <div id="Section-video "
+          className="w-full text-center flex flex-col items-center text-blue-950 mt-10 gap-4 ">
         
         {/* Título llamativo */}
-        <h1 className="text-3xl lg:text-4xl p-5 ml-10 mr-10 ">
+        <h1 className="text-3xl lg:text-5xl ml-5 mr-5 border-2">
            {t("sectionVideo.title")}
         </h1>
         
         {/* Subtítulo breve */}
-        <p className="text-lg lg:text-xl text-[#231f20]  w-4/5 lg:w-2/3">
+        <p className="text-lg lg:text-2xl text-[#231f20]  w-4/5 lg:w-2/3 border-2">
           {t("sectionVideo.subtitle")}
         </p>
 
@@ -145,20 +145,19 @@ export default function HeroAlienta() {
           </div>
         </div>
       </div>
-
-      {/* Section-1 corregido */}
-      <div id="Section-1 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6  ">
-        <h1 className="text-2xl lg:text-5xl p-5 ml-10 mr-10">{t("section1.title")}</h1>
+      {/* Section-1 */}
+      <div id="Section-1"
+        className="w-full text-center flex flex-col items-center text-blue-950 mt-20 gap-4 border-green-500 border-2 ">
+        <h1 className="text-3xl lg:text-5xl  ml-10 mr-10 ">{t("section1.title")}</h1>
         
-        <ul className=" ml-10 mr-10 space-y-4" >
+        <ul className=" ml-10 mr-10 space-y-4 border-2 border-red-500" >
           {reasons.map((reason, idx) => (
-            <li key={idx} className="text-left lg:mr-20 list-disc list-inside text-lg lg:text-2xl text-[#231f20] ">{reason}</li>
+            <li key={idx} className="text-left list-disc list-inside text-lg lg:text-2xl text-[#231f20] ">{reason}</li>
           ))}
         </ul>
 
         <div id="Justificacion-sec-1"
-        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald mt-10 ">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald border-2 border-red-500 mt-6">
             {/* contendio sec 1 */}
             <div className="w-full lg:w-[65%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag ">
               <h1 className="text-white text-center lg:text-left text-2xl mt-3  lg:pl-10 ">{t("section1.part2Title")}</h1>
@@ -223,18 +222,18 @@ export default function HeroAlienta() {
         </div>
 
       </div>
-      <div id="Section-2"
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
-        <div className="w-2/4 ">
-          <h1 className="text-3xl lg:text-5xl">{t("section2.title")}</h1>
-          <h2 className="text-left text-2xl lg:text-3xl ml-3 mt-3 mb-2" >{t("section2.subtitle")}</h2>
-          <p className="text-left text-xl  lg:text-2xl text-[#231f20]">{t("section2.paragraph")}</p>
+      <div id="Section-2 "
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2 border-red-500 ">
+        <div className="w-3/4 lg:w-2/4 border-2 gap-4 flex flex-col items-center">
+          <h1 className="text-3xl lg:text-5xl border-2 ">{t("section2.title")}</h1>
+          <h2 className="text-center text-lg lg:text-2xl border-2" >{t("section2.subtitle")}</h2>
+          <p className="text-center text-base lg:text-xl text-[#231f20] border-2">{t("section2.paragraph")}</p>
         </div>
         
         <div id="Justificacion-sec-2"
-        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 oswald">
-            {/* contendio sec 2 */}
-            <div className="w-full h-auto bg-white p-10 ">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald border-2 ">
+            {/* contenido sec 2 */}
+            <div className="w-full h-auto bg-white pl-10 pt-10 pr-10 ">
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h-full gap-4 ">
                 {/* Fila*/}
@@ -264,14 +263,14 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-3 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
-        <div className="w-2/4">
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
+        <div className="w-3/4 lg:w-2/4 border-2">
           <h1 className="text-3xl lg:text-5xl">{t("section3.title")}</h1>
         </div>
         
         <div
           id="Justificacion-sec-3"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5 oswald "
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5 oswald border-2"
         >
           {/* img */}
           <div
@@ -285,18 +284,18 @@ export default function HeroAlienta() {
           ></div>
 
           {/* right contenedor */}
-          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-2xl lg:text-3xl order-1 lg:order-2 text-[#231f20] p-10">
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 ">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-2xl lg:text-3xl order-1 lg:order-2 text-[#231f20] pl-10 pr-10 pb-5 lg:pb-0">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 pb-4">
               <img src={n01} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">{t("section3.part2Box1")}</h1>
+              <h1 className="text-left  ">{t("section3.part2Box1")}</h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 pb-4">
               <img src={n02} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">{t("section3.part2Box2")}</h1>
+              <h1 className="text-left ">{t("section3.part2Box2")}</h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 pb-4">
               <img src={n03} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">
+              <h1 className="text-left ">
                 {t("section3.part2Box3")}
               </h1>
             </div>
@@ -312,39 +311,39 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-4 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
-        <div className="w-full flex flex-col gap-4">
-          <h1 className="text-3xl lg:text-5xl">{t("section4.title")}</h1>
-          <p className="text-[#231f20] text-xl lg:text-2xl">{t("section4.subtitle")}</p>
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
+        <div className="w-3/4 lg:w-2/4 flex flex-col gap-4 border-2">
+          <h1 className="text-3xl lg:text-5xl border-2">{t("section4.title")}</h1>
+          <p className="text-[#231f20] text-lg lg:text-2xl border-2">{t("section4.subtitle")}</p>
         </div>
         
         <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10  "
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5  border-2"
         >
           {/* right contenedor */}
           
-          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-2xl lg:text-3xl text-[#231f20] p-10 ">
-            <h1 className=" text-left text-2xl lg:text-4xl text-blue-950 mb-4">{t("section4.part2Title")}</h1>
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald">
-              <img src={n01} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-2xl lg:text-3xl text-[#231f20] pr-10 pl-10 pb-5 ">
+            <h1 className=" text-left text-2xl lg:text-4xl text-blue-950 mb-0 ">{t("section4.part2Title")}</h1>
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald pb-4 ">
+              <img src={n01} alt="" className="w-10 h-10  lg:w-15 lg:h-15 border-red-500 " />
+              <h1 className="text-left ">
                 {t("section4.part2Box1")}
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald pb-4">
               <img src={n02} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">
+              <h1 className="text-left ">
                 {t("section4.part2Box2")}
               </h1>
             </div>
-            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald">
+            <div className="flex w-full h-auto border-b-2 border-blue-950 gap-4 oswald pb-4">
               <img src={n03} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
-              <h1 className="text-left mb-4">
+              <h1 className="text-left ">
                 {t("section4.part2Box3")}
               </h1>
             </div>
-            <div className="flex w-full h-auto  gap-4">
+            <div className="flex w-full h-auto gap-4 ">
               <img src={n04} alt="" className="w-10 h-10  lg:w-15 lg:h-15" />
               <h1 className="text-left oswald">{t("section4.part2Box4")}</h1>
             </div>
@@ -364,10 +363,10 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-5 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10">
+        className="w-full text-center flex flex-col items-center text-blue-950 mt-20 border-2 gap-y-4 lg:gap-y-0">
         
         {/* img */}
-        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center" 
+        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center order-2 lg:order-1" 
         style={{
               backgroundImage: `url(${imgSection5})`,
               backgroundSize: "cover",
@@ -375,12 +374,12 @@ export default function HeroAlienta() {
             }}>
         </div>
 
-        {/* right content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row mt-10">
-          <div className="flex h-50 w-full lg:w-1/2  items-center justify-center">
-            <h1 className="text-5xl lg:text-7xl">{t("section5.title")}</h1>
+        {/* down content */}
+        <div className="w-full h-auto flex flex-col lg:flex-row border-2 order-1 lg:order-2 items-center">
+          <div className="flex  lg:h-50 w-full lg:w-1/2  items-center justify-center border-2 border-red-500">
+            <h1 className="text-3xl lg:text-5xl border-2">{t("section5.title")}</h1>
           </div>
-          <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-lg text-[#231f20] bg-blue-950 text-white p-5 oswald">
+          <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-xl text-[#231f20] bg-blue-950 text-white p-5 oswald mt-5 lg:mt-0 ">
             <div className="flex w-full h-auto gap-4 ">
               <img src={checkSection5} alt="" className="w-10 h-10" />
               <h1 className="text-left ">
@@ -408,13 +407,13 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-6 "
-        className="w-full min-h-screen text-center flex flex-col items-center justify-center  text-blue-950 mt-10 mb-20 lg:mb-10 ">
+        className="w-full text-center flex flex-col items-center justify-center  text-blue-950 mt-20  border-2 ">
 
-          <div className="w-full h-auto ">
+          <div className="w-full h-auto border-2 ">
             <h1 className="text-3xl lg:text-5xl">{t("section6.title")}</h1>
           </div> 
             
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 p-10 place-items-center sm:place-items-stretch">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 pt-10 pr-10 pl-10 place-items-center sm:place-items-stretch border-2 border-red-500">
 
             <div id="Card1" className="flex h-auto w-full md:w-full ">    
               <div className="relative flex h-auto w-full flex-col items-start">
@@ -521,7 +520,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-7 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+        className="w-full h-min-screen  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
 
           <div className="w-full h-auto">
             <h1 className="text-3xl">{t("section7.title")}</h1>
@@ -529,7 +528,7 @@ export default function HeroAlienta() {
             
         <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 items-stretch"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-6 items-stretch"
         >
           {/* right contenedor */}
           <div className="flex flex-col w-full h-1/2 lg:w-1/2 h-auto  bg-blue-950 gap-y-4 text-lg lg:text-xl text-white justify-center items-center">
@@ -567,7 +566,7 @@ export default function HeroAlienta() {
 
           {/* img */}
           <div
-            className="flex w-full lg:w-1/2 h-110  justify-center items-center"
+            className="flex w-full lg:w-1/2 min-h-110 lg:h-auto  justify-center items-center border-2"
             style={{
               backgroundImage: `url(${imgSection7})`,
               backgroundSize: "cover",
@@ -584,16 +583,14 @@ export default function HeroAlienta() {
 
       </div>
       <div id="historia"
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10  ">
-       
-        
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 border-2">
         <div
-          id="Justificacion-sec-8"
-          className="relative w-full flex  flex-col lg:flex-row justify-between items-center "
+          id="Justificacion-sec-8 "
+          className="relative w-full flex  flex-col lg:flex-row justify-between items-center border-2 "
         >
           {/* img */}
           <div
-            className="flex relative w-full lg:w-[50%] h-100 sm:min-h-screen bg-blue-950 order-2 lg:order-1"
+            className="flex relative w-full lg:w-[50%] h-100 sm:min-h-screen bg-blue-950 order-2 lg:order-1 border-2 border-red-500"
             style={{
               backgroundImage: `url(${imgSection8})`,
               backgroundSize: "cover",
@@ -601,7 +598,7 @@ export default function HeroAlienta() {
             }}
           >
             {/* Overlay difuminado solo en el 15% derecho */}
-            <div className="hidden lg:block absolute right-0 top-0 h-full w-[20%] bg-gradient-to-r from-transparent to-white"></div>
+            <div className="hidden lg:block absolute right-0 top-0 h-full w-[20%] bg-gradient-to-r from-transparent to-white "></div>
 
           </div>
 
@@ -609,8 +606,8 @@ export default function HeroAlienta() {
          
 
           {/* right contenedor */}
-          <div className="relative  top-0 right-0 w-full lg:w-1/2 min-h-screen bg-white/80 flex flex-col text-[#231f20] p-10  order-1 lg:order-2 gap-y-5 justify-center">
-            <h1 className="text-blue-950 text-3xl lg:text-5xl">
+          <div className="relative  top-0 right-0 w-full lg:w-1/2 min-h-screen bg-white/80 flex flex-col text-[#231f20] pr-10 pl-10  order-1 lg:order-2 gap-y-5 justify-center border-2 border-red-500">
+            <h1 className="text-blue-950 text-3xl lg:text-5xl border-2 border-red-500">
               {t("history.title")}
             </h1>
             <h2 className="text-blue-950 text-xl lg:text-2xl" >
@@ -631,7 +628,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="contacto"
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 ">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 ">
        
         
         <div className="flex flex-col w-full h-160 md:flex-row"

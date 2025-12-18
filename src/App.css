@@ -70,11 +70,8 @@ html, body {
   text-shadow: 4px 4px 6px rgba(0,0,0,0.7);
 }
 
-.text-shadow-white {
-  text-shadow: 2px 2px 6px rgba(255,255,255,0.8);
-}
 .text-shadow-xl {
-  text-shadow: 6px 6px 10px rgba(0,0,0,0.8);
+  text-shadow: 10px 10px 20px rgba(0,0,0,1);
 }
 
 li::marker {
@@ -89,4 +86,18 @@ li::marker {
 
 .fadeInScale {
   animation: fadeInScale 0.3s ease;
+}
+
+
+/* Estilo base: columna */
+.custom-flex-xs {
+  display: flex;
+  flex-direction: column;
+}
+
+/* A partir de 400px: fila */
+@media (min-width: 400px) {
+  .custom-flex-xs {
+    flex-direction: row;
+  }
 }

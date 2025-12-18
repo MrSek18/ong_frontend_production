@@ -13,82 +13,85 @@ import n02White from "../assets/num_02.png";
 export default function QuienesSomos() {
   return (
     <div className="w-full h-auto overflow-x-hidden ">
-      <div className="w-full h-auto  flex flex-col ">
         <Header className="fixed top-0 left-0 w-full z-50"/>
         
         
-        <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow">
-            <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pl-10 pr-10">
-                <div className="flex flex-col mb-10 mt-10">
-                    <h1 className="text-5xl text-blue-950 w-full text-center mb-10">Quienes Somos</h1>
-                    <p className="text-2xl text-[#231f20] mb-5">Somos una asociación sin fines de lucro que nació del 
-                    corazón de un grupo de amigos con una pasión en común: el 
-                    fútbol y el deseo de ayudar a niños en situación de 
-                    vulnerabilidad.</p>
-                    <p className="text-2xl text-[#231f20] mb-5">
-                    Trabajamos en San Juan de Lurigancho formando no solo 
-                    futbolistas, sino seres humanos con valores, disciplina y 
-                    esperanza.   
-                    </p>
-                    <p className="text-2xl text-[#231f20] mb-5">
-                    Creemos que el fútbol puede ser una herramienta poderosa 
-                    para transformar vidas y abrir caminos donde no los hay.   
-                    </p>
-                    <p className="text-2xl text-[#231f20]">
-                    Por eso buscamos aliados que crean, como nosotros, que 
-                    un balón puede cambiar un destino.   
-                    </p>
-                </div>
-                
-
+        
+    <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow border-2 border-green-500">
+        <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pt-30 lg:pt-20 border-5 border-red-500">
+            <div className="flex flex-col mb-10 mt-10 oswald border-2 border-blue-600 pl-10 pr-10  ">
+                <h1 className="text-3xl lg:text-5xl text-blue-950 w-full text-center mb-5 anton border-2">Quienes Somos</h1>
+                <p className="text-lg lg:text-2xl text-[#231f20] mb-5 border-2">Somos una asociación sin fines de lucro que nació del 
+                corazón de un grupo de amigos con una pasión en común: el 
+                fútbol y el deseo de ayudar a niños en situación de 
+                vulnerabilidad.</p>
+                <p className="text-lg lg:text-2xl text-[#231f20] mb-5">
+                Trabajamos en San Juan de Lurigancho formando no solo 
+                futbolistas, sino seres humanos con valores, disciplina y 
+                esperanza.   
+                </p>
+                <p className="text-lg lg:text-2xl text-[#231f20] mb-5">
+                Creemos que el fútbol puede ser una herramienta poderosa 
+                para transformar vidas y abrir caminos donde no los hay.   
+                </p>
+                <p className="text-lg lg:text-2xl text-[#231f20]">
+                Por eso buscamos aliados que crean, como nosotros, que 
+                un balón puede cambiar un destino.   
+                </p>
             </div>
             
-            <div
-            className="w-full lg:w-1/2 h-160 bg-blue-950 "
-            style={{
-                backgroundImage: `url(${imgsec1QuienesSomos})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-            }}
-            ></div>
+
         </div>
         
-      </div>
+        <div
+        className="w-full lg:w-1/2 min-h-160 bg-blue-950 "
+        style={{
+            backgroundImage: `url(${imgsec1QuienesSomos})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+        }}
+        ></div>
+    </div>
+        
       {/* Sección con columnas */}
-      <div id="Section-2" className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10 gap-6 ">
+      <div id="Section-2" className="w-full text-center flex flex-col items-center text-blue-950 mt-20  border-2 border-red-500">
         <div
             id="Justificacion-sec-2"
-            className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-10 "
+            className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center "
         >
             {/* img */}
             <div
-            className="w-full lg:w-1/2 h-160 bg-blue-950  order-2 lg:order-1"
+            className="relative w-full lg:w-1/2 min-h-160 bg-blue-950 order-2 lg:order-1 border-2"
             style={{
                 backgroundImage: `url(${imgsec2QuienesSomos})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
             }}
-            ></div>
+            >
+            {/* Overlay difuminado solo en el 20% derecho */}
+            <div className="hidden lg:block absolute right-0 top-0 h-full w-[20%] bg-gradient-to-r from-transparent to-white"></div>
+            </div>
+
 
             {/* right contenedor */}
-            <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-10 text-xl order-1 lg:order-2 text-[#231f20] p-10 items-end m-10">
+            <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-10 text-xl order-1 lg:order-2 text-[#231f20] p-10 items-end oswald border-2">
                 <div className="flex w-full h-auto border-2 border-blue-950 gap-4 p-10 rounded-4xl relative">
-                    <h1 className="text-left">Formar integralmente a niños con talento futbolístico en 
+                    <h1 className="text-left text-lg lg:text-2xl ">Formar integralmente a niños con talento futbolístico en 
                     contextos vulnerables, brindándoles entrenamiento de 
                     alto nivel, educación y soporte emocional para 
                     convertirlos en profesionales y ciudadanos ejemplares.
                     </h1>
                     <div className="absolute top-0 left-0 -translate-y-1/2 -translate-x-[25%] flex px-6 items-center justify-center bg-white p-5">
-                        <h1 className="text-4xl text-center text-blue-950">Misión</h1>
+                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">Misión</h1>
                     </div>
                 </div>
                 <div className="flex w-[80%] h-auto border-2 border-blue-950 gap-4 p-10 rounded-4xl relative">
-                    <h1 className="text-left ">Ser un referente en Latinoamérica en transformación 
+                    <h1 className="text-left text-lg lg:text-2xl ">Ser un referente en Latinoamérica en transformación 
                     social a través del fútbol, desarrollando talentos con 
                     impacto global.
                     </h1>
                     <div className="absolute top-0 left-0 -translate-y-1/2 -translate-x-[25%] flex px-6 items-center justify-center bg-white p-5">
-                        <h1 className="text-4xl text-center text-blue-950">Visión</h1>
+                        <h1 className="text-3xl lg:text-4xl text-center text-blue-950 anton">Visión</h1>
                     </div>
                 </div>
 
@@ -96,10 +99,10 @@ export default function QuienesSomos() {
         </div>
       </div>
       <div id="Section-3 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-10  ">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 border-2 border-yellow-500 ">
         
         {/* img */}
-        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center" 
+        <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center order-2 lg-order-1" 
         style={{
             backgroundImage: `url(${imgsec3QuienesSomos})`,
             backgroundSize: "cover",
@@ -107,12 +110,12 @@ export default function QuienesSomos() {
             }}>
         </div>
 
-        {/* right content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row mt-10 p-10 justify-center items-center">
-        <div className="flex h-50 w-full lg:w-1/2  items-center justify-center">
-            <h1 className="text-7xl">Valores</h1>
+        {/* bottom content */}
+        <div className="w-full h-auto flex flex-col lg:flex-row mt-10 lg:pr-10 lg:pl-10 justify-center items-center border-2 border-red-500 gap-y-4 order-1 lg:order-2">
+        <div className="flex w-auto lg:w-[45%]  items-center justify-center border-2">
+            <h1 className="text-3xl lg:text-5xl ">Valores</h1>
         </div>
-        <div className="flex flex-col sm:flex-row w-auto lg:w-auto h-auto gap-y-4 gap-x-4 text-3xl text-[#231f20] bg-blue-950 text-white justify-around items-center p-5 ">
+        <div className="flex custom-flex-xs sm:flex-row gap-x-4 lg:gap-x-0 w-full lg:w-[55%] h-auto gap-y-4 text-2xl lg:text-3xl text-[#231f20] bg-blue-950 text-white justify-evenly items-center p-5 border-2 border-green-500 lg:text-3xl oswald mb-4">
             <div className="flex flex-col w-auto gap-y-4   ">
                 <div className="flex w-full h-auto gap-4 ">
                     <img src={checkSection3} alt="" className="w-10 h-10" />
@@ -134,7 +137,7 @@ export default function QuienesSomos() {
                 </div>
             </div>
             
-            <div className="flex flex-col w-auto  gap-y-4  ">
+            <div className="flex flex-col w-auto  gap-y-4   ">
                 <div className="flex w-full h-auto gap-4 ">
                     <img src={checkSection3} alt="" className="w-10 h-10" />
                     <h1 className="text-center ">
@@ -159,10 +162,7 @@ export default function QuienesSomos() {
 
       </div>
       <div id="Section-4 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950  ">
-
-        
-            
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950  border-2 border-green-500 mt-20 ">
         <div
         id="Justificacion-sec-4"
         className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center  items-stretch gap-x-15 "
@@ -170,40 +170,37 @@ export default function QuienesSomos() {
         
             {/* right contenedor */}
             <div className="flex flex-col w-full lg:w-2/3 h-auto ">
-                <h1 className="text-7xl mt-10 mb-10">Objetivos</h1>
-                <div className="flex flex-col w-full h-1/2  h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center">
-                
-                <div className="flex w-[70%] md:w-[80%] h-auto border-b-2 border-white gap-4 mb-4 pb-3 mt-10">
-                <img src={n01White} alt="" className="w-13 h-13 " />
-                <div className="flex flex-col gap-y-4">
-                    <h1 className="text-left w-full">
-                    Escuelas de fútbol tradicionales:
-                    </h1>
-                    <p className="text-left">Se enfocan solo en la técnica. No abordan nutrición, psicología ni educación formal</p>
+                <h1 className="text-3xl lg:text-5xl mb-5">Objetivos</h1>
+                <div className="flex flex-col w-full h-1/2  h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center oswald border-2 border-red-500">
+                    <div className="flex w-[70%] md:w-[55%] h-auto  gap-4 mb-4 mt-10 ">
+                        <img src={n01White} alt="" className="w-10 h-10 " />
+                        <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
+                            <p className="text-left">Detectar y formar talento deportivo en zonas de alto riesgo</p>
+                        </div>
+                    
+                    </div>
+                    <div className="flex w-[70%] md:w-[55%] h-auto  gap-4 mb-4">
+                        <img src={n02White} alt="" className="w-10 h-10" />
+                        <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
+                            <p className="text-left">Brindar soporte completo (médico, psicólógico, educativo).</p>
+                        </div>
+                    
+                    </div>
+                    <div className="flex w-[70%] md:w-[55%] h-auto e gap-4 mb-4  ">
+                        <img src={n01White} alt="" className="w-10 h-10" />
+                        <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
+                            <p className="text-left">Establecer alianzas con clubes, empresas y entidades educativas</p>
+                        </div>
+                    </div>
+
+                    <div className="flex w-[70%] md:w-[55%] h-auto gap-4  mb-10">
+                        <img src={n01White} alt="" className="w-10 h-10" />
+                        <div className="flex flex-col gap-y-4 w-full">
+                            <p className="text-left">Promover modelos de vida saludable y alejados de la violencia</p>
+                        </div>
+                    </div>
+                    
                 </div>
-                
-                </div>
-                <div className="flex w-[70%] md:w-[80%] h-auto border-b-2 border-white gap-4 mb-4 pb-3">
-                <img src={n02White} alt="" className="w-13 h-13" />
-                <div className="flex flex-col gap-y-4">
-                    <h1 className="text-left w-full">
-                    Academias profesionales privadas:
-                    </h1>
-                    <p className="text-left">Costosas, inaccesibles para niños de bajos recursos</p>
-                </div>
-                
-                </div>
-                <div className="flex w-[70%] md:w-[80%] h-auto gap-4 pb-3  mb-10">
-                <img src={n01White} alt="" className="w-13 h-13" />
-                <div className="flex flex-col gap-y-4">
-                    <h1 className="text-left w-full">
-                    ONGs deportivas:
-                    </h1>
-                    <p className="text-left">Existen, pero pocas con enfoque profesionalizante</p>
-                </div>
-                </div>
-                
-            </div>
             </div>
             
 
@@ -222,7 +219,7 @@ export default function QuienesSomos() {
 
       </div>
       <div id="Section-5 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 border-2 mt-20">
         
         <div
         id="Justificacion-sec-5"
@@ -230,12 +227,12 @@ export default function QuienesSomos() {
         >
         {/* right contenedor */}
         
-        <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4 text-3xl text-[#231f20] p-5 sm:p-10 ">
+        <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4  text-[#231f20] pl-5 pr-5 sm:p-10 ">
             <div className="flex flex-col w-full h-auto gap-4">
-                <div className="w-full h-auto bg-blue-950">
-                    <h1 className="text-white p-3 text-4xl">Posicionamiento</h1>
+                <div className="w-full h-auto bg-blue-950 border-2">
+                    <h1 className="text-white p-3 text-3xl lg:text-5xl">Posicionamiento</h1>
                 </div>
-                <h1 className="text-center  text-xl  p-5 ">
+                <h1 className="text-center text-xl p-5 oswald border-2">
                     “ALIENTA PERUANO es una plataforma de 
                     transformación que convierte a niños con 
                     talento y pocos recursos en futbolistas 
@@ -243,11 +240,11 @@ export default function QuienesSomos() {
                     integrando deporte, salud y educación.”
                 </h1>
             </div>
-            <div className="flex flex-col w-full h-auto  gap-4">
-                <div className="w-full h-auto bg-blue-950">
-                    <h1 className="text-white p-3 text-4xl">Propuesta de valor</h1>
+            <div className="flex flex-col w-full h-auto gap-4 mb-4">
+                <div className="w-full h-auto bg-blue-950 border-2">
+                    <h1 className="text-white p-3 text-3xl lg:text-5xl">Propuesta de valor</h1>
                 </div>
-                <h1 className="text-center text-xl">
+                <h1 className="text-center text-xl oswald border-2">
                     Brindamos una oportunidad real de desarrollo 
                     personal y profesional a niños vulnerables con 
                     talento, a través de un modelo integral que une 
