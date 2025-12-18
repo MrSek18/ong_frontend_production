@@ -92,26 +92,26 @@ export default function Header({ className = "" }) {
 
         {/* Menú desplegable en móvil */}
         {open && (
-          <div className="absolute top-30 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:950px)]:hidden shadow-lg z-50">
-            <button onClick={() => setOpen(false)} className="self-end text-white mb-2 focus:outline-none">
-              <XMarkIcon className="w-8 h-8 lg:w-6 lg:h-6" />
+          <div className="absolute top-21 right-10 w-auto bg-blue-950 text-white flex flex-col items-start gap-4 p-6 [@media(min-width:950px)]:hidden shadow-lg z-50 fade-in-down">
+            <button onClick={() => setOpen(false)} className="self-end text-white  focus:outline-none">
+              <XMarkIcon className="w-7 h-7 lg:w-5 lg:h-5" />
             </button>
 
             <Link to="/" onClick={() => setOpen(false)} className="text-white text-sm lg:text-xs cursor-pointer hover:scale-105 transition">
-              Contenido
+              {t("nav.home")}
             </Link>
 
             <Link to="/quienesSomos" onClick={() => setOpen(false)} className="text-white text-sm lg:text-xs cursor-pointer hover:scale-105 transition">
-              Quienes Somos
+              {t("nav.about")}
             </Link>
 
             {location.pathname === "/" && (
               <>
                 <a href="#historia" className="cursor-pointer text-sm lg:text-xs hover:scale-105 transition">
-                  Nuestra Historia
+                  {t("nav.history")}
                 </a>
                 <a href="#contacto" className="cursor-pointer text-sm lg:text-xs hover:scale-105 transition">
-                  Contáctanos
+                  {t("nav.contact")}
                 </a>
               </>
             )}
@@ -120,7 +120,7 @@ export default function Header({ className = "" }) {
               to="/donaciones"
               className="bg-red-600 text-white px-4 py-2 lg:px-3 lg:py-1 rounded-full cursor-pointer hover:scale-105 transform-gpu transition text-sm lg:text-xs"
             >
-              Dona ahora
+              {t("nav.donate")}
             </Link>
           </div>
         )}
