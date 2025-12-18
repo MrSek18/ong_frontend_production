@@ -17,11 +17,11 @@ export default function QuienesSomos() {
         
         
         
-    <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow border-2 border-green-500">
-        <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pt-30 lg:pt-20 border-5 border-red-500">
-            <div className="flex flex-col mb-10 mt-10 oswald border-2 border-blue-600 pl-10 pr-10  ">
-                <h1 className="text-3xl lg:text-5xl text-blue-950 w-full text-center mb-5 anton border-2">Quienes Somos</h1>
-                <p className="text-lg lg:text-2xl text-[#231f20] mb-5 border-2">Somos una asociación sin fines de lucro que nació del 
+    <div id="Seccion1" className="flex flex-col lg:flex-row flex-grow ">
+        <div className="flex justify-center items-center flex-grow  lg:w-[50%] w-full pt-30 lg:pt-20 ">
+            <div className="flex flex-col mb-10 mt-10 oswald  pl-10 pr-10  ">
+                <h1 className="text-3xl lg:text-5xl text-blue-950 w-full text-center mb-5 anton ">Quienes Somos</h1>
+                <p className="text-lg lg:text-2xl text-[#231f20] mb-5 ">Somos una asociación sin fines de lucro que nació del 
                 corazón de un grupo de amigos con una pasión en común: el 
                 fútbol y el deseo de ayudar a niños en situación de 
                 vulnerabilidad.</p>
@@ -54,14 +54,14 @@ export default function QuienesSomos() {
     </div>
         
       {/* Sección con columnas */}
-      <div id="Section-2" className="w-full text-center flex flex-col items-center text-blue-950 mt-20  border-2 border-red-500">
+      <div id="Section-2" className="w-full text-center flex flex-col items-center text-blue-950 mt-20  ">
         <div
             id="Justificacion-sec-2"
             className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center "
         >
             {/* img */}
             <div
-            className="relative w-full lg:w-1/2 min-h-160 bg-blue-950 order-2 lg:order-1 border-2"
+            className="relative w-full lg:w-1/2 min-h-160 bg-blue-950 order-2 lg:order-1 "
             style={{
                 backgroundImage: `url(${imgsec2QuienesSomos})`,
                 backgroundSize: "cover",
@@ -74,7 +74,7 @@ export default function QuienesSomos() {
 
 
             {/* right contenedor */}
-            <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-10 text-xl order-1 lg:order-2 text-[#231f20] p-10 items-end oswald border-2">
+            <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-10 text-xl order-1 lg:order-2 text-[#231f20] p-10 items-end oswald ">
                 <div className="flex w-full h-auto border-2 border-blue-950 gap-4 p-10 rounded-4xl relative">
                     <h1 className="text-left text-lg lg:text-2xl ">Formar integralmente a niños con talento futbolístico en 
                     contextos vulnerables, brindándoles entrenamiento de 
@@ -99,7 +99,7 @@ export default function QuienesSomos() {
         </div>
       </div>
       <div id="Section-3 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 border-2 border-yellow-500 ">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20  ">
         
         {/* img */}
         <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center order-2 lg-order-1" 
@@ -111,58 +111,58 @@ export default function QuienesSomos() {
         </div>
 
         {/* bottom content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row mt-10 lg:pr-10 lg:pl-10 justify-center items-center border-2 border-red-500 gap-y-4 order-1 lg:order-2">
-        <div className="flex w-auto lg:w-[45%]  items-center justify-center border-2">
-            <h1 className="text-3xl lg:text-5xl ">Valores</h1>
-        </div>
-        <div className="flex custom-flex-xs sm:flex-row gap-x-4 lg:gap-x-0 w-full lg:w-[55%] h-auto gap-y-4 text-2xl lg:text-3xl text-[#231f20] bg-blue-950 text-white justify-evenly items-center p-5 border-2 border-green-500 lg:text-3xl oswald mb-4">
-            <div className="flex flex-col w-auto gap-y-4   ">
-                <div className="flex w-full h-auto gap-4 ">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-left ">
-                    Superacion
-                    </h1>
+        <div className="w-full h-auto flex flex-col lg:flex-row  lg:pr-10 lg:pl-10 lg:pt-10 justify-center items-center   gap-y-4 order-1 lg:order-2">
+            <div className="flex w-auto lg:w-[45%]  items-center justify-center ">
+                <h1 className="text-3xl lg:text-5xl ">Valores</h1>
+            </div>
+            <div className="flex custom-flex-xs sm:flex-row gap-x-4 lg:gap-x-0 w-full lg:w-[55%] h-auto gap-y-4 text-2xl lg:text-3xl text-[#231f20] bg-blue-950 text-white justify-evenly items-center p-5 lg:text-3xl oswald ">
+                <div className="flex flex-col w-auto gap-y-4   ">
+                    <div className="flex w-full h-auto gap-4 ">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-left ">
+                        Superacion
+                        </h1>
+                    </div>
+                    <div className="flex w-full h-auto gap-4 ">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-left">
+                        Disciplina
+                        </h1>
+                    </div>
+                    <div className="flex w-full h-auto gap-4">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-left">
+                        Empatía
+                        </h1>
+                    </div>
                 </div>
-                <div className="flex w-full h-auto gap-4 ">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-left">
-                    Disciplina
-                    </h1>
-                </div>
-                <div className="flex w-full h-auto gap-4">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-left">
-                    Empatía
-                    </h1>
+                
+                <div className="flex flex-col w-auto  gap-y-4   ">
+                    <div className="flex w-full h-auto gap-4 ">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-center ">
+                        Compromiso
+                        </h1>
+                    </div>
+                    <div className="flex w-full h-auto gap-4 ">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-left">
+                        Esperanza
+                        </h1>
+                    </div>
+                    <div className="flex w-full h-auto gap-4">
+                        <img src={checkSection3} alt="" className="w-10 h-10" />
+                        <h1 className="text-left">
+                        Excelencia
+                        </h1>
+                    </div>
                 </div>
             </div>
-            
-            <div className="flex flex-col w-auto  gap-y-4   ">
-                <div className="flex w-full h-auto gap-4 ">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-center ">
-                    Compromiso
-                    </h1>
-                </div>
-                <div className="flex w-full h-auto gap-4 ">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-left">
-                    Esperanza
-                    </h1>
-                </div>
-                <div className="flex w-full h-auto gap-4">
-                    <img src={checkSection3} alt="" className="w-10 h-10" />
-                    <h1 className="text-left">
-                    Excelencia
-                    </h1>
-                </div>
-            </div>
-        </div>
         </div>
 
       </div>
       <div id="Section-4 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950  border-2 border-green-500 mt-20 ">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950   mt-20 ">
         <div
         id="Justificacion-sec-4"
         className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center  items-stretch gap-x-15 "
@@ -171,7 +171,7 @@ export default function QuienesSomos() {
             {/* right contenedor */}
             <div className="flex flex-col w-full lg:w-2/3 h-auto ">
                 <h1 className="text-3xl lg:text-5xl mb-5">Objetivos</h1>
-                <div className="flex flex-col w-full h-1/2  h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center oswald border-2 border-red-500">
+                <div className="flex flex-col w-full h-1/2  h-auto  bg-blue-950 gap-y-4 text-xl text-white justify-center items-center oswald ">
                     <div className="flex w-[70%] md:w-[55%] h-auto  gap-4 mb-4 mt-10 ">
                         <img src={n01White} alt="" className="w-10 h-10 " />
                         <div className="flex flex-col gap-y-4 border-b-2 border-white pb-3 w-full">
@@ -219,7 +219,7 @@ export default function QuienesSomos() {
 
       </div>
       <div id="Section-5 "
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 border-2 mt-20">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950  mt-20">
         
         <div
         id="Justificacion-sec-5"
@@ -229,10 +229,10 @@ export default function QuienesSomos() {
         
         <div className="flex flex-col w-full lg:w-1/2 h-auto  gap-y-4  text-[#231f20] pl-5 pr-5 sm:p-10 ">
             <div className="flex flex-col w-full h-auto gap-4">
-                <div className="w-full h-auto bg-blue-950 border-2">
+                <div className="w-full h-auto bg-blue-950 ">
                     <h1 className="text-white p-3 text-3xl lg:text-5xl">Posicionamiento</h1>
                 </div>
-                <h1 className="text-center text-xl p-5 oswald border-2">
+                <h1 className="text-center text-xl p-5 oswald ">
                     “ALIENTA PERUANO es una plataforma de 
                     transformación que convierte a niños con 
                     talento y pocos recursos en futbolistas 
@@ -241,10 +241,10 @@ export default function QuienesSomos() {
                 </h1>
             </div>
             <div className="flex flex-col w-full h-auto gap-4 mb-4">
-                <div className="w-full h-auto bg-blue-950 border-2">
+                <div className="w-full h-auto bg-blue-950 ">
                     <h1 className="text-white p-3 text-3xl lg:text-5xl">Propuesta de valor</h1>
                 </div>
-                <h1 className="text-center text-xl oswald border-2">
+                <h1 className="text-center text-xl oswald ">
                     Brindamos una oportunidad real de desarrollo 
                     personal y profesional a niños vulnerables con 
                     talento, a través de un modelo integral que une 

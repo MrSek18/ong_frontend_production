@@ -122,12 +122,12 @@ export default function HeroAlienta() {
           className="w-full text-center flex flex-col items-center text-blue-950 mt-10 gap-4 ">
         
         {/* Título llamativo */}
-        <h1 className="text-3xl lg:text-5xl ml-5 mr-5 border-2">
+        <h1 className="text-3xl lg:text-5xl ml-5 mr-5 ">
            {t("sectionVideo.title")}
         </h1>
         
         {/* Subtítulo breve */}
-        <p className="text-lg lg:text-2xl text-[#231f20]  w-4/5 lg:w-2/3 border-2">
+        <p className="text-lg lg:text-2xl text-[#231f20]  w-4/5 lg:w-2/3 ">
           {t("sectionVideo.subtitle")}
         </p>
 
@@ -147,17 +147,17 @@ export default function HeroAlienta() {
       </div>
       {/* Section-1 */}
       <div id="Section-1"
-        className="w-full text-center flex flex-col items-center text-blue-950 mt-20 gap-4 border-green-500 border-2 ">
+        className="w-full text-center flex flex-col items-center text-blue-950 mt-20 gap-4  ">
         <h1 className="text-3xl lg:text-5xl  ml-10 mr-10 ">{t("section1.title")}</h1>
         
-        <ul className=" ml-10 mr-10 space-y-4 border-2 border-red-500" >
+        <ul className=" ml-10 mr-10 space-y-4 " >
           {reasons.map((reason, idx) => (
             <li key={idx} className="text-left list-disc list-inside text-lg lg:text-2xl text-[#231f20] ">{reason}</li>
           ))}
         </ul>
 
         <div id="Justificacion-sec-1"
-        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald border-2 border-red-500 mt-6">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald  mt-6">
             {/* contendio sec 1 */}
             <div className="w-full lg:w-[65%] h-full lg:absolute lg:left-0 lg:top-0 bg-blue-950 clip-inverted-flag ">
               <h1 className="text-white text-center lg:text-left text-2xl mt-3  lg:pl-10 ">{t("section1.part2Title")}</h1>
@@ -223,15 +223,15 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-2 "
-        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2 border-red-500 ">
-        <div className="w-3/4 lg:w-2/4 border-2 gap-4 flex flex-col items-center">
-          <h1 className="text-3xl lg:text-5xl border-2 ">{t("section2.title")}</h1>
-          <h2 className="text-center text-lg lg:text-2xl border-2" >{t("section2.subtitle")}</h2>
-          <p className="text-center text-base lg:text-xl text-[#231f20] border-2">{t("section2.paragraph")}</p>
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20  ">
+        <div className="w-3/4 lg:w-2/4  gap-4 flex flex-col items-center">
+          <h1 className="text-3xl lg:text-5xl  ">{t("section2.title")}</h1>
+          <h2 className="text-center text-lg lg:text-2xl " >{t("section2.subtitle")}</h2>
+          <p className="text-center text-base lg:text-xl text-[#231f20] ">{t("section2.paragraph")}</p>
         </div>
         
         <div id="Justificacion-sec-2"
-        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald border-2 ">
+        className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center oswald  ">
             {/* contenido sec 2 */}
             <div className="w-full h-auto bg-white pl-10 pt-10 pr-10 ">
 
@@ -263,14 +263,14 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-3 "
-        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
-        <div className="w-3/4 lg:w-2/4 border-2">
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20">
+        <div className="w-3/4 lg:w-2/4 ">
           <h1 className="text-3xl lg:text-5xl">{t("section3.title")}</h1>
         </div>
         
         <div
           id="Justificacion-sec-3"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5 oswald border-2"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5 oswald "
         >
           {/* img */}
           <div
@@ -311,15 +311,15 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-4 "
-        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
-        <div className="w-3/4 lg:w-2/4 flex flex-col gap-4 border-2">
-          <h1 className="text-3xl lg:text-5xl border-2">{t("section4.title")}</h1>
-          <p className="text-[#231f20] text-lg lg:text-2xl border-2">{t("section4.subtitle")}</p>
+        className="w-full  text-center flex flex-col items-center text-blue-950 mt-20 ">
+        <div className="w-3/4 lg:w-2/4 flex flex-col gap-4 ">
+          <h1 className="text-3xl lg:text-5xl">{t("section4.title")}</h1>
+          <p className="text-[#231f20] text-lg lg:text-2xl ">{t("section4.subtitle")}</p>
         </div>
         
         <div
           id="Justificacion-sec-4"
-          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5  border-2"
+          className="relative w-full h-auto flex flex-col lg:flex-row justify-between items-center mt-5  "
         >
           {/* right contenedor */}
           
@@ -363,7 +363,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-5 "
-        className="w-full text-center flex flex-col items-center text-blue-950 mt-20 border-2 gap-y-4 lg:gap-y-0">
+        className="w-full text-center flex flex-col items-center text-blue-950 mt-20  gap-y-4 lg:gap-y-0">
         
         {/* img */}
         <div className="flex w-full h-100 border-b-10 border-blue-950 bg-green-500 items-center justify-center order-2 lg:order-1" 
@@ -375,9 +375,9 @@ export default function HeroAlienta() {
         </div>
 
         {/* down content */}
-        <div className="w-full h-auto flex flex-col lg:flex-row border-2 order-1 lg:order-2 items-center">
-          <div className="flex  lg:h-50 w-full lg:w-1/2  items-center justify-center border-2 border-red-500">
-            <h1 className="text-3xl lg:text-5xl border-2">{t("section5.title")}</h1>
+        <div className="w-full h-auto flex flex-col lg:flex-row  order-1 lg:order-2 items-center">
+          <div className="flex  lg:h-50 w-full lg:w-1/2  items-center justify-center ">
+            <h1 className="text-3xl lg:text-5xl ">{t("section5.title")}</h1>
           </div>
           <div className="flex flex-col w-full lg:w-1/2 h-auto gap-y-4 text-xl text-[#231f20] bg-blue-950 text-white p-5 oswald mt-5 lg:mt-0 ">
             <div className="flex w-full h-auto gap-4 ">
@@ -407,13 +407,13 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-6 "
-        className="w-full text-center flex flex-col items-center justify-center  text-blue-950 mt-20  border-2 ">
+        className="w-full text-center flex flex-col items-center justify-center  text-blue-950 mt-20   ">
 
-          <div className="w-full h-auto border-2 ">
+          <div className="w-full h-auto  ">
             <h1 className="text-3xl lg:text-5xl">{t("section6.title")}</h1>
           </div> 
             
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 pt-10 pr-10 pl-10 place-items-center sm:place-items-stretch border-2 border-red-500">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-10 pt-10 pr-10 pl-10 place-items-center sm:place-items-stretch ">
 
             <div id="Card1" className="flex h-auto w-full md:w-full ">    
               <div className="relative flex h-auto w-full flex-col items-start">
@@ -520,7 +520,7 @@ export default function HeroAlienta() {
 
       </div>
       <div id="Section-7 "
-        className="w-full h-min-screen  text-center flex flex-col items-center text-blue-950 mt-20 border-2">
+        className="w-full h-min-screen  text-center flex flex-col items-center text-blue-950 mt-20 ">
 
           <div className="w-full h-auto">
             <h1 className="text-3xl">{t("section7.title")}</h1>
@@ -566,7 +566,7 @@ export default function HeroAlienta() {
 
           {/* img */}
           <div
-            className="flex w-full lg:w-1/2 min-h-110 lg:h-auto  justify-center items-center border-2"
+            className="flex w-full lg:w-1/2 min-h-110 lg:h-auto  justify-center items-center"
             style={{
               backgroundImage: `url(${imgSection7})`,
               backgroundSize: "cover",
@@ -583,14 +583,14 @@ export default function HeroAlienta() {
 
       </div>
       <div id="historia"
-        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 border-2">
+        className="w-full h-min-screen text-center flex flex-col items-center text-blue-950 mt-20 ">
         <div
           id="Justificacion-sec-8 "
-          className="relative w-full flex  flex-col lg:flex-row justify-between items-center border-2 "
+          className="relative w-full flex  flex-col lg:flex-row justify-between items-center "
         >
           {/* img */}
           <div
-            className="flex relative w-full lg:w-[50%] h-100 sm:min-h-screen bg-blue-950 order-2 lg:order-1 border-2 border-red-500"
+            className="flex relative w-full lg:w-[50%] h-100 sm:min-h-screen bg-blue-950 order-2 lg:order-1"
             style={{
               backgroundImage: `url(${imgSection8})`,
               backgroundSize: "cover",
@@ -606,8 +606,8 @@ export default function HeroAlienta() {
          
 
           {/* right contenedor */}
-          <div className="relative  top-0 right-0 w-full lg:w-1/2 min-h-screen bg-white/80 flex flex-col text-[#231f20] pr-10 pl-10  order-1 lg:order-2 gap-y-5 justify-center border-2 border-red-500">
-            <h1 className="text-blue-950 text-3xl lg:text-5xl border-2 border-red-500">
+          <div className="relative  top-0 right-0 w-full lg:w-1/2 min-h-screen bg-white/80 flex flex-col text-[#231f20] pr-10 pl-10  order-1 lg:order-2 gap-y-5 justify-center ">
+            <h1 className="text-blue-950 text-3xl lg:text-5xl ">
               {t("history.title")}
             </h1>
             <h2 className="text-blue-950 text-xl lg:text-2xl" >
