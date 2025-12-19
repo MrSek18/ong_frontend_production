@@ -6,6 +6,7 @@ import formPsi from "../assets/formPsiLogo.png";
 import logoAlientaOriginal from "../assets/alientaPeruanoLogoOriginal.png";
 import { useEffect, useState, useRef  } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 export default function Donacion() {
   const [showReactive, setShowReactive] = useState(false);
@@ -16,13 +17,30 @@ export default function Donacion() {
   const [showForm, setShowForm] = useState(false);
   const [mensajePago, setMensajePago] = useState(null);
   const brickControllerRef = useRef(null);
+  const [locale, setLocale] = useState("es-PE");
 
   useEffect(() => {
     if (showForm) {
-      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale: "es-PE" });
+      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale});
       const bricksBuilder = mp.bricks();
-
-      bricksBuilder.create("cardPayment", "paymentBrick_container", {
+      if (plan == "mensual"){
+        // Brick de suscripcion mensual
+        bricksBuilder.create("subscription", "paymentBrick_container", {
+          initialization:{
+            planId: import.meta.env.VITE_MERCADOPAGO_PLAN_ID_MENSUAL
+          },
+          callbacks:{
+            onReady: () => console.log("Brick de suscripción listo"),
+            onError: (error) => {
+              console.error("Error en Brick de suscripción:", error);
+              setMensajePago("Error al inicializar el formulario de suscripción.");
+            },
+          },
+        }).then(controller => {
+          brickControllerRef.current = controller;
+        });
+      } else if (plan == "unica"){
+        bricksBuilder.create("cardPayment", "paymentBrick_container", {
         initialization: {
           amount: monto === "otro" ? Number(otroMonto) : Number(monto),
         },
@@ -69,6 +87,8 @@ export default function Donacion() {
       }).then(controller => {
         brickControllerRef.current = controller;
       });
+      }
+      
     }
 
     return () => {
@@ -77,33 +97,35 @@ export default function Donacion() {
         brickControllerRef.current = null;
       }
     };
-  }, [showForm, monto, otroMonto, plan]);
+  }, [showForm, monto, otroMonto, plan, locale]);
 
-
-
-
+  const {t} = useTranslation("donacion");
   const handleNext = () => {
     let newErrors = { plan: null, monto: null };
 
     if (!plan) {
-      newErrors.plan = "Debes seleccionar un plan (Mensual o Única).";
+      newErrors.plan = `${t("secondView.errors.plan.1")}`;
+    }
+    if (!monto) {
+      newErrors.monto = `${t("secondView.errors.monto.1")}`;
     }
 
     switch (monto) {
       case "":
-        newErrors.monto = "Debes seleccionar un monto.";
+        newErrors.monto = `${t("secondView.errors.monto.2")}`;
         break;
       case "otro":
         if (!otroMonto) {
-          newErrors.monto = "Debes ingresar un monto en 'OTRO'.";
+          newErrors.monto = `${t("secondView.errors.otro.1")}`;
         } else if (isNaN(otroMonto)) {
-          newErrors.monto = "El monto ingresado debe ser un número válido.";
+          newErrors.monto = `${t("secondView.errors.otro.2")}`;
         } else if (Number(otroMonto) <= 0) {
-          newErrors.monto = "El monto ingresado debe ser mayor a cero.";
+          newErrors.monto = `${t("secondView.errors.otro.3")}`;
         } else if (Number(otroMonto) < 5) {
-          newErrors.monto = "El monto mínimo para donar es S/ 5.00.";
+          newErrors.monto = `${t("secondView.errors.otro.4")}`;
         }
         break;
+      
     }
 
 
@@ -116,10 +138,12 @@ export default function Donacion() {
 
   };
 
+  
+
   return (
     <div className="w-full h-auto overflow-x-hidden ">
       <div className="w-full h-auto flex flex-col ">
-       <Header className="fixed top-0 left-0 w-full z-50"/>
+       <Header className="fixed top-0 left-0 w-full z-50" onChangeLocale={setLocale}/>
         <div id="donacion" className="w-full h-screen text-center flex flex-col items-center text-blue-950 gap-6 ">
           <div id="Justificacion-sec-2" className="relative w-full h-full flex flex-col lg:flex-row justify-between items-center ">
             
@@ -138,24 +162,22 @@ export default function Donacion() {
 
               {/* first contenedor */}
               {!showReactive && !showForm && (
-                <div className="flex flex-col w-[85%] gap-6 items-center justify-center ">
-                  <h1 className="text-7xl tracking-wider">¡Con tu ayuda</h1>
-                  <h2 className="text-4xl tracking-wide">podemos ayudarlos!</h2>
-                  <p className="text-2xl w-[80%] oswald">
-                    Tu apoyo puede convertir a niños con talento y pocos recursos en futbolistas profesionales y líderes positivos
-                  </p>
+                <div className="flex flex-col w-[85%] gap-3 items-center justify-center ">
+                  <h1 className="text-4xl lg:text-7xl tracking-wider">{t("firstView.titlePart1")}</h1>
+                  <h2 className="text-2xl lg:text-4xl tracking-wide">{t("firstView.titlePart2")}</h2>
+                  <p className="text-xl  lg:text-2xl w-[80%] oswald mt-3">{t("firstView.paragraph")}</p>
                   <button
                     onClick={() => setShowReactive(true)}
-                    className="bg-red-600 text-white px-6 py-4 rounded-full cursor-pointer hover:scale-110 transform-gpu transition text-2xl oswald font-bold"
+                    className="bg-red-600 text-white px-6 py-4 rounded-full cursor-pointer hover:scale-110 transform-gpu transition text-xl lg:text-2xl oswald font-bold mt-3"
                   >
-                    Dona ahora
+                  {t("nav.donate")}
                   </button>
                 </div>
               )}
 
               {/* reactive contenedor */}
               {showReactive && !showForm && (
-                <div className="flex flex-col w-[95%] lg:w-[70%] gap-2 items-center justify-start bg-[#a7a9ac] text-[#231f20] lg:p-4 p-6 relative  lg:max-h-110 ">
+                <div className="flex flex-col w-[95%] lg:w-[70%] gap-2 items-center justify-start bg-[#a7a9ac] text-[#231f20] lg:p-4 p-6 relative  lg:max-h-110 oswald font-bold">
                   <button
                     onClick={() => setShowReactive(false)}
                     className="absolute top-2 right-4 text-black text-xl font-bold"
@@ -164,10 +186,10 @@ export default function Donacion() {
                     ✕
                   </button>
 
-                  <h1 className="text-2xl">DONA AHORA</h1>
+                  <h1 className="text-2xl">{t("secondView.title")}</h1>
                   <h2 className="text-base">
-                    Con tu apoyo ayudas al desarrollo personal y profesional a niños vulnerables con talento. <br />
-                    Elije el monto.
+                    {t("secondView.subtitle")} <br />
+                    
                   </h2>
 
                   {/* Planes */}
@@ -176,13 +198,13 @@ export default function Donacion() {
                       onClick={() => setPlan("mensual")}
                       className={`p-3 w-1/2 ${plan === "mensual" ? "bg-[#fff200]" : "bg-white"}`}
                     >
-                      MENSUAL
+                      {t("secondView.options.1")}
                     </button>
                     <button
                       onClick={() => setPlan("unica")}
                       className={`p-3 w-1/2 ${plan === "unica" ? "bg-[#fff200]" : "bg-white"}`}
                     >
-                      ÚNICA
+                      {t("secondView.options.2")}
                     </button>
                   </div>
                   {errors.plan && <p className="text-red-600 text-sm">{errors.plan}</p>}
@@ -197,21 +219,26 @@ export default function Donacion() {
                           monto === valor ? "bg-[#fff200]" : "bg-white"
                         } ${i === 3 ? "border-r-0" : ""}`}
                       >
-                        {valor === "otro" ? "OTRO" : `S/. ${valor}`}
+                        {valor === "otro" ? `${t("secondView.options.3")}` : `S/ ${valor}`}
                       </button>
                     ))}
                   </div>
 
                   {monto === "otro" && (
-                    <div className="w-full flex flex-col gap-2">
-                      <label className="text-sm font-semibold">Ingresa tu monto:</label>
+                    <div className="min-w-1/2 flex flex-col gap-2">
+                      <label className="text-sm font-semibold">{t("secondView.customAmount")}</label>
                       <input
-                        type="number"
-                        value={otroMonto}
-                        onChange={(e) => setOtroMonto(e.target.value)}
-                        className="border border-black p-2 rounded"
-                        placeholder="Ejemplo: 120"
+                        type="text"
+                        value={otroMonto ? `S/ ${otroMonto}` : "S/ "}
+                        onChange={(e) => {
+                          // eliminamos todo lo que no sea número
+                          const value = e.target.value.replace(/\D/g, "");
+                          setOtroMonto(value);
+                        }}
+                        className="border border-black p-2 rounded text-center bg-white"
+                        placeholder="S/ 0"
                       />
+
                     </div>
                   )}
                   {errors.monto && <p className="text-red-600 text-sm">{errors.monto}</p>}
@@ -223,12 +250,12 @@ export default function Donacion() {
                                 transform transition duration-300 
                                 hover:scale-105 active:scale-95"
                     >
-                      SIGUIENTE
+                      {t("secondView.next")}
                     </button>
                   </div>
 
                   <p className="text-sm w-full">
-                    Tu donación es deducible de impuestos.
+                    {t("secondView.tax")}
                   </p>
                 </div>
               )}
@@ -238,7 +265,7 @@ export default function Donacion() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm roboto-condensed" >
                   {/* Contenedor del formulario */}
                   <div className="relative w-[95%] lg:w-[900px] max-h-[90vh] overflow-y-auto 
-                      bg-white text-[#231f20] rounded-xl shadow-2xl p-8 fadeInScale">
+                      bg-white text-[#231f20] rounded-xl shadow-2xl p-2 fadeInScale">
 
                     
                     {/* Botón de cierre */}
@@ -259,7 +286,7 @@ export default function Donacion() {
 
                     {/* Mensaje inicial */}
                     <p className="text-sm mb-6 text-center text-gray-600 font-medium">
-                      Recuerda activar las compras por internet con tu banco
+                      {t("thirdView.item1")}
                     </p>
 
                     {/* Brick de Mercado Pago con más ancho */}
@@ -273,16 +300,11 @@ export default function Donacion() {
                     )}
 
                     {/* Aviso legal */}
-                    <p className="text-xs text-center text-gray-500 mb-4">
-                      Infórmate sobre el tratamiento de tus datos personales aquí
-                    </p>
-                    <p className="text-xs text-center text-gray-500 mt-4 ">
-                      Tu donación será procesada de manera segura a través de Mercado Pago, 
-                      cumpliendo con los estándares PCI DSS. Nosotros no almacenamos tus datos de tarjeta.
-                    </p>
+                    
+                    <p className="text-xs text-center text-gray-500 mt-4 ">{t("thirdView.item2")}</p>
 
                     {/* Logos de seguridad */}
-                    <div className="grid grid-cols-3 gap-4 justify-items-center sm:flex sm:justify-center mt-5">
+                    <div className="flex items-center justify-center mt-5 ">
                       <img src={formPsi} alt="PCI Security Standards Council" className="h-8" />
                     </div>
                   </div>

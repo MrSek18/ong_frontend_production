@@ -11,7 +11,7 @@ import peruLogo from "../assets/peru_logo.png";
 import AlientaPeruano from "../assets/alientaPeruanoLogo.png";
 import i18n from "i18next";
 
-export default function Header({ className = "" }) {
+export default function Header({ className = "", onChangeLocale }) {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { t } = useTranslation();
@@ -19,7 +19,7 @@ export default function Header({ className = "" }) {
   return (
     <header className={`w-full flex flex-col ${className} roboto-condensed`}>
       {/* Barra superior: redes + idiomas */}
-      <div className="w-full flex flex-row h-auto bg-gradient-to-r from-black/100 to-transparent">
+      <div className="w-full flex flex-row h-auto bg-black/50">
         {/* Redes sociales */}
         <div className="flex flex-shrink-0 basis-1/3 justify-start items-center gap-2 py-2 pl-2">
           <img src={facebookLogo} alt="Facebook" className="w-6 h-6 lg:w-5 lg:h-5 cursor-pointer hover:scale-110 transition" />
@@ -31,22 +31,28 @@ export default function Header({ className = "" }) {
         {/* Idiomas */}
         <div className="flex flex-grow basis-2/3 justify-end items-center gap-4 py-2 pr-2">
           {/* Español */}
-          <div onClick={() => i18n.changeLanguage("es")} className="cursor-pointer flex items-center gap-2">
-            <img src={peruLogo} alt="Peru" className="w-8 h-8 lg:w-6 lg:h-6 transition" />
-            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl">Español</span>
+          <div onClick={() => {
+            i18n.changeLanguage("es"); 
+            onChangeLocale?.("es-PE");
+            }} className="cursor-pointer flex items-center gap-2">
+            <img src={peruLogo} alt="Peru" className="w-8 h-8 lg:w-6 lg:h-6 cursor-pointer hover:scale-110 transition " />
+            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl cursor-pointer hover:scale-110 transition">Español</span>
           </div>
 
           {/* Inglés */}
-          <div onClick={() => i18n.changeLanguage("en")} className="cursor-pointer flex items-center gap-2">
-            <img src={usaLogo} alt="USA" className="w-8 h-8 lg:w-6 lg:h-6 transition" />
-            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl">English</span>
+          <div onClick={() => {
+            i18n.changeLanguage("en"); 
+            onChangeLocale?.("en-US");
+            }} className="cursor-pointer flex items-center gap-2">
+            <img src={usaLogo} alt="USA" className="w-8 h-8 lg:w-6 lg:h-6 transition cursor-pointer hover:scale-110 transition" />
+            <span className="text-white text-sm sm:text-base lg:text-xs text-shadow-xl cursor-pointer hover:scale-110 transition">English</span>
           </div>
         </div>
       </div>
 
       {/* Navbar principal */}
-      <div className="w-full flex justify-around items-center h-20 px-6 py-4 
-                      lg:h-16 lg:px-4 lg:py-2 bg-gradient-to-r from-blue-950 via-blue-950/80 to-transparent drop-shadow-md relative ">
+      <div className="w-full flex justify-around items-center h-25 px-6 py-4 
+                      lg:h-21 lg:px-4 lg:py-2 bg-gradient-to-r bg-blue-950/50 drop-shadow-md relative ">
         {/* Logo */}
         <img
           src={AlientaPeruano}
