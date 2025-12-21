@@ -265,7 +265,7 @@ export default function Donacion() {
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm roboto-condensed" >
                   {/* Contenedor del formulario */}
                   <div className="relative w-[95%] lg:w-[900px] max-h-[90vh] overflow-y-auto 
-                      bg-white text-[#231f20] rounded-xl shadow-2xl p-2 fadeInScale">
+                      bg-white text-[#231f20] rounded-xl shadow-2xl pl-2 pr-2 pt-5 pb-5 fadeInScale">
 
                     
                     {/* Botón de cierre */}
