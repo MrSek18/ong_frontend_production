@@ -281,7 +281,7 @@ export default function Donacion() {
                     <img
                       src={logoAlientaOriginal}
                       alt="Logo Alienta"
-                      className="mx-auto h-20 mb-8"
+                      className="mx-auto h-20 mb-8 mt-15"
                     />
 
                     {/* Mensaje inicial */}
@@ -304,7 +304,7 @@ export default function Donacion() {
                     <p className="text-xs text-center text-gray-500 mt-4 ">{t("thirdView.item2")}</p>
 
                     {/* Logos de seguridad */}
-                    <div className="flex items-center justify-center mt-5 ">
+                    <div className="flex items-center justify-center mt-5 mb-10">
                       <img src={formPsi} alt="PCI Security Standards Council" className="h-8" />
                     </div>
                   </div>
