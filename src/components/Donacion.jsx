@@ -63,7 +63,7 @@ export default function Donacion() {
             onSubmit: async (cardData) => {
               try {
                 console.log("cardData recibido:", JSON.stringify(cardData, null, 2));
-
+                // response admitida
                 const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/pago`, {
                   token: cardData.token,
                   payment_method_id: cardData.payment_method_id,
