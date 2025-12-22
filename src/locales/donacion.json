@@ -45,6 +45,9 @@
         "thirdView": {
           "item1": "Recuerda activar las compras por internet con tu banco",
           "item2": "Tu donación será procesada de manera segura a través de Mercado Pago, cumpliendo con los estándares PCI DSS. Nosotros no almacenamos tus datos de tarjeta."
+        },
+        "healthCheck": {
+          "WaitingMessage": "Cargando, por favor espera..."
         }
         
         },
@@ -94,6 +97,9 @@
         "thirdView": {
           "item1": "Remember to enable online purchases with your bank.",
           "item2": "Your donation will be securely processed through Mercado Pago, in compliance with PCI DSS standards. We do not store your card data."
+        },
+        "healthCheck": {
+          "WaitingMessage": "Loading, please wait..."
         }
       
     }
