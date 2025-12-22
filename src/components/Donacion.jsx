@@ -20,15 +20,15 @@ export default function Donacion() {
   const [mensajePago, setMensajePago] = useState(null);
   const brickControllerRef = useRef(null);
   const [locale, setLocale] = useState("es-PE");
-
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
     const initBricks = async () => {
       if (showForm ) {
-
+        setLoading(true);
         await warmUpDatabase(); 
-
+        setLoading(false);
 
         const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale});
         const bricksBuilder = mp.bricks();
@@ -300,7 +300,13 @@ export default function Donacion() {
                       {t("thirdView.item1")}
                     </p>
 
-                    
+                    {/* Brick de Mercado Pago con más ancho */}
+                    {loading && (
+                      <div className="loading-container">
+                        <div className="spinner"></div>
+                        <p>{t("healthCheck.WaitingMessage")}</p>
+                      </div>
+                    )}
                     <div id="paymentBrick_container" className="w-full min-h-[350px] mb-6 "></div>
 
                     {/* Mensaje dinámico */}
