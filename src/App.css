@@ -89,6 +89,9 @@ li::marker {
 }
 
 
+
+
+
 /* Estilo base: columna */
 .custom-flex-xs {
   display: flex;
@@ -130,4 +133,28 @@ li::marker {
 
 .fade-in-down {
   animation: fadeInDown 0.6s ease-out forwards;
+}
+
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #3498db; /* color del spinner */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

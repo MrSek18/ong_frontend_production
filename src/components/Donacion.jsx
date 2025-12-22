@@ -301,7 +301,12 @@ export default function Donacion() {
                     </p>
 
                     {/* Brick de Mercado Pago con más ancho */}
-                    {loading && <p>{t("healthCheck.WaitingMessage")}</p>}
+                    {loading && (
+                      <div className="loading-container">
+                        <div className="spinner"></div>
+                        <p>{t("healthCheck.WaitingMessage")}</p>
+                      </div>
+                    )}
                     <div id="paymentBrick_container" className="w-full min-h-[350px] mb-6 "></div>
 
                     {/* Mensaje dinámico */}
