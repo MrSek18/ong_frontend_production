@@ -7,5 +7,5 @@ export const warmUpDatabase = async () => {
   } catch (err) {
     console.warn("Warm-up falló, esperando igual...:", err.message);
   }
-  await new Promise((resolve) => setTimeout(resolve, 10000));
+  await new Promise((resolve) => setTimeout(resolve, 5000));
 };
