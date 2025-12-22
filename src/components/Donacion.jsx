@@ -8,6 +8,8 @@ import { useEffect, useState, useRef  } from "react";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
 
+import {warmUpDatabase} from "../utils/warmUpDatabase.js";
+
 export default function Donacion() {
   const [showReactive, setShowReactive] = useState(false);
   const [plan, setPlan] = useState(null);
@@ -19,78 +21,86 @@ export default function Donacion() {
   const brickControllerRef = useRef(null);
   const [locale, setLocale] = useState("es-PE");
 
+
+
   useEffect(() => {
-    if (showForm) {
-      const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale});
-      const bricksBuilder = mp.bricks();
-      if (plan == "mensual"){
-        // Brick de suscripcion mensual
-        bricksBuilder.create("subscription", "paymentBrick_container", {
-          initialization:{
-            planId: import.meta.env.VITE_MERCADOPAGO_PLAN_ID_MENSUAL
+    const initBricks = async () => {
+      if (showForm ) {
+        
+        await warmUpDatabase();
+
+        const mp = new window.MercadoPago(import.meta.env.VITE_MERCADOPAGO_PUBLIC_KEY, { locale});
+        const bricksBuilder = mp.bricks();
+        if (plan == "mensual"){
+          // Brick de suscripcion mensual
+          bricksBuilder.create("subscription", "paymentBrick_container", {
+            initialization:{
+              planId: import.meta.env.VITE_MERCADOPAGO_PLAN_ID_MENSUAL
+            },
+            callbacks:{
+              onReady: () => console.log("Brick de suscripción listo"),
+              onError: (error) => {
+                console.error("Error en Brick de suscripción:", error);
+                setMensajePago("Error al inicializar el formulario de suscripción.");
+              },
+            },
+          }).then(controller => {
+            brickControllerRef.current = controller;
+          });
+        } else if (plan == "unica"){
+          bricksBuilder.create("cardPayment", "paymentBrick_container", {
+          initialization: {
+            amount: monto === "otro" ? Number(otroMonto) : Number(monto),
           },
-          callbacks:{
-            onReady: () => console.log("Brick de suscripción listo"),
+          callbacks: {
+            onReady: () => {
+              console.log("Brick ready");
+            },
             onError: (error) => {
-              console.error("Error en Brick de suscripción:", error);
-              setMensajePago("Error al inicializar el formulario de suscripción.");
+              console.error("Error en Brick :", error);
+              setMensajePago("Error al inicializar el formulario de pago.");
+            },
+            onSubmit: async (cardData) => {
+              try {
+                console.log("cardData recibido:", JSON.stringify(cardData, null, 2));
+
+                const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/pago`, {
+                  token: cardData.token,
+                  payment_method_id: cardData.payment_method_id,
+                  installments: cardData.installments,
+                  email: cardData.payer.email,
+                  identification_type: cardData.payer.identification.type,
+                  identification_number: cardData.payer.identification.number,
+                  monto: monto === "otro" ? otroMonto : monto,
+                  plan,
+                });
+
+                console.log("Pago OK:", response.data);
+
+                if (response.data.status === "approved") {
+                  setMensajePago("¡Gracias! Tu donación fue procesada con éxito.");
+                } else if (response.data.status === "rejected") {
+                  setMensajePago("Lo sentimos, tu pago fue rechazado. Intenta con otra tarjeta o método.");
+                } else if (response.data.status === "pending") {
+                  setMensajePago("Tu pago está pendiente de confirmación. Te avisaremos cuando se apruebe.");
+                } else {
+                  setMensajePago("Hubo un problema al procesar tu pago. Intenta nuevamente.");
+                }
+              } catch (error) {
+                console.error("Error backend:", error.response?.data || error.message);
+                setMensajePago("Error de conexión con el servidor. Intenta más tarde.");
+              }
             },
           },
         }).then(controller => {
           brickControllerRef.current = controller;
         });
-      } else if (plan == "unica"){
-        bricksBuilder.create("cardPayment", "paymentBrick_container", {
-        initialization: {
-          amount: monto === "otro" ? Number(otroMonto) : Number(monto),
-        },
-        callbacks: {
-          onReady: () => {
-            console.log("Brick ready");
-          },
-          onError: (error) => {
-            console.error("Error en Brick :", error);
-            setMensajePago("Error al inicializar el formulario de pago.");
-          },
-          onSubmit: async (cardData) => {
-            try {
-              console.log("cardData recibido:", JSON.stringify(cardData, null, 2));
-
-              const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/pago`, {
-                token: cardData.token,
-                payment_method_id: cardData.payment_method_id,
-                installments: cardData.installments,
-                email: cardData.payer.email,
-                identification_type: cardData.payer.identification.type,
-                identification_number: cardData.payer.identification.number,
-                monto: monto === "otro" ? otroMonto : monto,
-                plan,
-              });
-
-              console.log("Pago OK:", response.data);
-
-              if (response.data.status === "approved") {
-                setMensajePago("¡Gracias! Tu donación fue procesada con éxito.");
-              } else if (response.data.status === "rejected") {
-                setMensajePago("Lo sentimos, tu pago fue rechazado. Intenta con otra tarjeta o método.");
-              } else if (response.data.status === "pending") {
-                setMensajePago("Tu pago está pendiente de confirmación. Te avisaremos cuando se apruebe.");
-              } else {
-                setMensajePago("Hubo un problema al procesar tu pago. Intenta nuevamente.");
-              }
-            } catch (error) {
-              console.error("Error backend:", error.response?.data || error.message);
-              setMensajePago("Error de conexión con el servidor. Intenta más tarde.");
-            }
-          },
-        },
-      }).then(controller => {
-        brickControllerRef.current = controller;
-      });
+        }
+        
       }
-      
     }
-
+    
+    initBricks();
     return () => {
       if (brickControllerRef.current) {
         brickControllerRef.current.unmount();
