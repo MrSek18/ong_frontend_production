@@ -82,7 +82,7 @@ export default function Donacion() {
                   setMensajePago("¡Gracias! Tu donación fue procesada con éxito.");
                 } else if (response.data.status === "rejected") {
                   setMensajePago("Lo sentimos, tu pago fue rechazado. Intenta con otra tarjeta o método.");
-                } else if (response.data.status === "pending") {
+                } else if (response.data.status === "in_process") {
                   setMensajePago("Tu pago está pendiente de confirmación. Te avisaremos cuando se apruebe.");
                 } else {
                   setMensajePago("Hubo un problema al procesar tu pago. Intenta nuevamente.");
