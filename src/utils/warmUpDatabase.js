@@ -6,7 +6,7 @@ export const warmUpDatabase = async ({ retries = 5, delay = 3000 } = {}) => {
   const baseUrl = import.meta.env.VITE_API_URL;
   const isDev = import.meta.env.DEV;
 
-  // 1️⃣ Backend
+  // Backend
   try {
     await axios.get(`${baseUrl}/health`);
   } catch {
@@ -14,7 +14,7 @@ export const warmUpDatabase = async ({ retries = 5, delay = 3000 } = {}) => {
   }
 
 
-  // 2️⃣ DB
+  //  DB
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       await axios.get(`${baseUrl}/db-wakeup`, {
